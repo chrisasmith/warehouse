@@ -1,0 +1,184 @@
+:host {
+
+  .app-drawer-wrapper {
+    height: 87vh;
+    position: fixed;
+    top: 140px;
+    transition: all .2s;
+    z-index: 9999;
+  }
+  .app-drawer-overlay {
+    background: rgba(0, 0, 0, 0);
+    left: 0;
+    top: 0;
+  }
+
+  .drawer-open {
+
+  }
+  .app-drawer-wrapper {
+    box-shadow: 2px 8px 6px 7px rgba(118,118,118,0.12);
+  }
+  /*
+
+
+  */
+
+  .drawer-content-wrapper .drawer-section {
+    padding-top: 0;
+  }
+
+
+  .drawer-heading {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    height: 63px;
+    padding: 20px 26px;
+    background-color: white;
+    border-bottom: #ADADAD solid 1px;
+    &:first-child {
+      border-top: 0;
+    }
+    .drawer-title {
+      color: #238FFB;
+      font-size: 16px;
+    }
+    .drawer-close-btn {
+      box-sizing: border-box;
+      height: 22.5px;
+      width: 22.5px;
+      border: 0.5px solid #67758D;
+      background-color: #FFFFFF;
+      border-radius: 50%;
+      padding-left: 4px;
+    }
+  }
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    background-color: #67758D;
+    width: 15px;
+  }
+}
+
+
+/*
+// Drawer
+
+// Colors
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #ddd;
+$gray-300: #ccc;
+$gray-400: #bbb;
+$gray-500: #adb5bd;
+$gray-600: #777;
+$gray-700: #444;
+$gray-800: #373a3c;
+$gray-900: #212529;
+$black: #000;
+
+$body-bg: $white !default;
+$body-color: $gray-900 !default;
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg: ($font-size-base * 1.25) !default;
+$font-size-sm: ($font-size-base * .875) !default;
+
+$spacer-lg: 3rem;
+$spacer-sm: 1.5rem;
+
+$layout-spacer-lg: 3rem;
+$layout-spacer-x: 1.5rem;
+
+$draw-width: 450px;
+
+$box-shadow-lg-default: 0 0.76875rem 2.4875rem rgba($gray-800, .3), 0 1.3375rem 1.70625rem rgba($gray-800, .3), 0 0.55rem 0.53125rem rgba(darken($gray-800, 50%), .05), 0 0.225rem 0.4375rem rgba($gray-800, .3);
+
+$box-shadow-sm: 0 .125rem .25rem rgba($black, .075) !default;
+
+.app-drawer-overlay {
+  position: fixed;
+  height: 0%;
+  width: 0%;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.3);
+  display: block;
+  content: '';
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.app-drawer-wrapper {
+  width: $draw-width;
+  height: 100%;
+  position: fixed;
+  right: -$draw-width;
+  top: 0;
+  transition: all .2s;
+  z-index: 9999;
+}
+
+.drawer-open {
+  .app-drawer-wrapper {
+    right: 0;
+    box-shadow: $box-shadow-lg-default;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  .app-drawer-overlay {
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.drawer-content-wrapper {
+  background: $white;
+  position: relative;
+  height: 100%;
+
+  .drawer-heading {
+    font-size: $font-size-sm;
+    color: $body-color;
+    margin: 0;
+    background: $gray-100;
+    padding: ($layout-spacer-x / 2) $layout-spacer-x;
+    border-bottom: $gray-300 solid 1px;
+    border-top: $gray-300 solid 1px;
+
+    &:first-child {
+      border-top: 0;
+    }
+  }
+
+  .drawer-section {
+    padding: $layout-spacer-x;
+  }
+
+  & > .app-sidebar__heading:first-child {
+    margin-top: 0;
+  }
+}
+
+.drawer-nav-btn {
+  border-radius: 30px;
+  background: $white;
+  position: absolute;
+  right: $layout-spacer-x / 2;
+  top: $layout-spacer-x / 2;
+  padding: ($layout-spacer-x / 3);
+  box-shadow: $box-shadow-sm;
+  z-index: 20;
+
+  .hamburger {
+    margin-top: 4px;
+  }
+}
+*/

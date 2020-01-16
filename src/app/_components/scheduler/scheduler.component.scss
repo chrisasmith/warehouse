@@ -1,0 +1,74 @@
+:host {
+  .scheduler-title {
+    padding-top: 42px;
+    padding-bottom: 56px;
+    font-size: 13px;
+    line-height: 37px;
+    span {
+      height: 29px;
+      width: 433px;
+      color: #67758D;
+    }
+  }
+  .content {
+    .content-item {
+      align-items: center;
+      padding-bottom: 30px;
+      &:last-child {
+        padding-bottom: 89px;
+      }
+      .item-label {
+        height: 20px;
+        width: 45px;
+        opacity: 0.79;
+        color: #637381;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 20px;
+      }
+      .from-group {
+        display: flex;
+        flex-flow: row nowrap;
+
+        border-radius: 0.25rem;
+        border: 1px solid #ced4da;
+        min-height: 36px;
+        padding: 0 0 0 2px;
+        input {
+          padding: 2px 10px;
+          border: 0;
+          outline: none;
+        }
+        .scheduler-select {
+          padding-right: 0;
+          padding-left: 0;
+          border-left: 1px solid #ced4da;
+          border-radius: 0;
+        }
+        ::ng-deep .ng-select .ng-select-container {
+          background-color: #fff;
+          border: 0;
+        }
+      }
+    }
+    >div:last-child {
+      padding-top: 69px;
+    }
+    .btn-container {
+      justify-content: flex-end;
+      .scheduler-btn {
+        width: 100%;
+        justify-content: center;
+        button {
+          color: #fff;
+          height: 38px;
+          border-radius: 6px;
+          background-color: #238FFB;
+          border-color: #238FFB;
+
+          font-size: 16px;	font-weight: 500;	line-height: 22px;
+        }
+      }
+    }
+  }
+}

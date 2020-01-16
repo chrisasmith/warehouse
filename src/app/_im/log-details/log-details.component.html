@@ -1,0 +1,29 @@
+<app-headingtitlenav [heading]="heading" [subheading]="subheading" [page]="page"></app-headingtitlenav>
+<br>
+
+<div class="center-content">
+    <div>
+        <div class="row">
+          <div class="col-md-3">
+            Started: <span class="values"> 10/03/2019 at 003:34:10 AM</span>
+          </div>
+          <div class="col-md-3">
+            End: <span class="values"> 10/03/2019 at 003:45:10 AM</span>
+          </div>
+          <div class="col-md-3">
+            Total Duration: <span class="values"> 10/03/2019 at 00h:11:00s</span>
+          </div>
+          <div class="col-md-3">
+            Run By: <span class="values"> John Doe</span>
+          </div>
+        </div>
+      </div>
+    <br>
+
+  <br>
+
+    <app-data-grid [filterable]="'yes'" [datagrid]="'logdetails'"></app-data-grid>
+    <app-footerrefresh></app-footerrefresh>
+
+
+</div>

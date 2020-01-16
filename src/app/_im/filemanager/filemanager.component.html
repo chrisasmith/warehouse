@@ -1,0 +1,608 @@
+<app-headingtitlenav [heading]="heading" [subheading]="subheading" [page]="'filemanager'" (open)="openModal($event)"></app-headingtitlenav>
+<br>
+<br>
+<main class="center-content">
+    <!-- <div class="container"> -->
+    <!-- Files Manager Section Start -->
+    <!-- File Manager Section Header Start -->
+    <div class="col-12">
+        <div class="files-container-header user-bar clearfix">
+            <h3 class="files-section-heading">All Folders</h3>
+            <div class="user-features-wrapper">
+                <a href="#" class="user-icon user-search-btn">
+                    <i class="fas fa-search"></i>
+                </a>
+
+                <!-- <a (click)="selectView('filelist')" class="user-icon file-list-btn btn-less-margin"><i class="fas fa-th-list active" [ngClass]="{'active': view === 'filelist','inactive': view === 'fileicons'}"></i></a>
+                <a (click)="selectView('fileicons')" class="user-icon file-grid-btn btn-less-margin"><i class="fas fa-th-large inactive" [ngClass]="{'active': view === 'fileicons','inactive': view === 'filelist'}"></i></a> -->
+
+                <div class="btn-group ml-3 mr-3">
+                    <div class="btn-group" ngbDropdown role="group">
+                        <button class="btn btn-outline-active" (click)="selectView('filelist')" [ngClass]="{'btn-outline-active': view === 'filelist','btn-outline-inactive': view === 'fileicons'}">
+                            <i
+                                class="fas fa-th-list active"
+                                [ngClass]="{'active': view === 'filelist','inactive': view === 'fileicons'}"
+                            ></i>
+                        </button>
+                    </div>
+                    <div class="btn-group" ngbDropdown role="group">
+                        <button class="btn btn-outline-inactive" (click)="selectView('fileicons')" [ngClass]="{'btn-outline-active': view === 'fileicons','btn-outline-inactive': view === 'filelist'}">
+                            <i
+                                class="fas fa-th-large inactive"
+                                [ngClass]="{'active': view === 'fileicons','inactive': view === 'filelist'}"
+                            ></i>
+                        </button>
+                    </div>
+                </div>
+                <a class="user-icon user-group-btn">
+                    <i class="fas fa-users"></i>
+                </a>
+                <div class="user-icon user-switch custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="user-switch" checked>
+                    <label class="custom-control-label" for="user-switch"></label>
+                </div>
+                <a class="user-icon user-profile disabled">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- File Manager Section Header End -->
+    <!-- <div class="row acme-section"> -->
+    <!-- File Manager Files Grid Start -->
+    <!-- <div class="row acme-section"> -->
+    <div *ngIf="view === 'fileicons'" class="row acme-section">
+        <div class="col-12">
+            <div class="acme-container files-container">
+                <div class="row">
+                    <div class="folders-slider">
+                        <div class="folders-slider-content" data-items="1,3,5,6" data-slide="1" id="folders-slider-content" data-interval="1000">
+                            <div class="folders-slider-inner">
+                                <div class="item file-grid-item">
+                                    <div class="pad15">
+                                        <div class="file-icon">
+                                            <i class="fas fa-folder file-icon"></i>
+                                        </div>
+                                        <div class="file-name">Private</div>
+                                        <div class="file-meta-container clearfix">
+                                            <div class="file-meta file-meta-size">1MB</div>
+                                            <div class="file-meta file-meta-date">1MB</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item file-grid-item">
+                                    <div class="pad15">
+                                        <div class="file-icon">
+                                            <i class="fas fa-folder-open file-icon"></i>
+                                        </div>
+                                        <div class="file-name">Public</div>
+                                        <div class="file-meta-container clearfix">
+                                            <div class="file-meta file-meta-size">1MB</div>
+                                            <div class="file-meta file-meta-date">1MB</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item file-grid-item">
+                                    <div class="pad15">
+                                        <div class="file-icon">
+                                            <i class="fas fa-folder"></i>
+                                        </div>
+                                        <div class="file-name">Images</div>
+                                        <div class="file-meta-container clearfix">
+                                            <div class="file-meta file-meta-size">1MB</div>
+                                            <div class="file-meta file-meta-date">1MB</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item file-grid-item">
+                                    <div class="pad15">
+                                        <div class="file-icon">
+                                            <i class="fas fa-folder file-icon"></i>
+                                        </div>
+                                        <div class="file-name">Downloads</div>
+                                        <div class="file-meta-container clearfix">
+                                            <div class="file-meta file-meta-size">1MB</div>
+                                            <div class="file-meta file-meta-date">1MB</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item file-grid-item">
+                                    <div class="pad15">
+                                        <div class="file-icon">
+                                            <i class="fas fa-folder file-icon"></i>
+                                        </div>
+                                        <div class="file-name">Shared</div>
+                                        <div class="file-meta-container clearfix">
+                                            <div class="file-meta file-meta-size">1MB</div>
+                                            <div class="file-meta file-meta-date">1MB</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item file-grid-item">
+                                    <div class="pad15">
+                                        <div class="file-icon">
+                                            <i class="fas fa-folder file-icon"></i>
+                                        </div>
+                                        <div class="file-name">Private</div>
+                                        <div class="file-meta-container clearfix">
+                                            <div class="file-meta file-meta-size">1MB</div>
+                                            <div class="file-meta file-meta-date">1MB</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item file-grid-item">
+                                    <div class="pad15">
+                                        <div class="file-icon">
+                                            <i class="fas fa-folder file-icon"></i>
+                                        </div>
+                                        <div class="file-name">Public</div>
+                                        <div class="file-meta-container clearfix">
+                                            <div class="file-meta file-meta-size">1MB</div>
+                                            <div class="file-meta file-meta-date">1MB</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item file-grid-item">
+                                    <div class="pad15">
+                                        <div class="file-icon">
+                                            <i class="fas fa-folder file-icon"></i>
+                                        </div>
+                                        <div class="file-name">Images</div>
+                                        <div class="file-meta-container clearfix">
+                                            <div class="file-meta file-meta-size">1MB</div>
+                                            <div class="file-meta file-meta-date">1MB</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item file-grid-item">
+                                    <div class="pad15">
+                                        <div class="file-icon">
+                                            <i class="fas fa-folder file-icon"></i>
+                                        </div>
+                                        <div class="file-name">Downloads</div>
+                                        <div class="file-meta-container clearfix">
+                                            <div class="file-meta file-meta-size">1MB</div>
+                                            <div class="file-meta file-meta-date">1MB</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item file-grid-item">
+                                    <div class="pad15">
+                                        <div class="file-icon">
+                                            <i class="fas fa-folder file-icon"></i>
+                                        </div>
+                                        <div class="file-name">Shared</div>
+                                        <div class="file-meta-container clearfix">
+                                            <div class="file-meta file-meta-size">1MB</div>
+                                            <div class="file-meta file-meta-date">1MB</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary leftLst">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="btn btn-primary rightLst">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- File Manager Section Header Start -->
+        <div class="col-12">
+            <div class="files-container-header user-bar clearfix">
+                <h3 class="files-section-heading">Public Files</h3>
+            </div>
+        </div>
+        <!-- File Manager Section Header End -->
+
+        <!-- File Manager Files Grid Start -->
+        <div class="files-grid col-12">
+            <div class="acme-container files-container">
+                <div class="row file-grid-row">
+                    <div class="col file-grid-item selected">
+                        <i class="fas fa-check-circle fas-selected"></i>
+                        <div class="file-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="file-name">Contoso_Acme</div>
+                        <div class="file-meta-container clearfix">
+                            <div class="file-meta file-meta-size">1MB</div>
+                            <div class="file-meta file-meta-date">1MB</div>
+                        </div>
+                    </div>
+                    <div class="col file-grid-item">
+                        <div class="file-icon">
+                            <i class="fas fa-file-excel"></i>
+                        </div>
+                        <div class="file-name">Acme_List</div>
+                        <div class="file-meta-container clearfix">
+                            <div class="file-meta file-meta-size">1MB</div>
+                            <div class="file-meta file-meta-date">1MB</div>
+                        </div>
+                    </div>
+                    <div class="col file-grid-item">
+                        <div class="file-icon">
+                            <i class="fas fa-file-word"></i>
+                        </div>
+                        <div class="file-name">Contoso_Acme</div>
+                        <div class="file-meta-container clearfix">
+                            <div class="file-meta file-meta-size">1MB</div>
+                            <div class="file-meta file-meta-date">1MB</div>
+                        </div>
+                    </div>
+                    <div class="col file-grid-item">
+                        <div class="file-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="file-name">Acme_List</div>
+                        <div class="file-meta-container clearfix">
+                            <div class="file-meta file-meta-size">1MB</div>
+                            <div class="file-meta file-meta-date">1MB</div>
+                        </div>
+                    </div>
+                    <div class="col file-grid-item">
+                        <div class="file-icon">
+                            <i class="fas fa-file-excel"></i>
+                        </div>
+                        <div class="file-name">Contoso_Acme</div>
+                        <div class="file-meta-container clearfix">
+                            <div class="file-meta file-meta-size">1MB</div>
+                            <div class="file-meta file-meta-date">1MB</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row file-grid-row">
+                    <div class="col file-grid-item">
+                        <div class="file-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="file-name">Acme_List</div>
+                        <div class="file-meta-container clearfix">
+                            <div class="file-meta file-meta-size">1MB</div>
+                            <div class="file-meta file-meta-date">1MB</div>
+                        </div>
+                    </div>
+                    <div class="col file-grid-item">
+                        <div class="file-icon">
+                            <i class="fas fa-file-word"></i>
+                        </div>
+                        <div class="file-name">Contoso_Acme</div>
+                        <div class="file-meta-container clearfix">
+                            <div class="file-meta file-meta-size">1MB</div>
+                            <div class="file-meta file-meta-date">1MB</div>
+                        </div>
+                    </div>
+                    <div class="col file-grid-item">
+                        <div class="file-icon">
+                            <i class="fas fa-file-excel"></i>
+                        </div>
+                        <div class="file-name">Acme_List</div>
+                        <div class="file-meta-container clearfix">
+                            <div class="file-meta file-meta-size">1MB</div>
+                            <div class="file-meta file-meta-date">1MB</div>
+                        </div>
+                    </div>
+                    <div class="col file-grid-item">
+                        <div class="file-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="file-name">Contoso_Acme</div>
+                        <div class="file-meta-container clearfix">
+                            <div class="file-meta file-meta-size">1MB</div>
+                            <div class="file-meta file-meta-date">1MB</div>
+                        </div>
+                    </div>
+                    <div class="col file-grid-item">
+                        <div class="file-icon">
+                            <i class="fas fa-file-word"></i>
+                        </div>
+                        <div class="file-name">Acme_List</div>
+                        <div class="file-meta-container clearfix">
+                            <div class="file-meta file-meta-size">1MB</div>
+                            <div class="file-meta file-meta-date">1MB</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row file-grid-row">
+                    <div class="col file-grid-item">
+                        <div class="file-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="file-name">Contoso_Acme</div>
+                        <div class="file-meta-container clearfix">
+                            <div class="file-meta file-meta-size">1MB</div>
+                            <div class="file-meta file-meta-date">1MB</div>
+                        </div>
+                    </div>
+                    <div class="col file-grid-item">
+                        <div class="file-icon">
+                            <i class="fas fa-file-excel"></i>
+                        </div>
+                        <div class="file-name">Acme_List</div>
+                        <div class="file-meta-container clearfix">
+                            <div class="file-meta file-meta-size">1MB</div>
+                            <div class="file-meta file-meta-date">1MB</div>
+                        </div>
+                    </div>
+                    <div class="col file-grid-item">
+                        <div class="file-icon">
+                            <i class="fas fa-file-word"></i>
+                        </div>
+                        <div class="file-name">Contoso_Acme</div>
+                        <div class="file-meta-container clearfix">
+                            <div class="file-meta file-meta-size">1MB</div>
+                            <div class="file-meta file-meta-date">1MB</div>
+                        </div>
+                    </div>
+                    <div class="col file-grid-item">
+                        <div class="file-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="file-name">Acme_List</div>
+                        <div class="file-meta-container clearfix">
+                            <div class="file-meta file-meta-size">1MB</div>
+                            <div class="file-meta file-meta-date">1MB</div>
+                        </div>
+                    </div>
+                    <div class="col file-grid-item">
+                        <div class="file-icon">
+                            <i class="fas fa-file-excel"></i>
+                        </div>
+                        <div class="file-name">Contoso_Acme</div>
+                        <div class="file-meta-container clearfix">
+                            <div class="file-meta file-meta-size">1MB</div>
+                            <div class="file-meta file-meta-date">1MB</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row file-grid-row">
+                    <div class="col file-grid-item">
+                        <div class="file-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="file-name">Acme_List</div>
+                        <div class="file-meta-container clearfix">
+                            <div class="file-meta file-meta-size">1MB</div>
+                            <div class="file-meta file-meta-date">1MB</div>
+                        </div>
+                    </div>
+                    <div class="col file-grid-item">
+                        <div class="file-icon">
+                            <i class="fas fa-file-word"></i>
+                        </div>
+                        <div class="file-name">Contoso_Acme</div>
+                        <div class="file-meta-container clearfix">
+                            <div class="file-meta file-meta-size">1MB</div>
+                            <div class="file-meta file-meta-date">1MB</div>
+                        </div>
+                    </div>
+                    <div class="col file-grid-item">
+                        <div class="file-icon">
+                            <i class="fas fa-file-excel"></i>
+                        </div>
+                        <div class="file-name">Acme_List</div>
+                        <div class="file-meta-container clearfix">
+                            <div class="file-meta file-meta-size">1MB</div>
+                            <div class="file-meta file-meta-date">1MB</div>
+                        </div>
+                    </div>
+                    <div class="col file-grid-item"></div>
+                    <div class="col file-grid-item"></div>
+                </div>
+            </div>
+        </div>
+        <!-- File Manager Files Grid End -->
+
+    </div>
+    <!-- </div> -->
+    <div class="row acme-section">
+        <div *ngIf="view === 'filelist' " class="col-12">
+            <div class="configuration-data-grid">
+                <div class="main-card mb-3 card">
+                    <div class="table-responsive">
+                        <div class="table-filter-bar">
+                            <div class="data-grid-search-component">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <div class="data-grid-filter-component" ngbDropdown>
+                                <i ngbDropdownToggle class="fa fa-filter"></i>
+                                <div ngbDropdownMenu class="dropdown-menu-hover-link">
+                                    <h6 class="dropdown-header">Header</h6>
+                                    <button class="dropdown-item">
+                                        <i class="dropdown-icon lnr-inbox"></i>
+                                        <span>Menus</span>
+                                    </button>
+                                    <button class="dropdown-item">
+                                        <i class="dropdown-icon lnr-file-empty"></i>
+                                        <span>Settings</span>
+                                    </button>
+                                    <button class="dropdown-item">
+                                        <i class="dropdown-icon lnr-book"></i>
+                                        <span>Actions</span>
+                                    </button>
+                                    <div class="dropdown-divider"></div>
+                                    <button class="dropdown-item">
+                                        <i class="dropdown-icon lnr-picture"></i>
+                                        <span>Dividers</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="data-grid-dots-component">
+                                <i class="fa fa-ellipsis-h"></i>
+                            </div>
+                        </div>
+                        <table class="align-middle text-truncate mb-0 table table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-left pad-left ">Name</th>
+                                    <th class="text-center">Modified</th>
+                                    <th class="text-center">Modified By</th>
+                                    <th class="text-center">File Size</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-left pad-left ">
+                                        <i class="fas fa-folder-open file-icon"></i> Configurations
+                                    </td>
+                                    <td class="text-center">July 01, 2019 1:18am</td>
+                                    <td class="text-center">
+                                        <img width="40" [routerLink]="['/dashboards/usermanagement']" class="rounded-circle" src="./assets/images/avatars/1.jpg" alt>
+                                        <!-- <p [attr.data-letters]="item.submittedByUser.name | slice:0:2"></p> -->
+                                    </td>
+                                    <td class="text-center">3 Items</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left pad-left ">
+                                        <i class="fas fa-file-word"></i> Server_Info.Doc
+                                    </td>
+                                    <td class="text-center">July 01, 2019 1:18am</td>
+                                    <td class="text-center">
+                                        <img width="40" [routerLink]="['/dashboards/usermanagement']" class="rounded-circle" src="./assets/images/avatars/1.jpg" alt>
+                                        <!-- <p [attr.data-letters]="item.submittedByUser.name | slice:0:2"></p> -->
+                                    </td>
+                                    <td class="text-center">220kb</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left pad-left ">
+                                        <i class="fas fa-file-word"></i> PrivateFiles.doc
+                                    </td>
+                                    <td class="text-center">May 01, 2019 1:18am</td>
+                                    <td class="text-center">
+                                        <img width="40" [routerLink]="['/dashboards/usermanagement']" class="rounded-circle" src="./assets/images/avatars/1.jpg" alt>
+                                        <!-- <p [attr.data-letters]="item.submittedByUser.name | slice:0:2"></p> -->
+                                    </td>
+                                    <td class="text-center">1.3mb</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left pad-left ">
+                                        <i class="fas fa-file-pdf"></i> Note_Available.pdf
+                                    </td>
+                                    <td class="text-center">April 01, 2019 1:18am</td>
+                                    <td class="text-center">
+                                        <img width="40" [routerLink]="['/dashboards/usermanagement']" class="rounded-circle" src="./assets/images/avatars/1.jpg" alt>
+                                        <!-- <p [attr.data-letters]="item.submittedByUser.name | slice:0:2"></p> -->
+                                    </td>
+                                    <td class="text-center">150kb</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <app-footerrefresh></app-footerrefresh>
+        </div>
+    </div>
+    <!-- </div> -->
+    <!-- Files Manager Section End -->
+    <!-- </div> -->
+</main>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        var itemsMainDiv = ('.folders-slider-content');
+        var itemsDiv = ('.folders-slider-inner');
+        var itemWidth = "";
+
+        $('.leftLst, .rightLst').click(function() {
+            var condition = $(this).hasClass("leftLst");
+            if (condition)
+                click(0, this);
+            else
+                click(1, this)
+        });
+
+        ResCarouselSize();
+
+        $(window).resize(function() {
+            ResCarouselSize();
+        });
+
+        //this function define the size of the items
+        function ResCarouselSize() {
+            var incno = 0;
+            var dataItems = ("data-items");
+            var itemClass = ('.item');
+            var id = 0;
+            var btnParentSb = '';
+            var itemsSplit = '';
+            var sampwidth = $(itemsMainDiv).width();
+            var bodyWidth = $('body').width();
+            $(itemsDiv).each(function() {
+                id = id + 1;
+                var itemNumbers = $(this).find(itemClass).length;
+                btnParentSb = $(this).parent().attr(dataItems);
+                itemsSplit = btnParentSb.split(',');
+                $(this).parent().attr("id", "folders-slider-content" + id);
+
+                if (bodyWidth >= 1200) {
+                    incno = itemsSplit[3];
+                    itemWidth = sampwidth / incno;
+                } else if (bodyWidth >= 992) {
+                    incno = itemsSplit[2];
+                    itemWidth = sampwidth / incno;
+                } else if (bodyWidth >= 768) {
+                    incno = itemsSplit[1];
+                    itemWidth = sampwidth / incno;
+                } else {
+                    incno = itemsSplit[0];
+                    itemWidth = sampwidth / incno;
+                }
+                $(this).css({
+                    'transform': 'translateX(0px)',
+                    'width': itemWidth * itemNumbers
+                });
+                $(this).find(itemClass).each(function() {
+                    $(this).outerWidth(itemWidth);
+                });
+
+                $(".leftLst").addClass("over");
+                $(".rightLst").removeClass("over");
+
+            });
+        }
+
+        //this function used to move the items
+        function ResCarousel(e, el, s) {
+            var leftBtn = ('.leftLst');
+            var rightBtn = ('.rightLst');
+            var translateXval = '';
+            var divStyle = $(el + ' ' + itemsDiv).css('transform');
+            var values = divStyle.match(/-?[\d\.]+/g);
+            var xds = Math.abs(values[4]);
+            if (e == 0) {
+                translateXval = parseInt(xds) - parseInt(itemWidth * s);
+                $(el + ' ' + rightBtn).removeClass("over");
+
+                if (translateXval <= itemWidth / 2) {
+                    translateXval = 0;
+                    $(el + ' ' + leftBtn).addClass("over");
+                }
+            } else if (e == 1) {
+                var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
+                translateXval = parseInt(xds) + parseInt(itemWidth * s);
+                $(el + ' ' + leftBtn).removeClass("over");
+
+                if (translateXval >= itemsCondition - itemWidth / 2) {
+                    translateXval = itemsCondition;
+                    $(el + ' ' + rightBtn).addClass("over");
+                }
+            }
+            $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
+        }
+
+        //It is used to get some elements from btn
+        function click(ell, ee) {
+            var Parent = "#" + $(ee).parent().find('.folders-slider-content').attr("id");
+            var slide = $(Parent).attr("data-slide");
+            ResCarousel(ell, Parent, slide);
+        }
+    });
+</script>
+
+<!-- Modal -->
+<app-filemgr *ngIf="modal === 'filemgr'"></app-filemgr>

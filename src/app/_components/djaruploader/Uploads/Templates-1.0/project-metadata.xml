@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+    <artifacts>
+        <artifact>
+            <createdBy id="1">ACTIAN\gcoates</createdBy>
+            <createdDate>2018-10-01T12:28:31.470519-05:00</createdDate>
+            <description>Process sends web service request to REST API via URL and captures web service response in Json format (refactored Robert Gorsuch example), and transfer the responese to a text file.</description>
+            <entry>WebServiceAPI.process</entry>
+            <id>c87a0437-ae00-43d7-b782-cc5f89abb7f6</id>
+            <keywords></keywords>
+            <name>WebServiceAPI</name>
+            <type>Process</type>
+            <updatedBy id="1">ACTIAN\bzhang</updatedBy>
+            <updatedDate>2019-06-04T19:06:06.000-05:00</updatedDate>
+        </artifact>
+        <artifact>
+            <createdBy id="1">ACTIAN\gcoates</createdBy>
+            <createdDate>2018-10-01T12:28:31.470519-05:00</createdDate>
+            <description>Process sends web service request to REST API via URL and captures web service response in Json format (refactored Robert Gorsuch example), and transfer the responese to a text file.</description>
+            <entry>WebServiceAPI.process.rtc</entry>
+            <id>d3ad3369-4b70-4e68-a60c-14a0cbccb970</id>
+            <keywords></keywords>
+            <name>WebServiceAPI</name>
+            <type>Configuration</type>
+            <updatedBy id="1">ACTIAN\bzhang</updatedBy>
+            <updatedDate>2019-06-04T19:06:06.000-05:00</updatedDate>
+        </artifact>
+        <artifact>
+            <createdBy id="1">ACTIAN\gcoates</createdBy>
+            <createdDate>2018-10-02T09:58:09.529911-05:00</createdDate>
+            <description></description>
+            <entry>WebServiceAPI.map</entry>
+            <id>e137492f-c779-46c6-96f0-5acd8d28c4fe</id>
+            <keywords></keywords>
+            <name>WebServiceAPI</name>
+            <type>Map</type>
+            <updatedBy id="1">ACTIAN\bzhang</updatedBy>
+            <updatedDate>2019-06-04T19:06:06.000-05:00</updatedDate>
+        </artifact>
+        <artifact>
+            <createdBy id="1">ACTIAN\gcoates</createdBy>
+            <createdDate>2018-10-02T09:58:09.529911-05:00</createdDate>
+            <description></description>
+            <entry>WebServiceAPI.map.rtc</entry>
+            <id>1379aaa3-7f52-45e7-a0f8-05f53cfaf694</id>
+            <keywords></keywords>
+            <name>WebServiceAPI</name>
+            <type>Configuration</type>
+            <updatedBy id="1">ACTIAN\bzhang</updatedBy>
+            <updatedDate>2019-06-04T19:06:06.000-05:00</updatedDate>
+        </artifact>
+    </artifacts>
+    <metadata>
+        <createdBy id="1">ACTIAN\kvyvial</createdBy>
+        <createdDate>2019-09-09T13:47:05.398798-05:00</createdDate>
+        <id>adab3c32-cc5e-4df6-9902-9bdd0dc9c1fe</id>
+        <inactive>false</inactive>
+        <keywords></keywords>
+        <name>Templates</name>
+        <updatedBy id="1">ACTIAN\kvyvial</updatedBy>
+        <updatedDate>2019-09-09T13:47:07.18-05:00</updatedDate>
+        <version>1.0</version>
+    </metadata>
+    <references xmlns:xlink="http://www.w3.org/1999/xlink"/>
+</project>

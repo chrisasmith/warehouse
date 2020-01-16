@@ -1,0 +1,43 @@
+<div class="content-heading">
+  <div class="content-heading-subheading">
+        <!-- Integration > Configuration -->
+        {{subheading}}      
+	</div>
+  <div class="content-heading-main">
+        <!-- Configurations -->
+        {{heading}}
+      <ul id="header-nav-ul" >
+        <ng-container *ngIf="page != 'logdetails'">
+          <li class="header-nav-links"><a [routerLink]="['/im/configurations']">Configurations </a></li>
+          <li class="header-nav-links"><a [routerLink]="['/im/templates']" >Templates</a></li>
+          <li class="header-nav-links"><a [routerLink]="['/im/macros']" >Macros</a></li>
+          <li class="header-nav-links"><a [routerLink]="['/im/filemanager']">Files Manager</a></li>
+          <li class="header-nav-links"> 
+            <button [routerLink]="['/dashboards/clusters/create-new']" *ngIf="page === 'configurations'" class="mb-2 mr-2 btn-pill btn btn-info btn-icon">
+              <i class="lnr-plus-circle btn-icon-wrapper"> </i>
+              Create Configuration
+            </button>
+          </li>
+          <li class="header-nav-links" *ngIf="page === 'filemanager'" > 
+              <button class="mb-2 mr-2 btn-pill btn btn-info btn-icon"(click)="openModal('filemgr')">
+                  <i class="lnr-plus-circle btn-icon-wrapper"> </i>
+                  Upload Folders / Files
+              </button>
+            </li>
+          <li class="header-nav-links" *ngIf="page === 'templates'"> 
+            <button [routerLink]="['/dashboards/clusters/create-new-template']" class="mb-2 mr-2 btn-pill btn btn-info btn-icon">
+              <i class="lnr-plus-circle btn-icon-wrapper"> </i>
+              Create Template
+            </button>
+          </li>
+        </ng-container>
+        <li class="header-nav-links" *ngIf="page === 'logdetails'"> 
+            <button [routerLink]="['/dashboards/clusters/create-new-template']" class="mb-2 mr-2 btn-pill btn btn-info btn-icon">
+              <i class="lnr-download btn-icon-wrapper"> </i>
+              Download Log File
+            </button>
+          </li>
+      </ul>
+  </div>
+  
+</div>

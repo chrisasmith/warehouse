@@ -1,0 +1,27 @@
+{
+  "entryPoint" : "WebServiceAPI.process",
+  "logLevel" : "DEBUG",
+  "logfileName" : "$(LOGS)/WebServiceAPI.log",
+  "flushLog" : false,
+  "clearLog" : true,
+  "isLogging" : true,
+  "useEventLog" : false,
+  "macroSetNames" : [ "T_WEB_SERVICE_API" ],
+  "profiling" : false,
+  "macroDefinitions" : [ ],
+  "transformOptions" : { },
+  "datasetConfigs" : {
+    "namedDatasets" : [ ],
+    "namedSessions" : [ ]
+  },
+  "profile_mask" : 65535,
+  "profile_output_file" : "C:\\dcsamples_workspace\\Templates\\WebServiceAPI\\Output\\profile.out",
+  "artifact_metadata" : {
+    "description" : "Process sends web service request to REST API via URL and captures web service response in Json format (refactored Robert Gorsuch example), and transfer the responese to a text file.",
+    "creator" : "ACTIAN\\gcoates",
+    "author" : "ACTIAN\\bzhang",
+    "version" : "1.73",
+    "date_created" : "2018-10-01T12:28:31.470519-05:00",
+    "date_modified" : "2019-06-03T14:49:35.562-05:00"
+  }
+}

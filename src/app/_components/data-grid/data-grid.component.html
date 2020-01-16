@@ -1,0 +1,522 @@
+<div class="data-grid">
+    <div class="main-card mb-3 card">
+        <div class="data-grid-header">
+          <div class="data-grid-title-left" *ngIf="datagrid === 'logdetails'">
+            7 Logs Items
+          </div>
+
+          <div class="data-grid-calendar-component" *ngIf="dateRange ==='yes'">
+            <button class="btn-date-range"> 
+              <span class="calendar-date-range"> May 22 - May 28,2019 </span> 
+            </button>
+          </div>
+          <div class="table-filter-bar">
+            <div class="data-applied-filters" *ngIf="filterable ==='yes'">
+              <span class="filter-total-count">4</span>
+              <span>Jobs</span>
+              <div class="data-applied-filters-pills">
+                  <button class="mb-2 mr-2 btn-transition btn-pill btn btn-outline-light"><span class="applied-filter-count">0</span> Running</button>
+                  <button class="mb-2 mr-2 btn-transition btn-pill btn btn-outline-light"><span class="applied-filter-count">0</span> Errors</button>
+                  <button class="mb-2 mr-2 btn-transition btn-pill btn btn-outline-light"><span class="applied-filter-count">0</span> Finished</button>
+              </div>
+            </div>
+              <div class="data-grid-search-component" style="
+              padding-top: 0px;">
+                <div class="searchBox">
+                    <input class="searchInput"type="text" name="" placeholder="Search">
+                    <button class="searchButton" href="#">
+                        <i class="material-icons">
+                            search
+                        </i>
+                    </button>
+                </div>
+              </div>
+              <div class="data-grid-filter-component" ngbDropdown> 
+                  <i ngbDropdownToggle class="fa fa-filter"></i>
+                  <div ngbDropdownMenu class="dropdown-menu-hover-link">
+                    <h6 class="dropdown-header">Filter By</h6>
+                    <button class="dropdown-item"><span>Status</span></button>
+                    <button class="dropdown-item"><span>Template Used</span></button>
+                    <button class="dropdown-item"><span>Owner</span></button>
+                  </div>
+              </div>
+              <div class="data-grid-menu-component">
+                  <i class="fa fa-ellipsis-h"></i>
+              </div>
+          </div>
+            
+        </div>
+        <div class="table-responsive">
+          <table class="align-middle text-truncate mb-0 table table-hover">
+            <thead>
+
+              <tr *ngIf="datagrid === 'logdetails'" >
+                  <th style="width:100px;">Start Date & Time</th>
+                  <th style="width:180px;">Return Code</th>
+                  <th>Details</th>
+                  <th class="log-action"><i class="fa fa-plus-square" style="font-size: 1.5em;"></i></th>
+              </tr>
+
+              <tr *ngIf="datagrid === 'configuration'">
+                <th class="text-center"></th>
+                <th class="text-center">Start</th>
+                <th class="text-center">Configuration</th>
+                <th class="text-center">Template Used</th>
+                <th class="text-center">Owner</th>
+                <th class="text-center">Status</th>
+                <th class="text-center">Duration</th>
+                <th class="text-center">Log</th>
+              </tr>
+
+              <tr *ngIf="datagrid === 'im'">
+                <th ></th>
+                <th >Start</th>
+                <th >Configuration</th>
+                <th >Template Used</th>
+                <th >Owner</th>
+                <th >Status</th>
+                <th >Duration</th>
+                <th >Log</th>
+              </tr>
+
+              <tr *ngIf="datagrid === 'configurations'">
+                  <th class="text-center">Configuration</th>
+                  <th class="text-center">Template Used</th>
+                  <th class="text-center">Next Job</th>
+                  <th class="text-center">Owner</th>
+                  <th class="text-center">Active</th>
+                  <th class="text-center">Action</th>
+                </tr>
+
+              <tr *ngIf="datagrid === 'permissions'">
+                <th class="text-center">User</th>
+                <th >Email Notification</th>
+                <th >Write</th>
+                <th >Run</th>
+              </tr>
+              
+              <tr *ngIf="datagrid === 'macrostab'">
+                  <th>Name of Macro</th>
+                  <th>Value</th>
+              </tr>
+
+              <tr *ngIf="datagrid === 'jobs'">
+                  <th class="table-title">Start Time</th>
+                  <th class="table-title">Job ID</th>
+                  <th class="table-title">Status</th>
+                  <th class="table-title">Duration</th>
+                  <th class="table-title">Log</th>
+              </tr>
+
+              <tr *ngIf="datagrid === 'files'">
+                  <th class="table-title">Name</th>
+                  <th class="table-title">Date Uploaded</th>
+              </tr>
+              
+            </thead>
+            <tbody>
+              <!-- Log Details -->
+                <tr *ngIf="datagrid === 'logdetails'" >
+                    <td>Oct 03, 2019  03:34:10</td>
+                    <td class="return-code" >23432</td>
+                    <td (click)="longText = !longText">
+                      ### Owner: Actian Corporation ...Read More:
+                      <div *ngIf="longText">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <br>
+                          magna aliqua. Nulla aliquet porttitor lacus luctus. Sed enim ut sem viverra aliquet eget sit amet tellus.   <br>
+                          Fames ac turpis egestas integer eget aliquet nibh. In vitae turpis massa sed. Congue quisque egestas diam  <br>
+                          in arcu cursus euismod. Est velit egestas dui id. Faucibus nisl tincidunt eget nullam. Sed odio morbi quis <br>
+                          commodo odio aenean sed adipiscing. Fusce id velit ut tortor pretium viverra suspendisse. Malesuada nunc <br>
+                          vel risus commodo viverra. Amet commodo nulla facilisi nullam vehicula ipsum a. Dolor sit amet  <br>
+                          consectetur adipiscing elit ut aliquam purus. Hac habitasse platea dictumst vestibulum.  <br>
+                          Neque laoreet suspendisse interdum consectetur libero id faucibus. Sit amet justo donec enim diam. <br>
+                      </div>
+                    </td>
+                    <td><i class="fa fa-angle-down" style="font-size: 1.5em;"></i></td>
+                </tr>
+                <tr *ngIf="datagrid === 'logdetails'" >
+                    <td>Oct 03, 2019  03:34:10</td>
+                    <td class="return-code" >23432</td>
+                    <td>### Owner: Actian Corporation</td>
+                    <td><i class="fa fa-angle-down" style="font-size: 1.5em;"></i></td>
+                </tr>
+                <tr *ngIf="datagrid === 'logdetails'" >
+                    <td>Oct 03, 2019  03:34:10</td>
+                    <td class="return-code" >23432</td>
+                    <td>### Owner: Actian Corporation</td>
+                    <td><i class="fa fa-angle-down" style="font-size: 1.5em;"></i></td>
+                </tr>
+                <tr *ngIf="datagrid === 'logdetails'" >
+                    <td>Oct 03, 2019  03:34:10</td>
+                    <td class="return-code" >23432</td>
+                    <td>### Owner: Actian Corporation</td>
+                    <td><i class="fa fa-angle-down" style="font-size: 1.5em;"></i></td>
+                </tr>
+                <tr *ngIf="datagrid === 'logdetails'" >
+                    <td>Oct 03, 2019  03:34:10</td>
+                    <td class="return-code" >23432</td>
+                    <td>### Owner: Actian Corporation</td>
+                    <td><i class="fa fa-angle-down" style="font-size: 1.5em;"></i></td>
+                </tr>
+                <tr *ngIf="datagrid === 'logdetails'" >
+                    <td>Oct 03, 2019  03:34:10</td>
+                    <td class="return-code" >23432</td>
+                    <td>### Owner: Actian Corporation</td>
+                    <td><i class="fa fa-angle-down" style="font-size: 1.5em;"></i></td>
+                </tr>
+                <tr *ngIf="datagrid === 'logdetails'" >
+                    <td>Oct 03, 2019  03:34:10</td>
+                    <td class="return-code" >23432</td>
+                    <td>### Owner: Actian Corporation</td>
+                    <td><i class="fa fa-angle-down" style="font-size: 1.5em;"></i></td>
+                </tr>
+                <tr *ngIf="datagrid === 'logdetails'" >
+                    <td>Oct 03, 2019  03:34:10</td>
+                    <td class="return-code" >23432</td>
+                    <td>### Owner: Actian Corporation</td>
+                    <td><i class="fa fa-angle-down" style="font-size: 1.5em;"></i></td>
+                </tr>
+                <tr *ngIf="datagrid === 'logdetails'" >
+                    <td>Oct 03, 2019  03:34:10</td>
+                    <td class="return-code-orange">23432 <span class="return-code-circle"><i class="fa fa-circle"></i></span></td>
+                    <td>### Owner: Actian Corporation</td>
+                    <td><i class="fa fa-angle-down" style="font-size: 1.5em;"></i></td>
+                </tr>
+                <tr *ngIf="datagrid === 'logdetails'" >
+                    <td>Oct 03, 2019  03:34:10</td>
+                    <td class="return-code">23432</td>
+                    <td>### Owner: Actian Corporation</td>
+                    <td><i class="fa fa-angle-down" style="font-size: 1.5em;"></i></td>
+                </tr>
+
+
+              <div *ngIf="datagrid === 'configuration'">
+                <tr  *ngFor="let item of items; let i = index">
+                  <td class="text-center"></td>
+                  <td class="text-center">May 22, 2019 1:18am</td>
+                  <td class="text-center">John's Config</td>
+                  <td class="text-center">Salesforce Account to Net...</td>
+                  <td class="text-center">test</td>
+                  <td class="text-center">Error</td>
+                  <td class="text-center">12h : 01m: 08s</td>
+                  <td class="text-center">
+                    <i class="fa fa-file info"></i>
+                  </td>
+                </tr>
+              </div>
+
+              <tr *ngIf="datagrid === 'im'">
+                  <td ><input type="checkbox" id="delete" name="delete"></td>
+                  <td >May 22, 2019 1:18am</td>
+                  <td >John's Config</td>
+                  <td >Salesforce Account to Net...</td>
+                  <td >test</td>
+                  <td >Error</td>
+                  <td >12h : 01m: 08s</td>
+                  <td > <a href="#" ><i class="fa fa-file info"></i></a> </td>
+              </tr>
+              <tr *ngIf="datagrid === 'im'">
+                <td ><input type="checkbox" id="delete" name="delete"></td>
+                <td >May 22, 2019 1:18am</td>
+                <td >John's Config</td>
+                <td >Salesforce Account to Net...</td>
+                <td >test</td>
+                <td >Error</td>
+                <td >12h : 01m: 08s</td>
+                <td > <a href="#" ><i class="fa fa-file info"></i></a> </td>
+            </tr>
+            <tr *ngIf="datagrid === 'im'">
+              <td ><input type="checkbox" id="delete" name="delete"></td>
+              <td >May 22, 2019 1:18am</td>
+              <td >John's Config</td>
+              <td >Salesforce Account to Net...</td>
+              <td >test</td>
+              <td >Error</td>
+              <td >12h : 01m: 08s</td>
+              <td > <a href="#" ><i class="fa fa-file info"></i></a> </td>
+          </tr>
+          <tr *ngIf="datagrid === 'im'">
+            <td ><input type="checkbox" id="delete" name="delete"></td>
+            <td >May 22, 2019 1:18am</td>
+            <td >John's Config</td>
+            <td >Salesforce Account to Net...</td>
+            <td >test</td>
+            <td >Error</td>
+            <td >12h : 01m: 08s</td>
+            <td > <a href="#" ><i class="fa fa-file info"></i></a> </td>
+        </tr>
+        <tr *ngIf="datagrid === 'im'">
+          <td ><input type="checkbox" id="delete" name="delete"></td>
+          <td >May 22, 2019 1:18am</td>
+          <td >John's Config</td>
+          <td >Salesforce Account to Net...</td>
+          <td >test</td>
+          <td >Error</td>
+          <td >12h : 01m: 08s</td>
+          <td > <a href="#" ><i class="fa fa-file info"></i></a> </td>
+      </tr>
+      <tr *ngIf="datagrid === 'im'">
+        <td ><input type="checkbox" id="delete" name="delete"></td>
+        <td >May 22, 2019 1:18am</td>
+        <td >John's Config</td>
+        <td >Salesforce Account to Net...</td>
+        <td >test</td>
+        <td >Error</td>
+        <td >12h : 01m: 08s</td>
+        <td > <a href="#" ><i class="fa fa-file info"></i></a> </td>
+    </tr>
+
+
+              <tr *ngIf="datagrid === 'configurations'">
+                  <td class="text-center" [routerLink]="['/im/configurations/summary']">Acme Config</td>
+                  <td class="text-center">Salesforce Account to Ne...</td>
+                  <td class="text-center">July 01, 2019</td>
+                  <td class="text-center" style="width: 80px;"> <img width="40" [routerLink]="['/dashboards/usermanagement']" class="rounded-circle" src="./assets/images/avatars/1.jpg" alt=""></td>
+                  <td class="text-center">
+                      <div class="custom-control custom-switch">
+                          <input type="checkbox" class="custom-control-input" id="config-switch" checked="">
+                          <label class="custom-control-label" for="config-switch"></label>
+                      </div>
+                  </td>
+                  <td class="text-center">
+
+                      <div class="mb-2 mr-2 btn-group" ngbDropdown>
+                          <button class="btn btn-info">SCHEDULE</button>
+                          <button type="button" ngbDropdownToggle class="dropdown-toggle-split btn btn-info"><span class="sr-only">Toggle Dropdown</span></button>
+                          <div ngbDropdownMenu>
+                              <button class="dropdown-item">Menus</button>
+                              <button class="dropdown-item">Settings</button>
+                          </div>
+                      </div>
+
+                  </td>
+              </tr>
+              <tr *ngIf="datagrid === 'configurations'">
+                  <td class="text-center" [routerLink]="['/im/configurations/summary']">Acme Config</td>
+                  <td class="text-center">Salesforce Account to Ne...</td>
+                  <td class="text-center">July 01, 2019</td>
+                  <td class="text-center" style="width: 80px;"> <img width="40" [routerLink]="['/dashboards/usermanagement']" class="rounded-circle" src="./assets/images/avatars/1.jpg" alt=""></td>
+                  <td class="text-center">
+                      <div class="custom-control custom-switch">
+                          <input type="checkbox" class="custom-control-input" id="config-switch" checked="">
+                          <label class="custom-control-label" for="config-switch"></label>
+                      </div>
+                  </td>
+                  <td class="text-center">
+
+                      <div class="mb-2 mr-2 btn-group" ngbDropdown>
+                          <button class="btn btn-info">SCHEDULE</button>
+                          <button type="button" ngbDropdownToggle class="dropdown-toggle-split btn btn-info"><span class="sr-only">Toggle Dropdown</span></button>
+                          <div ngbDropdownMenu>
+                              <button class="dropdown-item">Menus</button>
+                              <button class="dropdown-item">Settings</button>
+                          </div>
+                      </div>
+
+                  </td>
+              </tr>
+              <tr *ngIf="datagrid === 'configurations'">
+                  <td class="text-center" [routerLink]="['/im/configurations/summary']">Acme Config</td>
+                  <td class="text-center">Salesforce Account to Ne...</td>
+                  <td class="text-center">July 01, 2019</td>
+                  <td class="text-center" style="width: 80px;"> <img width="40" [routerLink]="['/dashboards/usermanagement']" class="rounded-circle" src="./assets/images/avatars/1.jpg" alt=""></td>
+                  <td class="text-center">
+                      <div class="custom-control custom-switch">
+                          <input type="checkbox" class="custom-control-input" id="config-switch" checked="">
+                          <label class="custom-control-label" for="config-switch"></label>
+                      </div>
+                  </td>
+                  <td class="text-center">
+
+                      <div class="mb-2 mr-2 btn-group" ngbDropdown>
+                          <button class="btn btn-info">SCHEDULE</button>
+                          <button type="button" ngbDropdownToggle class="dropdown-toggle-split btn btn-info"><span class="sr-only">Toggle Dropdown</span></button>
+                          <div ngbDropdownMenu>
+                              <button class="dropdown-item">Menus</button>
+                              <button class="dropdown-item">Settings</button>
+                          </div>
+                      </div>
+
+                  </td>
+              </tr>
+              <tr *ngIf="datagrid === 'configurations'">
+                  <td class="text-center" [routerLink]="['/im/configurations/summary']">Acme Config</td>
+                  <td class="text-center">Salesforce Account to Ne...</td>
+                  <td class="text-center">July 01, 2019</td>
+                  <td class="text-center" style="width: 80px;"> <img width="40" [routerLink]="['/dashboards/usermanagement']" class="rounded-circle" src="./assets/images/avatars/1.jpg" alt=""></td>
+                  <td class="text-center">
+                      <div class="custom-control custom-switch">
+                          <input type="checkbox" class="custom-control-input" id="config-switch" checked="">
+                          <label class="custom-control-label" for="config-switch"></label>
+                      </div>
+                  </td>
+                  <td class="text-center">
+
+                      <div class="mb-2 mr-2 btn-group" ngbDropdown>
+                          <button class="btn btn-info">SCHEDULE</button>
+                          <button type="button" ngbDropdownToggle class="dropdown-toggle-split btn btn-info"><span class="sr-only">Toggle Dropdown</span></button>
+                          <div ngbDropdownMenu>
+                              <button class="dropdown-item">Menus</button>
+                              <button class="dropdown-item">Settings</button>
+                          </div>
+                      </div>
+
+                  </td>
+              </tr>
+              <tr *ngIf="datagrid === 'configurations'">
+                  <td class="text-center" [routerLink]="['/im/configurations/summary']">Acme Config</td>
+                  <td class="text-center">Salesforce Account to Ne...</td>
+                  <td class="text-center">July 01, 2019</td>
+                  <td class="text-center" style="width: 80px;"> <img width="40" [routerLink]="['/dashboards/usermanagement']" class="rounded-circle" src="./assets/images/avatars/1.jpg" alt=""></td>
+                  <td class="text-center">
+                      <div class="custom-control custom-switch">
+                          <input type="checkbox" class="custom-control-input" id="config-switch" checked="">
+                          <label class="custom-control-label" for="config-switch"></label>
+                      </div>
+                  </td>
+                  <td class="text-center">
+
+                      <div class="mb-2 mr-2 btn-group" ngbDropdown>
+                          <button class="btn btn-info">SCHEDULE</button>
+                          <button type="button" ngbDropdownToggle class="dropdown-toggle-split btn btn-info"><span class="sr-only">Toggle Dropdown</span></button>
+                          <div ngbDropdownMenu>
+                              <button class="dropdown-item">Menus</button>
+                              <button class="dropdown-item">Settings</button>
+                          </div>
+                      </div>
+
+                  </td>
+              </tr>
+              <tr *ngIf="datagrid === 'configurations'">
+                  <td class="text-center" [routerLink]="['/im/configurations/summary']">Acme Config</td>
+                  <td class="text-center">Salesforce Account to Ne...</td>
+                  <td class="text-center">July 01, 2019</td>
+                  <td class="text-center" style="width: 80px;"> <img width="40" [routerLink]="['/dashboards/usermanagement']" class="rounded-circle" src="./assets/images/avatars/1.jpg" alt=""></td>
+                  <td class="text-center">
+                      <div class="custom-control custom-switch">
+                          <input type="checkbox" class="custom-control-input" id="config-switch" checked="">
+                          <label class="custom-control-label" for="config-switch"></label>
+                      </div>
+                  </td>
+                  <td class="text-center">
+
+                      <div class="mb-2 mr-2 btn-group" ngbDropdown>
+                          <button class="btn btn-info">SCHEDULE</button>
+                          <button type="button" ngbDropdownToggle class="dropdown-toggle-split btn btn-info"><span class="sr-only">Toggle Dropdown</span></button>
+                          <div ngbDropdownMenu>
+                              <button class="dropdown-item">Menus</button>
+                              <button class="dropdown-item">Settings</button>
+                          </div>
+                      </div>
+
+                  </td>
+              </tr>
+
+              <tr *ngIf="datagrid === 'permissions'">
+                <td class="text-center">Joel@famzpr.com</td>
+                <td ><input type="checkbox" id="delete" name="delete"></td>
+                <td ><input type="checkbox" id="delete" name="delete"></td>
+                <td ><input type="checkbox" id="delete" name="delete"></td>
+              </tr>
+              <tr *ngIf="datagrid === 'permissions'">
+                  <td class="text-center">Joel@famzpr.com</td>
+                  <td ><input type="checkbox" id="delete" name="delete"></td>
+                  <td ><input type="checkbox" id="delete" name="delete"></td>
+                  <td ><input type="checkbox" id="delete" name="delete"></td>
+                </tr>
+                <tr *ngIf="datagrid === 'permissions'">
+                    <td class="text-center">Joel@famzpr.com</td>
+                    <td ><input type="checkbox" id="delete" name="delete"></td>
+                    <td ><input type="checkbox" id="delete" name="delete"></td>
+                    <td ><input type="checkbox" id="delete" name="delete"></td>
+                  </tr>
+              <tr *ngIf="datagrid === 'macrostab'">
+                <td>ABC Macro</td>
+                <td>
+                  <span class="macros-lock"><i class="fas fa-unlock"></i></span>
+                  <span class="macros-value">**********</span>
+                  <span class="macros-minus"><i class="fas fa-minus-circle"></i></span>
+                </td>
+              </tr>
+
+              <tr *ngIf="datagrid === 'macrostab'">
+                  <td>ABC Macro</td>
+                  <td>
+                    <span class="macros-lock"><i class="fas fa-unlock"></i></span>
+                    <span class="macros-value">**********</span>
+                    <span class="macros-minus"><i class="fas fa-minus-circle"></i></span>
+                  </td>
+                </tr>
+
+                <tr *ngIf="datagrid === 'macrostab'">
+                    <td>ABC Macro</td>
+                    <td>
+                      <span class="macros-lock"><i class="fas fa-unlock"></i></span>
+                      <span class="macros-value">**********</span>
+                      <span class="macros-minus"><i class="fas fa-minus-circle"></i></span>
+                    </td>
+                  </tr>
+
+                  <tr *ngIf="datagrid === 'macrostab'">
+                      <td>ABC Macro</td>
+                      <td>
+                        <span class="macros-lock"><i class="fas fa-unlock"></i></span>
+                        <span class="macros-value">**********</span>
+                        <span class="macros-minus"><i class="fas fa-minus-circle"></i></span>
+                      </td>
+                    </tr>
+
+              <tr *ngIf="datagrid === 'jobs'">
+                  <td > May 01, 2019 1:18am</td>
+                  <td > 761g2gqwibq7bhwbhbawubw78abjadjb7w8h</td>
+                  <td > Error</td>
+                  <td > 12h : 01m : 08s</td>
+                  <td ><a href="#" ><i class="fas fa-file-medical-alt"></i> </a> </td>
+              </tr>
+              <tr *ngIf="datagrid === 'jobs'">
+                  <td > May 01, 2019 1:18am</td>
+                  <td > 761g2gqwibq7bhwbhbawubw78abjadjb7w8h</td>
+                  <td > Error</td>
+                  <td > 12h : 01m : 08s</td>
+                  <td ><a href="#" ><i class="fas fa-file-medical-alt"></i> </a> </td>
+              </tr>
+              <tr *ngIf="datagrid === 'jobs'">
+                  <td > May 01, 2019 1:18am</td>
+                  <td > 761g2gqwibq7bhwbhbawubw78abjadjb7w8h</td>
+                  <td > Error</td>
+                  <td > 12h : 01m : 08s</td>
+                  <td ><a href="#" ><i class="fas fa-file-medical-alt"></i> </a> </td>
+              </tr>
+              <tr *ngIf="datagrid === 'jobs'">
+                  <td > May 01, 2019 1:18am</td>
+                  <td > 761g2gqwibq7bhwbhbawubw78abjadjb7w8h</td>
+                  <td > Error</td>
+                  <td > 12h : 01m : 08s</td>
+                  <td ><a href="#" ><i class="fas fa-file-medical-alt"></i> </a> </td>
+              </tr>
+
+
+
+              
+              <tr *ngIf="datagrid === 'files'">
+                  <td class="macro-name">AcmePackagev3.djar</td>
+                  <td class="macro-value"> May 01, 2019 1:18am</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="data-grid-footer">
+            <div class="footer-label">Showing</div>
+          <div class="footer-select-filter">
+              <div class="d-inline-block" ngbDropdown>
+                <button type="button" ngbDropdownToggle class="mb-2 mr-2 btn btn-light btn-block"> 10 </button>
+                <div ngbDropdownMenu>
+                    <button class="dropdown-item">15</button>
+                </div>
+              </div>
+          </div>
+          <div class="footer-total">of <span> 18 </span> Items</div>
+        </div>
+    </div>
+</div>
+

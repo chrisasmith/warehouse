@@ -1,0 +1,40 @@
+
+
+
+<div class="center-content">
+    <div class="content-heading-subheading">
+        Teams & Groups
+      </div>
+      <div class="content-heading-main">
+        User Management 
+        <ul id="header-nav-ul">
+          <li class="header-nav-links"> 
+            <button class="mb-2 mr-2 btn-pill btn btn-info btn-icon"><i class="lnr-plus-circle btn-icon-wrapper"> </i>Add User</button>
+          </li>
+      </ul>
+      </div>
+      
+    <br><br>
+
+  <div class="row" *ngFor="let item of [].constructor(12); let i = index">
+    <div class="col-md-12">
+      <div class="main-card mb-3 card userCard">
+        <div class="card-body">
+          
+          <table class="userItems">
+            <tr>
+              <td class="text-center" style="width: 80px;">  <img width="40" class="rounded-circle" src="./assets/images/avatars/1.jpg" alt=""></td>
+              <td class="userName">Jeena McKingsey</td>
+              <td class="userTitle">Operator</td>
+              <td class="userEmail">jeena.m@gmail.com</td>
+              <td class="userPhone">123-456-7890</td>
+              <td ><button class="btn btn-info btnUserInfoRow">EMPLOYEE</button></td>
+              <td>...</td>
+            </tr>
+          </table>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

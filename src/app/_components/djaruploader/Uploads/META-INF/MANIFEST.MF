@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Process: Templates-1.0/WebServiceAPI/WebServiceAPI.process
+Main-Project-Dir: Templates-1.0

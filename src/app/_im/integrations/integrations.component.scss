@@ -1,0 +1,184 @@
+.card-cluster {		
+       width: 1021px;	
+       margin-left: auto;
+       margin-right: auto;
+       border-radius: 5px;	
+       background-color: #FFFFFF;	
+       box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1);
+       padding: 40px;
+       top:75px;
+       position: relative;
+}
+
+.card-cluster-header {
+       position: relative;
+       font-size: 33px;
+       font-weight: 500;
+       text-align: center;
+       margin-bottom: 40px;
+       color: #238FFB;
+       margin-top: 25px;
+}
+
+.cluster-form {
+       width: 515px;
+       margin-left: auto;
+       margin-right: auto;
+}
+
+.form-group {
+       margin-bottom: 2rem;
+}
+   
+.form-control-lg {
+       font-size: 14px;
+}
+
+.bottom-card-section{
+       text-align: center;
+}
+
+.bottom-card-section a{
+       font-size: 20px;
+       color: #238FFB;
+       font-weight: 500;
+}
+
+.bottom-card-section h3 {
+       font-size:20px;
+       font-weight: 500;
+}
+
+.bottom-card-section h1 {
+       font-size:36px;
+       color: #323C47;
+       font-weight: 500;
+       padding-bottom: 24px;
+}
+
+.continue{
+       padding-top: 50px;
+}
+
+.continue button {
+       text-transform: uppercase;
+       color: lightgray;
+       font-size: 17px;
+       font-weight: bold;
+       width: 232px;
+}
+
+.header-bar-title {
+       color: #424B5F;
+       font-size: 24px;
+       font-weight: 500;
+       text-align: left;
+}
+
+.table thead th {
+       font-size: 14px;
+       color: #238FFB;
+       padding-top:52px;
+       padding-bottom:29px;
+   }
+
+tr:nth-child(even) {background:rgba(246,249,252,0.66)}
+
+.hrline {
+    background-color: #DEE5EF;
+    color: #DEE5EF;
+    margin-bottom:10px;
+}
+
+.configuration-data-grid {
+       margin-top: 30px;
+}
+
+
+.last-refreshed {
+       float: right;
+}
+
+ul {
+      
+}
+#header-nav-ul {
+       float: right !important;
+       margin-left:auto !important;
+       padding:0 !important;
+       list-style-type: none !important;
+}
+li  {
+       display: inline-block;
+       margin-left: 3em;
+       font-size: 18px;
+}
+
+li a:hover {
+       text-decoration: none;
+       color: gray;
+}
+
+li a {
+       color: #98A9BC;
+}
+
+li button {
+       font-size:14px;
+       font-weight: bold;
+}
+
+.counters-tab{
+       right: 18%;
+       position: absolute;
+       margin-bottom: 10px;
+       margin-top: 15px;
+}
+
+.jobs-total {	
+       left: -19%;
+       float: right;
+       position: absolute;
+       margin-top: 3px;
+       font-size: 22px; 
+}
+
+.rectangle {	
+       box-sizing: border-box;	
+       height: 39px;	
+       width: 461px;	
+       border: 1px solid #EEEEEE;	
+       border-radius: 26px;	
+       background-color: #FFFFFF;
+}
+
+
+.counters{  
+       float: left;
+       margin-left: 28px;
+       margin-top: 9px;
+       font-weight: bold;
+       font-size: 12px;
+}
+
+.total-number {
+       font-size: 28px;
+}
+
+.group, .status-queued { color: #FF9000; }
+.group-1, .status-error { color: #FF4A41; }
+.group-2, .status-running { color: #B16EFF;}
+.group-3, .status-aborted { color: #000000; }
+.group-4, .status-finished { color: #35BA57;}
+.bolded {
+       font-weight: bold;
+}
+
+
+
+
+// <span *ngSwitchCase="'FINISHED_ERROR'" class="status-error">Error</span>
+//                           <span *ngSwitchCase="'UK'" class="status-finished">{{item.status}}</span>
+//                           <span *ngSwitchCase="'ABORTED'" class="status-aborted">Aborted</span>
+//                           <span *ngSwitchCase="'UK1'" class="status-running">{{item.status}}</span>
+//                           <span *ngSwitchCase="'UK2'" class="">{{item.status}}</span>

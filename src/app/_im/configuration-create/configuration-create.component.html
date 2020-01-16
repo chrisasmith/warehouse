@@ -1,0 +1,46 @@
+<app-headingtitle [heading]="heading" [subheading]="subheading"></app-headingtitle>
+<br><br>
+<div class="content-body-width">
+    <div class="card-cluster">
+        <div class="card-cluster-header">
+            Create a new configuration
+        </div>
+        <div class="cluster-form">
+            <!-- <form name="form" (ngSubmit)="onSubmit(f)" #f="ngForm" novalidate> -->
+            <form name="form" novalidate>
+                <div class="position-relative">
+                    <div class="form-group">
+                        <input placeholder="Enter Configuration Name" type="text" class="mb-2 form-control-lg form-control">
+                    </div>
+                    <div class="form-group">
+                        <ng-select [items]="templates" bindValue="id" bindLabel="name" placeholder="Select Template" [(ngModel)]="selectedTemplate" (change)="onSelectTemplate($event)" class="customNGSelect">
+                        </ng-select>
+                    </div>
+                    <div class="bottom-card-section newTempText" *ngIf="templt === 'new'">
+                        <div><b>or</b></div><br>
+                        <div class="customSubTitle">To Start off from a New Template, then first</div><br>
+                        <a class="bottom-card-section-a newTempText" [routerLink]="[ '/dashboards/clusters/create-new-template']" href="#">Create a New Template</a>
+                        <div class="continue">
+                            <button (click)="loadStep(2)" class="mb-2 mr-2 btn btnContinue btn-light btn-lg"> Continue </button>
+                        </div>
+                    </div>
+                    <div class="bottom-card-section" *ngIf="templt==='custom'">
+                        <div class="custom-control custom-checkbox">
+                            <input id="customConfig" type="checkbox" name="check" autocomplete="off" class="custom-control-input" value="true" [(ngModel)]="isChecked" (change)="changeBtn(isChecked?'customConfig':'defaultConfig')">
+                            <label for="customConfig" class="custom-control-label customSubTitle">
+                            Customize the <b>Package, Macros</b> and <b>Files</b> for this Configuration
+                            </label>
+                        </div>
+                        <div class="continue2" *ngIf="buttonCfg==='defaultConfig'">
+                            <button [routerLink]="['/im/configurations/summary']" class="mb-2 mr-2 btn btn-continue btn-lg">Continue</button>
+                        </div>
+                        <div class="continue2" *ngIf="buttonCfg==='customConfig'">
+                            <button [routerLink]="['/im/configurations/summary']" class="mb-2 mr-2 btn btn-continue btn-lg">Continue</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<app-custom-config-modal *ngIf="modal === 'custCfgModal'" (close)="openModal($event)"></app-custom-config-modal>

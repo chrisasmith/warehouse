@@ -1,0 +1,94 @@
+<div class="backdrop"> </div>
+<div class="modal-window">
+    <div class="modal-window-close">
+      <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <div class="modal-window-body">
+      <div class="title">
+        <div class="title-text">
+          <h1>Scheduling Configuration</h1>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-1">
+            <input type="radio" id="f-option" name="selector">
+          </div>
+          <div class="col-1">
+           <span class="run-title"><strong>Run</strong></span>
+           <br>
+           <span class="run-subtitle">Every</span>
+          </div>
+          <div class="col-2">
+            <div class="position-relative form-group">
+              <input placeholder="Enter Time" type="text" class="mb-2 form-control">
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="d-inline-block" ngbDropdown>
+                <button type="button" ngbDropdownToggle class="mb-2 mr-2 btn btn-light">minutes</button>
+                <div ngbDropdownMenu>
+                  <button class="dropdown-item">Seconds</button>
+                  <button class="dropdown-item">Hours</button>
+                  <button class="dropdown-item">Days</button>
+                </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-1">
+              <input type="radio" id="f-option" name="selector">
+          </div>
+          <div class="col-1">
+            <span class="run-title"><strong>Run</strong></span>
+            <br>
+           <span class="run-subtitle">Only</span>
+          </div>
+          <div class="col-2">
+            <div class="d-inline-block" ngbDropdown>
+                <button type="button" ngbDropdownToggle class="mb-2 mr-2 btn btn-light">weekly</button>
+                <div ngbDropdownMenu>
+                  <button class="dropdown-item">Seconds</button>
+                  <button class="dropdown-item">Hours</button>
+                  <button class="dropdown-item">Days</button>
+                </div>
+            </div>
+          </div>
+          <div class="col-1">
+           on
+           </div>
+          <div class="col-2">
+            <div class="d-inline-block" ngbDropdown>
+                <button type="button" ngbDropdownToggle class="mb-2 mr-2 btn btn-light">3 Days</button>
+                <div ngbDropdownMenu>
+                  <button class="dropdown-item">Seconds</button>
+                  <button class="dropdown-item">Hours</button>
+                  <button class="dropdown-item">Days</button>
+                </div>
+            </div>
+          </div>
+          <div class="col-1">
+            at
+           </div>
+
+           <div class="col-2">
+            <div class="position-relative form-group">
+              <input placeholder="Enter Time" type="text" class="mb-2 form-control">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+  <div class="modal-window-footer">
+    <button type="button" class="btn btn-primary">SCHEDULE</button>
+  </div>
+</div>

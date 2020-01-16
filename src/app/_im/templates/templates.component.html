@@ -1,0 +1,76 @@
+<!-- Configuration List Page -->
+<!-- <app-headingtitlenav></app-headingtitlenav> -->
+<!-- <app-headingtitlenav-template></app-headingtitlenav-template> -->
+
+<!-- <div class="content-heading">
+  <div class="content-heading-subheading">
+      Integration > Template
+    </div>
+<div class="content-heading-main">
+ Templates
+    <ul id="header-nav-ul">
+        <li class="header-nav-links"><a [routerLink]="['/dashboards/configurations']">Configurations </a></li>
+        <li class="header-nav-links"><a [routerLink]="['/dashboards/templates']" >Templates</a></li>
+        <li class="header-nav-links"><a href="#">Macros</a></li>
+        <li class="header-nav-links"><a href="#">Files Manager</a></li>
+        <li class="header-nav-links"> 
+          <button [routerLink]="['/dashboards/clusters/create-new-template']" class="mb-2 mr-2 btn-pill btn btn-info btn-icon">
+            <i class="lnr-plus-circle btn-icon-wrapper"> </i>
+            Create Template
+          </button>
+        </li>
+    </ul>
+</div>
+</div> -->
+<app-headingtitlenav [heading]="'Templates'" [subheading]="'Integration > Templates'" [page]="'templates'"></app-headingtitlenav> 
+<br>
+<br>
+<br>
+<div class="center-content">
+  <div class="configuration-data-grid">
+      
+      <div class="main-card mb-3 card">
+          <div class="table-responsive">
+            <table class="align-middle text-truncate mb-0 table table-hover">
+              <thead>
+                <tr>
+                  <th class="text-center">Templates</th>
+                  <th class="text-center">Owner</th>
+                  <th class="text-center">Created</th>
+                  <th class="text-center">Modified</th>
+                  <th class="text-center">Active</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center" [routerLink]="['/im/templates/summary']">Get Trello to Log File</td>
+                  <td class="text-center" style="width: 80px;">  <img width="40" [routerLink]="['/dashboards/usermanagement']"  class="rounded-circle" src="./assets/images/avatars/1.jpg" alt=""></td>
+                  <td class="text-center">July 01, 2019</td>
+                  <td class="text-center">July 01, 2019</td>
+                  <td class="text-center"> On / Off</td>
+                </tr>
+                <tr>
+                  <td class="text-center" [routerLink]="['/im/templates/summary']">Web Service API Call</td>
+                  <td class="text-center" style="width: 80px;">  <img width="40" [routerLink]="['/dashboards/usermanagement']"  class="rounded-circle" src="./assets/images/avatars/1.jpg" alt=""></td>
+                  <td class="text-center">June 01, 2019</td>
+                  <td class="text-center">June 01, 2019</td>
+                  <td class="text-center"> On / Off</td>
+                  </tr>
+                  <tr>
+                 <td class="text-center" [routerLink]="['/im/templates/summary']">Sleep Integration Template</td>
+                  <td class="text-center" style="width: 80px;">  <img width="40" [routerLink]="['/dashboards/usermanagement']"  class="rounded-circle" src="./assets/images/avatars/1.jpg" alt=""></td>
+                  <td class="text-center">May 01, 2019</td>
+                  <td class="text-center">May 01, 2019</td>
+                  <td class="text-center"> On / Off</td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+      </div>
+
+
+  </div>
+  <app-footerrefresh></app-footerrefresh>
+
+  
+</div>

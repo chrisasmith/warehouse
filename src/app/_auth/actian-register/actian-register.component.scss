@@ -1,0 +1,73 @@
+@import "../../../assets/actian/actian-variables";
+
+.whiteBox{
+       height: 550px !important;
+       width: 555px !important;
+}
+
+.signInControls {
+       margin-right: auto;
+       margin-left: auto;
+       width: 360px;
+       position: relative;
+       top:80px;
+
+}
+
+.copyright {
+       text-align: center;
+}
+
+.titleHeader {
+       top:47px;
+       color: $color-text-title-headers;
+       font-size: 30px;
+       font-weight: bold;
+       line-height: 40px;
+       position: relative;
+       text-align: center;
+}
+
+
+.btnContinue {
+       margin-top: 48px !important;
+       height: 43px;
+       width: 360px;
+       border-radius: 6px;
+       background-color: $color-actian-disabled;
+       color: #D0C9D6;
+       font-size: 13px;
+       font-weight: 500;
+       line-height: 22px;
+       text-align: center;
+       text-transform: uppercase;
+   }
+
+label {
+       font-weight: bold;
+}
+.form-control-lg { font-size: .85rem;
+}
+
+.copyright {
+       height: 18px;
+       color: $color-text-copyright;
+       font-size: 14px;
+       font-weight: 700;
+       line-height: 18px;
+       position: relative;
+       top:48px;
+       text-align: center;
+}
+
+   .copyright a {
+       color: $color-actian-primary;
+       text-decoration: none;
+       margin-left: 10px;
+   }
+
+
+.error-msg {
+       margin-top: 10px !important;
+}
+

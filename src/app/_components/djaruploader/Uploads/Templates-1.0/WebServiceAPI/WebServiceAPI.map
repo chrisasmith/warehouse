@@ -1,0 +1,378 @@
+{
+  "map" : {
+    "sources" : [ {
+      "name" : "SOURCE_1",
+      "description" : "",
+      "properties" : [ {
+        "name" : "schema_mismatch",
+        "value" : "error"
+      } ],
+      "control_links" : [ {
+        "src_path" : "/SOURCE_1/query/results/channel/item/yweather:forecast",
+        "trg_paths" : [ {
+          "rules" : [ {
+            "condition" : "",
+            "if_actions" : [ {
+              "parameters" : [ {
+                "name" : "preserve",
+                "value" : "False"
+              }, {
+                "name" : "count_expression",
+                "value" : ""
+              } ],
+              "name" : "OutputRecord"
+            } ],
+            "map_event" : {
+              "name" : "RecordStarted"
+            }
+          } ],
+          "trg_path" : "/TARGET_1/R1"
+        } ]
+      }, {
+        "src_path" : "/SOURCE_1/ROOT/entries/Object",
+        "trg_paths" : [ {
+          "rules" : [ {
+            "condition" : "",
+            "if_actions" : [ {
+              "parameters" : [ {
+                "name" : "preserve",
+                "value" : "False"
+              }, {
+                "name" : "count_expression",
+                "value" : ""
+              } ],
+              "name" : "OutputRecord"
+            } ],
+            "map_event" : {
+              "name" : "RecordStarted"
+            }
+          } ],
+          "trg_path" : "/TARGET_1/R1"
+        } ]
+      } ],
+      "schema" : {
+        "root_defs" : [ {
+          "name" : "DocumentRoot",
+          "max_occurs" : "unbounded",
+          "choice" : [ {
+            "name" : "ROOT",
+            "rec_type_ref" : "ROOT_._type"
+          } ]
+        } ],
+        "type_defs" : [ {
+          "name" : "ROOT_._type",
+          "groups" : [ {
+            "name" : "ROOT_._type_group",
+            "sequence" : [ {
+              "name" : "__._JSON_INPUT",
+              "max_occurs" : "unbounded",
+              "type" : "string",
+              "nulls" : false,
+              "length" : 16,
+              "external" : {
+                "type" : "String",
+                "pad_char" : " ",
+                "max_total_digits" : 0
+              },
+              "min_occurs" : 0
+            }, {
+              "name" : "count",
+              "max_occurs" : "unbounded",
+              "type" : "int",
+              "nulls" : false,
+              "length" : 4,
+              "external" : {
+                "type" : "Int",
+                "signed" : true,
+                "max_total_digits" : 0
+              },
+              "min_occurs" : 0,
+              "total_digits" : 0
+            }, {
+              "name" : "entries",
+              "max_occurs" : "unbounded",
+              "rec_type_ref" : "entries_._type",
+              "external" : {
+                "type" : "Structure"
+              },
+              "min_occurs" : 0
+            } ]
+          } ]
+        }, {
+          "name" : "entries_._type",
+          "groups" : [ {
+            "name" : "entries_._type_group",
+            "sequence" : [ {
+              "name" : "__._JSON_INPUT",
+              "max_occurs" : "unbounded",
+              "type" : "string",
+              "nulls" : false,
+              "length" : 16,
+              "external" : {
+                "type" : "String",
+                "pad_char" : " ",
+                "max_total_digits" : 0
+              },
+              "min_occurs" : 0
+            }, {
+              "name" : "Object",
+              "max_occurs" : "unbounded",
+              "rec_type_ref" : "Object_._type",
+              "external" : {
+                "type" : "Structure"
+              },
+              "min_occurs" : 0
+            } ]
+          } ]
+        }, {
+          "name" : "Object_._type",
+          "groups" : [ {
+            "name" : "Object_._type_group",
+            "sequence" : [ {
+              "name" : "__._JSON_INPUT",
+              "max_occurs" : "unbounded",
+              "type" : "string",
+              "nulls" : false,
+              "length" : 16,
+              "external" : {
+                "type" : "String",
+                "pad_char" : " ",
+                "max_total_digits" : 0
+              },
+              "min_occurs" : 0
+            }, {
+              "name" : "API",
+              "max_occurs" : "unbounded",
+              "type" : "string",
+              "nulls" : false,
+              "length" : 12,
+              "external" : {
+                "type" : "String",
+                "pad_char" : " ",
+                "max_total_digits" : 0
+              },
+              "min_occurs" : 0
+            }, {
+              "name" : "Description",
+              "max_occurs" : "unbounded",
+              "type" : "string",
+              "nulls" : false,
+              "length" : 38,
+              "external" : {
+                "type" : "String",
+                "pad_char" : " ",
+                "max_total_digits" : 0
+              },
+              "min_occurs" : 0
+            }, {
+              "name" : "Auth",
+              "max_occurs" : "unbounded",
+              "type" : "string",
+              "nulls" : false,
+              "length" : 6,
+              "external" : {
+                "type" : "String",
+                "pad_char" : " ",
+                "max_total_digits" : 0
+              },
+              "min_occurs" : 0
+            }, {
+              "name" : "HTTPS",
+              "max_occurs" : "unbounded",
+              "type" : "boolean",
+              "nulls" : false,
+              "length" : 1,
+              "external" : {
+                "type" : "Boolean",
+                "picture" : "True.False",
+                "max_total_digits" : 0
+              },
+              "min_occurs" : 0
+            }, {
+              "name" : "Cors",
+              "max_occurs" : "unbounded",
+              "type" : "string",
+              "nulls" : false,
+              "length" : 7,
+              "external" : {
+                "type" : "String",
+                "pad_char" : " ",
+                "max_total_digits" : 0
+              },
+              "min_occurs" : 0
+            }, {
+              "name" : "Link",
+              "max_occurs" : "unbounded",
+              "type" : "string",
+              "nulls" : false,
+              "length" : 74,
+              "external" : {
+                "type" : "String",
+                "pad_char" : " ",
+                "max_total_digits" : 0
+              },
+              "min_occurs" : 0
+            }, {
+              "name" : "Category",
+              "max_occurs" : "unbounded",
+              "type" : "string",
+              "nulls" : false,
+              "length" : 7,
+              "external" : {
+                "type" : "String",
+                "pad_char" : " ",
+                "max_total_digits" : 0
+              },
+              "min_occurs" : 0
+            } ]
+          } ]
+        } ],
+        "rule_defs" : { }
+      }
+    } ],
+    "targets" : [ {
+      "name" : "TARGET_1",
+      "description" : "",
+      "properties" : [ {
+        "name" : "multimode_target",
+        "value" : "false"
+      }, {
+        "name" : "schema_mismatch",
+        "value" : "error"
+      } ],
+      "schema" : {
+        "root_defs" : [ {
+          "name" : "DocumentRoot",
+          "max_occurs" : "unbounded",
+          "choice" : [ {
+            "name" : "R1",
+            "rec_type_ref" : "R1"
+          } ]
+        } ],
+        "type_defs" : [ {
+          "name" : "R1",
+          "groups" : [ {
+            "name" : "R1",
+            "sequence" : [ {
+              "name" : "API",
+              "type" : "string",
+              "length" : 12,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "Description",
+              "type" : "string",
+              "length" : 38,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "Auth",
+              "type" : "string",
+              "length" : 6,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "HTTPS",
+              "type" : "boolean",
+              "external" : {
+                "type" : "Boolean",
+                "picture" : "True.False"
+              }
+            }, {
+              "name" : "Cors",
+              "type" : "string",
+              "length" : 7,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "Link",
+              "type" : "string",
+              "length" : 74,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            }, {
+              "name" : "Category",
+              "type" : "string",
+              "length" : 7,
+              "external" : {
+                "type" : "Text",
+                "align" : "Left",
+                "pad_char" : " "
+              }
+            } ]
+          } ]
+        } ],
+        "rule_defs" : {
+          "recognition_rule" : [ {
+            "name" : "RuleSet 1"
+          } ]
+        },
+        "artifact_metadata" : { }
+      },
+      "map_rules" : {
+        "data_links" : [ {
+          "src_path" : "/SOURCE_1/ROOT/entries/Object/API",
+          "trg_path" : "/TARGET_1/R1/API",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/ROOT/entries/Object/Description",
+          "trg_path" : "/TARGET_1/R1/Description",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/ROOT/entries/Object/Auth",
+          "trg_path" : "/TARGET_1/R1/Auth",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/ROOT/entries/Object/HTTPS",
+          "trg_path" : "/TARGET_1/R1/HTTPS",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/ROOT/entries/Object/Cors",
+          "trg_path" : "/TARGET_1/R1/Cors",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/ROOT/entries/Object/Link",
+          "trg_path" : "/TARGET_1/R1/Link",
+          "ui_generated" : false
+        }, {
+          "src_path" : "/SOURCE_1/ROOT/entries/Object/Category",
+          "trg_path" : "/TARGET_1/R1/Category",
+          "ui_generated" : false
+        } ]
+      }
+    } ],
+    "execution_options" : [ {
+      "name" : "overflow",
+      "value" : "ignore"
+    }, {
+      "name" : "truncation",
+      "value" : "ignore"
+    }, {
+      "name" : "nulls",
+      "value" : "ignore"
+    } ],
+    "artifact_metadata" : {
+      "description" : "",
+      "creator" : "ACTIAN\\gcoates",
+      "author" : "ACTIAN\\bzhang",
+      "version" : "1.7",
+      "date_created" : "2018-10-02T09:58:09.529911-05:00",
+      "date_modified" : "2019-04-15T15:11:13.873-05:00"
+    }
+  }
+}

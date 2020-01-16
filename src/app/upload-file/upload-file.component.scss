@@ -1,0 +1,123 @@
+.file-manager{
+    color: #168CFF !important;
+    font-size: 17px;
+    font-weight: 600;
+}
+.card-cluster-header {
+    position: relative;
+    font-size: 33px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #168CFF !important;
+    margin-top: 25px;
+}
+p.browse-file{
+    color: #168CFF !important;
+    cursor: pointer;
+}
+.drag-drop {
+    position: relative;
+    border-style: dashed;
+    border-color: #168CFF !important;
+    border-width: 1px;
+    align-items: center;
+    text-align: center;
+    padding: 6px;
+    border-radius: 3px;
+    margin: 0 20%;
+    max-width: 80%;
+}
+p.package-heading {
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #98A9BC !important;
+    margin-top: 25px;
+}
+/* MODAL STYLES
+-------------------------------*/
+app-modal {
+    /* modals are hidden by default */
+    display: none;
+
+    .modal {
+        /* modal container fixed across whole screen */
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        /* z-index must be higher than .modal-background */
+        z-index: 1000;
+
+        /* enables scrolling for tall modals */
+        overflow: auto;
+
+        .modal-body {
+            padding: 20px;
+            background: #fff;
+            min-width: 300px;
+            /* margin exposes part of the modal background */
+            margin: 25%;
+            margin: 18% 26%;
+            border-radius: 8px;
+        }
+    }
+
+    .modal-background {
+        /* modal background fixed across whole screen */
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        /* semi-transparent black  */
+        background-color: #000;
+        opacity: 0.75;
+
+        /* z-index must be below .modal and above everything else  */
+        z-index: 900;
+    }
+}
+button.close-modal {
+    right: 0;
+    top: 0;
+    position: absolute;
+    margin: 5px;
+}
+body.modal-open {
+    /* body overflow is hidden to hide main scrollbar when modal window is open */
+    overflow: hidden;
+}
+button.continue-modal {
+    margin: 2% 44%;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 36px;
+    color: #168CFF !important;
+    background: #cbdef1;
+    cursor: pointer;
+}
+
+/* macros styles */
+input.macro-detail {
+    width: 41%;
+    height: 50px;
+    padding: 7px;
+    margin-left: 15px;
+    border: none;
+    color: #98A9BC;
+    font-weight: bold;
+    border: solid 1px #bdcbdc;
+    border-radius: 5px;
+}

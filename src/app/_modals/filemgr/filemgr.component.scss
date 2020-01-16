@@ -1,0 +1,336 @@
+#PackageFileUploadModal {
+    font-size: 14px;
+}
+
+.file-upload-container2 {
+    margin-top: 2em;
+}
+
+.upload-cancel-btn i {
+    color: #188DFF;
+}
+
+.uploading-file-icon i {
+    font-size: 32px;
+}
+
+.progress-indicator {
+    text-align: center;
+}
+
+.progress-indicator span {
+    background: #F6F9FC;
+}
+
+.progress-indicator span {
+    background: #F6F9FC;
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: inherit;
+    color: #188DFF;
+    border-radius: 5px;
+}
+
+.progress-indicator span i {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.uploading-file-name {
+    color: #000;
+    font-weight: 500;
+}
+
+.uploading-file-status {
+    font-size: 12px;
+}
+
+.uploading-file-progress-bg {
+    background: #98A9BC;
+    border-radius: 10px;
+    max-width: 200px;
+    overflow: hidden;
+}
+
+.uploading-file-progress-done {
+    background: #188DFF;
+    height: 6px;
+}
+
+.actian-modal {
+    color: #98A9BC;
+    display: inline;
+}
+
+.actian-modal .modal-header .close {
+    font-size: 40px;
+    padding: 0;
+    margin: 0 10px auto auto;
+    color: #d7dadf;
+    transition: color 300ms ease-out;
+}
+
+.actian-modal .modal-header .close:hover {
+    color: #000;
+}
+
+.actian-modal .modal-body {
+    padding: 30px 70px;
+}
+
+.actian-modal .row.form-row {
+    padding: 18px 0;
+}
+
+.actian-modal .row.form-row.button-row {
+    text-align: center;
+    display: block;
+}
+
+.actian-modal .modal-header,
+.actian-modal .modal-footer {
+    border: none;
+}
+
+.actian-modal .modal-footer {
+    text-align: center;
+    display: block;
+}
+
+.actian-modal h2 {
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.file-upload-container {
+    text-align: center;
+    margin: 0 120px;
+    border: 2px dashed #007bff;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 23px;
+}
+
+.modal-header h3 {
+    font-size: 22px;
+    color: #000;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+}
+
+.file-manager-modal .modal-footer .form-row {
+    text-align: center;
+    display: block;
+}
+
+.btn.btn-long {
+    min-width: 220px;
+}
+
+.actian-modal.file-manager-modal .modal-footer {
+    margin-bottom: 35px;
+}
+
+.actian-modal.file-manager-modal .row.form-row {
+    padding: 0;
+}
+
+@media screen and (min-width: 576px) {
+    .actian-modal .modal-dialog {
+        max-width: 850px;
+        width: 50%;
+    }
+    .actian-modal.file-manager-modal .modal-dialog {
+        max-width: 1020px;
+        width: 80%;
+    }
+}
+
+.modal-dialog {
+    box-shadow: none;
+    border-radius: 0.25rem;
+}
+
+.modal-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    background-color: #FFF;
+    width: 620px;
+    border-radius: 3px;
+}
+
+.modal-window label {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.modal-window-close {
+    right: 20px;
+    position: relative;
+    top: 20px;
+}
+
+.modal-window-footer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+
+.modal-window-body {
+    padding: 70px;
+    padding-bottom: 35px;
+}
+
+.modal-window-footer button {
+    width: 198px;
+    height: 38px;
+    margin-bottom: 70px;
+}
+
+.backdrop {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(206, 206, 206, 0.66);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.form-row {
+    margin-bottom: 15px !important;
+}
+
+.file-manager {
+    color: #168CFF !important;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.card-cluster-header {
+    position: relative;
+    font-size: 33px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #168CFF !important;
+    margin-top: 25px;
+}
+
+p.browse-file {
+    color: #168CFF !important;
+    cursor: pointer;
+}
+
+.drag-drop {
+    position: relative;
+    border-style: dashed;
+    border-color: #168CFF !important;
+    border-width: 1px;
+    align-items: center;
+    text-align: center;
+    padding: 6px;
+    border-radius: 3px;
+    margin: 0 20%;
+    max-width: 80%;
+}
+
+p.package-heading {
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #98A9BC !important;
+    margin-top: 25px;
+}
+
+
+/* MODAL STYLES
+-------------------------------*/
+
+app-modal {
+    /* modals are hidden by default */
+    display: none;
+    .modal {
+        /* modal container fixed across whole screen */
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        /* z-index must be higher than .modal-background */
+        z-index: 1000;
+        /* enables scrolling for tall modals */
+        overflow: auto;
+        .modal-body {
+            padding: 20px;
+            background: #fff;
+            min-width: 300px;
+            /* margin exposes part of the modal background */
+            margin: 25%;
+            margin: 18% 26%;
+            border-radius: 8px;
+        }
+    }
+    .modal-background {
+        /* modal background fixed across whole screen */
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        /* semi-transparent black  */
+        background-color: #000;
+        opacity: 0.75;
+        /* z-index must be below .modal and above everything else  */
+        z-index: 900;
+    }
+}
+
+button.close-modal {
+    right: 0;
+    top: 0;
+    position: absolute;
+    margin: 5px;
+}
+
+body.modal-open {
+    /* body overflow is hidden to hide main scrollbar when modal window is open */
+    overflow: hidden;
+}
+
+button.continue-modal {
+    margin: 2% 44%;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 36px;
+    color: #168CFF !important;
+    background: #cbdef1;
+    cursor: pointer;
+}
+
+
+/* macros styles */
+
+input.macro-detail {
+    width: 41%;
+    height: 50px;
+    padding: 7px;
+    margin-left: 15px;
+    border: none;
+    color: #98A9BC;
+    font-weight: bold;
+    border: solid 1px #bdcbdc;
+    border-radius: 5px;
+}

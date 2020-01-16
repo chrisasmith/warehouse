@@ -1,0 +1,40 @@
+<app-headingtitle [heading]="heading" [subheading]="subheading"></app-headingtitle>
+<div class="content-body-width">
+      <div class="card-cluster">
+        <div class="card-cluster-header">
+          Create Warehouse Name
+        </div>
+        <div class="cluster-form">
+          <div class="position-relative">
+            <div class="form-group">
+                <input placeholder="Enter Cluster Name" type="text" class="mb-2 form-control-lg form-control">
+            </div>
+            <div class="form-group">
+                <div class="d-inline-block btn-block" ngbDropdown>
+                    <button type="button" ngbDropdownToggle class="mb-2 mr-2 btn btn-lg btn-light btn-block">Choose a Location</button>
+                    <div ngbDropdownMenu>
+                      <button class="dropdown-item">Choose a Location</button>
+                    </div>
+                  </div>
+            </div>
+            <div class="form-group">
+                <div class="d-inline-block btn-block" ngbDropdown>
+                    <button type="button" ngbDropdownToggle class="mb-2 mr-2 btn btn-lg btn-light btn-block">Choose Warehouse Size</button>
+                    <div ngbDropdownMenu>
+                      <button class="dropdown-item">Choose Warehouse Size</button>
+                    </div>
+                  </div>
+            </div>
+            <div class="form-group">
+                <input placeholder="Enter Cluster Name" type="text" class="mb-2 form-control-lg form-control">
+            </div>
+
+            <div class="bottom-card-section">
+              <div class="continue">
+                  <button (click)="createWarehouse(2)" class="mb-2 mr-2 btn btnContinue btn-light btn-lg"> Continue </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

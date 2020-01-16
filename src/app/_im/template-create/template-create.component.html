@@ -1,0 +1,32 @@
+<app-headingtitle [heading]="heading" [subheading]="subheading"></app-headingtitle>
+<app-upload-file></app-upload-file>
+<div class="content-body-width">
+      <div class="card-cluster">
+        <div class="card-cluster-header">
+          Create a new Template
+        </div>
+        <div class="cluster-form">
+          <div class="position-relative">
+            <div class="form-group">
+                <input placeholder="Enter Configuration Name" type="text" class="mb-2 form-control-lg form-control">
+            </div>
+            <div class="form-group">
+                <div class="d-inline-block btn-block" ngbDropdown>
+                    <!-- <button type="button" ngbDropdownToggle class="mb-2 mr-2 btn btn-lg btn-light btn-block">Choose Existing Template</button> -->
+                    <div ngbDropdownMenu>
+                      <button class="dropdown-item">Acme Template</button>
+                    </div>
+                  </div>
+            </div>
+            <div class="bottom-card-section">
+              <!-- <h1>or</h1>
+              <h3>To Start off from a New Template, then first</h3> -->
+              <!-- <a class="bottom-card-section-a" href="#">Create a New Template</a> -->
+              <div class="continue">
+                  <button (click)="openModal('custom-modal-1')" class="mb-2 mr-2 btn btnContinue btn-light btn-lg"> Continue </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

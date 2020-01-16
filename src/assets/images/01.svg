@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="27px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>01</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="IM-/-New-Config---Connect_02" transform="translate(-519.000000, -536.000000)">
+            <g id="Group-3" transform="translate(198.517672, 290.000000)">
+                <g id="connect_screen" transform="translate(-0.000000, 0.000000)">
+                    <g id="Form/Default/Placeholder" transform="translate(0.070686, 0.000000)">
+                        <g id="Mask">
+                            <g id="01" transform="translate(321.000000, 241.000000)">
+                                <g id="Group-5" transform="translate(0.000000, 6.000000)">
+                                    <circle id="Oval" fill="#158BFF" cx="12.5" cy="12.5" r="10.4166667"></circle>
+                                    <circle id="Oval" stroke="#158BFF" cx="12.5" cy="12.5" r="12.5"></circle>
+                                </g>
+                                <polygon id="1" fill="#FFFFFF" fill-rule="nonzero" points="13.536 13.2 13.536 23 11.38 23 11.38 15.44 9.448 16.238 9.448 14.334 12.178 13.2"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

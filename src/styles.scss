@@ -1,0 +1,396 @@
+@import "assets/base";
+
+// Color Variables
+$color-actian-primary:#238FFB;
+$color-actian-primary-button:#238FFB;
+$color-actian-info: #00FF00;
+$color-actian-disabled: #ECE9F1;
+$color-text-disabled:#D0C9D6;
+$color-text-error:red;
+$color-button-error:red;
+$color-border-error:red;
+$color-text-disabled-button:#D0C9D6;
+$color-text-primary-button:#FFFFFF;
+
+// Button Variables
+$button-height: 43px;
+$button-border-radius: 6px;
+$button-large-width: 360px;
+$button-large-height: $button-height;
+$button-large-disabled-color:"";
+
+// IM Details Card
+$card-box-size-width: "";
+$card-box-size-height: "";
+$card-grid-row-background-color:"";
+$card-grid-row-alternate-color:"";
+
+
+// Illustration urls
+$illustration-offers:url('');
+$illustration-configuration-details:url('');
+
+// Layout Variables
+$cardpages-border-radius: 4px;
+$center-content-body-width: 90%;
+$header-color-gradient-a: $color-actian-primary;
+$header-color-gradient-b: $color-actian-info;
+$actian-logo-url:url('assets/images/logo-inverse.svg');
+$box-background-image-url: url('assets/actian/mountain_bg.png');
+$card-box-size-width: "";
+$card-box-size-height: "";
+$actian-background-color:"";
+$nav-link-color:#67758D;
+$nav-link-color-active: $color-actian-primary;
+
+
+// Logo, Colors, Fonts, Sizes, Customization,
+
+// Font Sizes
+$font-size-details-pages: 18px;
+$font-size-form-headers: 30px;
+$font-size-h1: 24px;
+
+
+// Error Handling
+.form-button-valid {
+       background-color: $color-actian-primary-button !important;
+       color: $color-text-primary-button !important
+}
+
+.form-field-error{
+       border-color: $color-border-error !important;
+}
+
+.form-label-error{
+       color: $color-text-error !important;
+}
+
+body {
+    font-family: $primary_font;
+    font-size: $primary-fs;
+    font-weight: $regular;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: $box-pages-background-color;
+}
+// Nave Links
+.nav-link {
+    color: $nav-link-color;
+}
+
+// Whitebox Pages Layout
+.loginLogo {
+    margin-right: auto;
+    margin-left: auto;
+    width: 166px;
+    height: 45px;
+    top: 58px;
+    position: relative;
+    background-image: url('assets/images/logo-inverse.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg {
+    background-image: url('assets/actian/mountain_bg.png');
+    background-size: cover;
+    width: 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    height: 70%;
+    position: absolute;
+    top: 634px;
+}
+
+.whiteBox {
+    position: relative;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 80px 0 rgba(37, 38, 49, 0.05);
+    top: 158px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+// END
+
+
+
+.widget-heading, .widget-subheading {
+       color: #FFF !important;
+}
+
+.m-l-10 {
+       margin-left: 10px;
+}
+
+.content-heading{
+       margin-top:48px;
+       width: $center-content-body-width;
+       margin-left: auto;
+       margin-right: auto;
+}
+.content-heading-subheading{
+       color:#97A4BA;
+       font-size: 12px;
+       line-height: 16px;
+}
+.content-heading-main{
+       color: #424B5F;
+       font-size: 24px;
+       line-height: 40px;
+       font-weight: bold;
+}
+.content-body-width {
+       width:$center-content-body-width;
+       margin-right: auto;
+       margin-left: auto;
+       position: relative;
+       top: -72px;
+}
+// .hrline{
+//        background-color: #DEE5EF;
+//        color: #DEE5EF;
+// }
+
+.search-wrapper.active .input-holder {
+       width: 851px;
+       border-radius: 50px;
+       left: -578px;
+   }
+
+.center-content {
+       width:$center-content-body-width;
+       margin-right: auto;
+       margin-left: auto;
+       position: relative;
+       margin-top: 10px;
+}
+
+app-footerrefresh {
+       float: right ;
+       height: 20px;
+       width: 265px;
+       line-height: 20px;
+       font-size: 11px;
+       font-weight: 500;
+}
+app-footerrefresh p{
+       opacity: 0.79;
+       color: #95A2B4;
+
+}
+app-footerrefresh a {
+       color: #238FFB;
+}
+
+
+// Data Grid
+
+.table thead th {
+       font-size: 14px;
+       color: #238FFB;
+       padding-top:52px;
+       padding-bottom:29px;
+   }
+
+tr:nth-child(even) {background:rgba(246,249,252,0.66)}
+
+.configuration-data-grid {
+       margin-top: -33px;
+}
+
+.dropdown-menu-xl {
+       min-width: 29rem;
+}
+
+.error-msg {
+       color: red;
+   }
+
+
+
+   /* The switch - the box around the slider */
+.switch {
+       position: relative;
+       display: inline-block;
+       width: 60px;
+       height: 34px;
+     }
+
+     /* Hide default HTML checkbox */
+     .switch input {
+       opacity: 0;
+       width: 0;
+       height: 0;
+     }
+
+     /* The slider */
+     .slider {
+       position: absolute;
+       cursor: pointer;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       background-color: #ccc;
+       -webkit-transition: .4s;
+       transition: .4s;
+     }
+
+     .slider:before {
+       position: absolute;
+       content: "";
+       height: 26px;
+       width: 26px;
+       left: 4px;
+       bottom: 4px;
+       background-color: white;
+       -webkit-transition: .4s;
+       transition: .4s;
+     }
+
+     input:checked + .slider {
+       background-color: #2196F3;
+     }
+
+     input:focus + .slider {
+       box-shadow: 0 0 1px #2196F3;
+     }
+
+     input:checked + .slider:before {
+       -webkit-transform: translateX(26px);
+       -ms-transform: translateX(26px);
+       transform: translateX(26px);
+     }
+
+     /* Rounded sliders */
+     .slider.round {
+       border-radius: 34px;
+     }
+
+     .slider.round:before {
+       border-radius: 50%;
+     }
+
+     [data-letters]:before {
+       content:attr(data-letters);
+       display:inline-block;
+       font-size:1em;
+       width:2.5em;
+       height:2.5em;
+       line-height:2.5em;
+       text-align:center;
+       border-radius:50%;
+       background:lightslategray;
+       vertical-align:middle;
+       margin-right:1em;
+       color:white;
+       text-transform: uppercase;
+       }
+
+
+.copyright-footer{
+       width: 600px;
+       text-align: center;
+       margin-right:auto;
+       margin-left:auto;
+       margin-bottom: 80px;
+}
+.copyright-footer ul {
+       margin-top: 10px;
+}
+.copyright-footer li {
+       list-style: none;
+       border-left: solid 1px black;
+       padding-left: 10px;
+       display: inline;
+       padding-right: 10px;
+}
+.copyright-footer li:first-child  {
+       border-left: none;
+}
+
+.footer-action {
+       position: fixed;
+       padding-bottom:10px;
+       padding-top:10px;
+       width: 100%;
+       bottom: 0;
+       left:0;
+       background-color: #FFF;;
+       box-shadow: 0 0 9px rgba(0, 0, 0, 0.1);
+  }
+
+
+  .action-button {
+       position: relative;
+       width:320px;
+       margin-right: auto;
+       margin-left: auto;
+   }
+
+  // toggle switch styles
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+// end toggle styles

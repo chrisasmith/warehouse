@@ -1,0 +1,86 @@
+<div class="content-heading">
+  <div class="content-heading-subheading">
+      Warehouse Overview
+    </div>
+<div class="content-heading-main">
+      Warehouses
+    <ul id="header-nav-ul">
+        <li class="header-nav-links">
+          <button [routerLink]="['/dashboards/warehouse/create-new']" class="mb-2 mr-2 btn-pill btn btn-info btn-icon">
+            <i class="lnr-plus-circle btn-icon-wrapper"> </i>
+            Create Warehouse
+          </button>
+        </li>
+    </ul>
+</div>
+
+</div>
+<br>
+  <div class="content-body">
+    <!-- Repeatable Cluster Cards -->
+    <div  class="row" *ngFor="let item of [].constructor(4); let i = index">
+      <div class="col-md-12">
+        <div class="main-card mb-3 card">
+          <div class="card-body">
+            <!-- <h5 class="card-title">Basic Example</h5> -->
+            <img class="clusterIcon" src="/assets/images/cluster-image.png"/>
+            <div class="clusterNameImage">
+              <p class="name">Warehouse {{i}}</p>
+              <p class="location">US East (N. Virginia)</p>
+            </div>
+            <div class="clusterNodes">
+                <p>16 Nodes</p>
+            </div>
+            <div class="clusterInfo">
+                <div class="progress-circle-wrapper">
+                    <div class="round-progress-text">
+                      <div class="widget-content p-0">
+                          <div class="widget-content-wrapper">
+                            <div class="widget-content-right mr-3">
+                              <div class="icon-wrapper m-0">
+                                <div class="progress-circle-wrapper">
+                                  <div class="round-progress-text">
+                                    <span>71%</span>
+                                    <round-progress
+                                      [current]="71"
+                                      [max]="100"
+                                      [color]="'#cc603c'"
+                                      [background]="'#f0f0f0'"
+                                      [radius]="62"
+                                      [stroke]="6"
+                                      [semicircle]="false"
+                                      [rounded]="true"
+                                      [clockwise]="false"
+                                      [responsive]="true"
+                                      [duration]="1400"
+                                      [animation]="'easeInOutQuart'"
+                                      [animationDelay]="0"></round-progress>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="usage">75GB / 100GB</p>
+                <p class="subusage">Data Used</p>
+            </div>
+            <div class="clusterActions">
+                <div class="mb-2 mr-2 btn-group" ngbDropdown>
+                    <button class="btn btn-outline-primary">Creating Cluster</button>
+                    <button type="button" ngbDropdownToggle class="dropdown-toggle-split btn btn-outline-primary"><span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <div ngbDropdownMenu>
+                      <button class="dropdown-item">Menus</button>
+                      <button class="dropdown-item">Settings</button>
+                      <h6 class="dropdown-header">Header</h6>
+                      <button class="dropdown-item">Actions</button>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

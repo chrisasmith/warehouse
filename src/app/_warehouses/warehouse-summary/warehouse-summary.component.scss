@@ -1,0 +1,236 @@
+.card-cluster {		
+       width: 1021px;	
+       margin-left: auto;
+       margin-right: auto;
+       border-radius: 5px;	
+       background-color: #FFFFFF;	
+       box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1);
+       padding: 40px;
+       top:75px;
+       position: relative;
+}
+
+.card-cluster-header {
+       position: relative;
+       font-size: 24px;
+       font-weight: 500;
+       text-align: center;
+       margin-bottom: 40px;
+       color: #16aaff;
+}
+
+.cluster-form {
+       width: 509px;
+       margin-left: auto;
+       margin-right: auto;
+}
+
+.form-group {
+       margin-bottom: 2rem;
+}
+   
+.form-control-lg {
+       font-size: 14px;
+   }
+
+   .btn {
+          text-align: left;
+   }
+
+   .btn-lg, .btn-group-lg > .btn {
+       padding: 0.75rem 1rem;
+   }
+
+   .btnContinue{
+          margin-left: auto;
+          margin-right: auto;
+          text-transform: uppercase;
+          padding: 6px 45px 6px 45px;
+   }
+
+//    .dropdown-toggle::after {
+//        position: absolute;
+//        top: 20px;
+//        right: 12px;
+//    }
+
+   .continue {
+       width: 175px;
+       margin-left: auto;
+       margin-right: auto;
+   }
+
+   .clusterNameImage, .clusterNodes, .clusterInfo, .clusterActions, .clusterIcon{
+          float: left;
+          width: 20%;
+   }
+   .clusterIcon {
+       height: 60px;
+       width: 102px;
+       margin-right: 4%;
+       margin-top: 6px;
+   }
+   .name{
+          text-transform: uppercase;
+          font-weight: bold;
+          line-height: 0px;
+          margin-top: 21px;
+   }
+   .clusterNodes {
+       margin-top: 25px;
+       font-weight: bold;
+   }
+   .clusterInfo{
+          line-height: 0;
+          margin-top: 13px;
+   }
+   .usage {
+       font-weight: bold;
+       margin-top: 18px;
+   }
+   .subusage, .location{
+       font-weight: lighter;
+   }
+   .content-body{
+          width: 66%;
+          margin-left: auto;
+          margin-right:auto;
+   }
+   .clusterActions {
+       margin-top: 20px;
+       margin-left: 7%;
+   }
+
+   .card-cluster {		
+       width: 1021px;	
+       margin-left: auto;
+       margin-right: auto;
+       border-radius: 5px;	
+       background-color: #FFFFFF;	
+       box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1);
+       padding: 40px;
+       top:75px;
+       position: relative;
+}
+
+.card-cluster-header {
+       position: relative;
+       font-size: 33px;
+       font-weight: 500;
+       text-align: center;
+       margin-bottom: 40px;
+       color: #238FFB;
+       margin-top: 25px;
+}
+
+.cluster-form {
+       width: 515px;
+       margin-left: auto;
+       margin-right: auto;
+}
+
+.form-group {
+       margin-bottom: 2rem;
+}
+   
+.form-control-lg {
+       font-size: 14px;
+}
+
+.bottom-card-section{
+       text-align: center;
+}
+
+.bottom-card-section a{
+       font-size: 20px;
+       color: #238FFB;
+       font-weight: 500;
+}
+
+.bottom-card-section h3 {
+       font-size:20px;
+       font-weight: 500;
+}
+
+.bottom-card-section h1 {
+       font-size:36px;
+       color: #323C47;
+       font-weight: 500;
+       padding-bottom: 24px;
+}
+
+.continue{
+       padding-top: 50px;
+}
+
+.continue button {
+       text-transform: uppercase;
+       color: lightgray;
+       font-size: 17px;
+       font-weight: bold;
+       width: 232px;
+}
+
+.header-bar-title {
+       color: #424B5F;
+       font-size: 24px;
+       font-weight: 500;
+       text-align: left;
+}
+
+.table thead th {
+       font-size: 14px;
+       color: #238FFB;
+       padding-top:52px;
+       padding-bottom:29px;
+   }
+
+tr:nth-child(even) {background:rgba(246,249,252,0.66)}
+
+.hrline {
+    background-color: #DEE5EF;
+    color: #DEE5EF;
+    margin-bottom:10px;
+}
+
+.configuration-data-grid {
+       margin-top: -33px;
+}
+
+
+.last-refreshed {
+       float: right;
+}
+
+ul {
+      
+}
+#header-nav-ul {
+       float: right;
+       margin-left:auto;
+       padding:0;
+       list-style-type: none;
+}
+li  {
+       display: inline-block;
+       margin-left: 2em;
+       font-size: 18px;
+}
+
+li a:hover {
+       text-decoration: none;
+       color: gray;
+}
+
+li a {
+       color: #98A9BC;
+}
+
+li button {
+       font-size:14px;
+       font-weight: bold;
+}
+
+.progress-circle-wrapper {
+       float:left;
+}

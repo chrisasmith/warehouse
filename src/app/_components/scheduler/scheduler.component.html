@@ -1,0 +1,77 @@
+<div class="col-12">
+  <div class="scheduler-title col-12">
+    <span>Set a schedule to start and stop this warehouse at a specific time.</span>
+  </div>
+  <div class="content col-12">
+    <div class="row content-item col-12">
+      <div class="col-2 item-label">
+        <span>Every</span>
+      </div>
+      <div class="col-10">
+        <ng-select
+                [items]="[{id: '0', name:'Test Value'}]"
+                bindValue="id"
+                bindLabel="name"
+                placeholder="Select Template"
+                class="scheduler-select">
+        </ng-select>
+      </div>
+    </div>
+    <div class="row content-item col-12">
+      <div class="col-2 item-label">
+        <span>on</span>
+      </div>
+      <div class="col-10">
+        <ng-select
+                [items]="[]"
+                bindValue="id"
+                bindLabel="name"
+                placeholder="Select Template"
+                class="scheduler-select">
+        </ng-select>
+      </div>
+    </div>
+    <div class="row content-item col-12">
+      <div class="col-2 item-label">
+        <span>from</span>
+      </div>
+      <div class="col-10">
+        <div class="col-12 from-group">
+          <input class="col-6" type="text" pattern="[A-Za-z]" placeholder="3:30" value="">
+          <ng-select
+                  [items]="[{id: '0', name:'am'}, {id: '0', name:'pm'}]"
+                  [(ngModel)]="fromTimeId"
+                  bindValue="id"
+                  bindLabel="name"
+                  placeholder="AM"
+                  class="col-6 scheduler-select">
+          </ng-select>
+        </div>
+      </div>
+    </div>
+    <div class="row content-item col-12">
+      <div class="col-2 item-label">
+        <span>to</span>
+      </div>
+      <div class="col-10">
+        <div class="col-12 from-group">
+          <input class="col-6" type="text" pattern="[A-Za-z]" placeholder="3:30" value="">
+          <ng-select
+                  [items]="[{id: '0', name:'am'}, {id: '0', name:'pm'}]"
+                  [(ngModel)]="toTimeId"
+                  bindValue="id"
+                  bindLabel="name"
+                  placeholder="AM"
+                  class="col-6 scheduler-select">
+          </ng-select>
+        </div>
+      </div>
+    </div>
+    <div class="row col-12 btn-container">
+      <div class="col-10 scheduler-btn">
+        <button type="button" class="btn btn-primary btn-block" (click)="setSchedule()">SCHEDULE</button>
+      </div>
+    </div>
+  </div>
+
+</div>

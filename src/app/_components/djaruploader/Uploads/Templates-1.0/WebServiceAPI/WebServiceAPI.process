@@ -1,0 +1,413 @@
+{
+  "variables" : [ {
+    "name" : "msgOut",
+    "type" : "DJMessage",
+    "description" : "Output date in memory",
+    "array" : false,
+    "initialValue" : "",
+    "is_public" : false
+  }, {
+    "name" : "msgIn",
+    "type" : "DJMessage",
+    "description" : "not used",
+    "array" : false,
+    "initialValue" : "",
+    "is_public" : false
+  }, {
+    "name" : "msgError",
+    "type" : "DJMessage",
+    "description" : "not used",
+    "array" : false,
+    "initialValue" : "",
+    "is_public" : false
+  } ],
+  "components" : [ {
+    "name" : "WebServiceInvoker",
+    "type" : "REST API Invoker 3.0.0",
+    "componentType" : "Invoker",
+    "options" : [ {
+      "name" : "protocol",
+      "value" : "HTTP",
+      "hidden" : false,
+      "editable" : true,
+      "description" : "HTTP Protocol",
+      "displayname" : "Protocol",
+      "displayvalue" : "HTTP"
+    }, {
+      "name" : "authentication",
+      "value" : "None",
+      "hidden" : false,
+      "editable" : true,
+      "description" : "Server Authentication",
+      "displayname" : "Authentication",
+      "displayvalue" : "None"
+    }, {
+      "name" : "globalEncoding",
+      "value" : "UTF-8",
+      "hidden" : false,
+      "editable" : true,
+      "description" : "Content Type",
+      "displayname" : "Message Encoding",
+      "displayvalue" : "UTF-8"
+    }, {
+      "name" : "base64Encoding",
+      "value" : "No",
+      "hidden" : false,
+      "editable" : true,
+      "description" : "Content Type",
+      "displayname" : "Use Base64 Encoding",
+      "displayvalue" : "No"
+    }, {
+      "name" : "httpUsername",
+      "value" : "",
+      "hidden" : true,
+      "editable" : true,
+      "description" : "",
+      "displayname" : "HTTP Username",
+      "displayvalue" : ""
+    }, {
+      "name" : "httpPassword",
+      "value" : "",
+      "hidden" : true,
+      "editable" : true,
+      "description" : "",
+      "displayname" : "HTTP Password",
+      "displayvalue" : ""
+    }, {
+      "name" : "userDomain",
+      "value" : "",
+      "hidden" : true,
+      "editable" : true,
+      "description" : "",
+      "displayname" : "Domain",
+      "displayvalue" : ""
+    }, {
+      "name" : "bearerToken",
+      "value" : "",
+      "hidden" : true,
+      "editable" : true,
+      "description" : "",
+      "displayname" : "Bearer Token",
+      "displayvalue" : ""
+    }, {
+      "name" : "proxyServer",
+      "value" : "",
+      "hidden" : false,
+      "editable" : true,
+      "description" : "",
+      "displayname" : "Proxy Server",
+      "displayvalue" : ""
+    }, {
+      "name" : "proxyPort",
+      "value" : "",
+      "hidden" : false,
+      "editable" : true,
+      "description" : "",
+      "displayname" : "Proxy Port",
+      "displayvalue" : ""
+    }, {
+      "name" : "proxyUser",
+      "value" : "",
+      "hidden" : false,
+      "editable" : true,
+      "description" : "",
+      "displayname" : "Proxy Username",
+      "displayvalue" : ""
+    }, {
+      "name" : "proxyPswd",
+      "value" : "",
+      "hidden" : false,
+      "editable" : true,
+      "description" : "",
+      "displayname" : "Proxy Password",
+      "displayvalue" : ""
+    }, {
+      "name" : "keystoreFile",
+      "value" : "",
+      "hidden" : true,
+      "editable" : true,
+      "description" : "",
+      "displayname" : "Keystore File",
+      "displayvalue" : ""
+    }, {
+      "name" : "keystorePswd",
+      "value" : "",
+      "hidden" : true,
+      "editable" : true,
+      "description" : "",
+      "displayname" : "Keystore Pswd",
+      "displayvalue" : ""
+    }, {
+      "name" : "truststoreFile",
+      "value" : "",
+      "hidden" : true,
+      "editable" : true,
+      "description" : "",
+      "displayname" : "Truststore File",
+      "displayvalue" : ""
+    }, {
+      "name" : "truststorePswd",
+      "value" : "",
+      "hidden" : true,
+      "editable" : true,
+      "description" : "",
+      "displayname" : "Truststore Pswd",
+      "displayvalue" : ""
+    } ],
+    "globalTransaction" : false
+  } ],
+  "steps" : [ {
+    "name" : "Start",
+    "type" : "Start",
+    "description" : "Initialize message variable",
+    "enabled" : true,
+    "ignoreError" : false,
+    "x" : 24,
+    "y" : 120,
+    "z" : 0,
+    "script" : "",
+    "expression" : "'===== Start DataConnect Generated Script =====\r\n\r\nSet msgOut = FindMessage(\"msgOut\")\r\nIf msgOut Is Nothing Then\r\n\tSet msgOut = new DJMessage (\"msgOut\")\r\nEnd If\r\n\r\n'===== End DataConnect Generated Script ====="
+  }, {
+    "name" : "Stop",
+    "type" : "Stop",
+    "description" : "Destroy message variable",
+    "enabled" : true,
+    "ignoreError" : false,
+    "x" : 669,
+    "y" : 252,
+    "z" : 0,
+    "script" : "",
+    "expression" : "'===== Start DataConnect Generated Script =====\r\n\r\nSet msgOut = Nothing\r\n\r\n'===== End DataConnect Generated Script ====="
+  }, {
+    "name" : "Setup",
+    "type" : "Script",
+    "description" : "Process sends web service request to API via URL and captures web service response in XML format.",
+    "enabled" : true,
+    "ignoreError" : false,
+    "x" : 138,
+    "y" : 120,
+    "z" : 0,
+    "script" : "",
+    "expression" : "On Error GoTo errHandler\r\nOption Explicit\r\n\r\n'Use DEBUG logging option to view any headers set on the messages\r\nDim i\r\n\r\nLogMessage(\"DEBUG\",\"--------- Target Message Properties for: \" & msgOut.name & \" ---------\")\r\nIf msgOut.PropertiesCount = 0 Then\r\n\tLogMessage(\"DEBUG\",\"--------- none set ---------\")\r\nElse \r\n\tFor i = 0 to msgOut.PropertiesCount - 1\r\n\t  \tLogMessage(\"DEBUG\",\"--------- Target Message Properties: \" & msgOut.PropertyNames(i) & \" = \" & msgOut.Properties(i)) \r\n\tNext i\r\nEnd If\r\n\r\nReturn\r\nerrHandler:\r\nLogMessage(\"ERROR\", \"Err.Number: \" & Err.Number & \" Err.Description: \" & Err.Description & \" Err.Line: \" & Err.Line & \" Err.Source: \" & Err.Source & \" Err.StackTrace: \" & Err.StackTrace)"
+  }, {
+    "name" : "Get API Response",
+    "type" : "Script",
+    "description" : "",
+    "enabled" : true,
+    "ignoreError" : false,
+    "x" : 540,
+    "y" : 48,
+    "z" : 0,
+    "script" : "",
+    "expression" : "On Error GoTo errHandler\r\nOption Explicit\r\n\r\n'Use DEBUG logging option to view any headers set on the messages\r\nDim i\r\n\r\nLogMessage(\"DEBUG\",\"--------- Target Message Properties for: \" & msgOut.name & \" ---------\")\r\nIf msgOut.PropertiesCount = 0 Then\r\n\tLogMessage(\"DEBUG\",\"--------- none set ---------\")\r\nElse \r\n\tFor i = 0 to msgOut.PropertiesCount - 1\r\n\t  \tLogMessage(\"DEBUG\",\"--------- Target Message Properties: \" & msgOut.PropertyNames(i) & \" = \" & msgOut.Properties(i)) \r\n\tNext i\r\nEnd If\r\n\r\nLogMessage(\"WARN\", \"$$$$ msgOut.body = \" & msgOut.body & \" $$$$\")\r\nFileWrite(\"$(DATA)/out/APIcallOut.json\",msgOut.body)\r\n\r\n\r\nReturn\r\nerrHandler:\r\nLogMessage(\"ERROR\", \"Err.Number: \" & Err.Number & \" Err.Description: \" & Err.Description & \" Err.Line: \" & Err.Line & \" Err.Source: \" & Err.Source & \" Err.StackTrace: \" & Err.StackTrace)"
+  }, {
+    "name" : "Save Error Code",
+    "type" : "Script",
+    "description" : "Capture API Return Code. Return code 0 indicates HTTP 200 OK. Any Return Code not 0, is triggered by HTTP 500 (Invalid Credentials or malformed API Request) or HTTP 4xx",
+    "enabled" : true,
+    "ignoreError" : false,
+    "x" : 516,
+    "y" : 196,
+    "z" : 0,
+    "script" : "",
+    "expression" : "On Error GoTo errHandler\r\nOption Explicit\r\n\r\n'Log web service response code\r\nLogMessage(\"INFO\",\"---------API Request Status Code: \" & Project(\"API Call\").Status & \" ---------\")\r\nLogMessage(\"INFO\",\"---------API Request Return Code: \" & Project(\"API Call\").ReturnCode & \" ---------\")\r\nLogMessage(\"INFO\",\"---------Target Message Size: \" & Len(msgOut.body) & \" ---------\")\r\n\r\n'Use DEBUG logging option to view any headers set on the messages\r\nDim i\r\n\r\nLogMessage(\"DEBUG\",\"--------- Target Message Properties for: \" & msgOut.name & \" ---------\")\r\nIf msgOut.PropertiesCount = 0 Then\r\n\tLogMessage(\"DEBUG\",\"--------- none set ---------\")\r\nElse \r\n\tFor i = 0 to msgOut.PropertiesCount - 1\r\n\t  \tLogMessage(\"DEBUG\",\"--------- Target Message Properties: \" & msgOut.PropertyNames(i) & \" = \" & msgOut.Properties(i)) \r\n\tNext j\r\nEnd If\r\n\r\n\r\nReturn\r\nerrHandler:\r\nLogMessage(\"ERROR\", \"Err.Number: \" & Err.Number & \" Err.Description: \" & Err.Description & \" Err.Line: \" & Err.Line & \" Err.Source: \" & Err.Source & \" Err.StackTrace: \" & Err.StackTrace)"
+  }, {
+    "name" : "API Result",
+    "type" : "Decision",
+    "description" : "",
+    "enabled" : true,
+    "ignoreError" : false,
+    "x" : 384,
+    "y" : 120,
+    "z" : 0,
+    "expression" : "Project(\"API Call\").ReturnCode == 0"
+  }, {
+    "name" : "API Call",
+    "type" : "Invoker",
+    "description" : "Execute REST API Invoker",
+    "enabled" : true,
+    "ignoreError" : true,
+    "x" : 264,
+    "y" : 120,
+    "z" : 0,
+    "options" : [ {
+      "name" : "design",
+      "value" : ""
+    }, {
+      "name" : "httpMethod",
+      "value" : "GET"
+    }, {
+      "name" : "url",
+      "value" : "$(URL)"
+    }, {
+      "name" : "urlQueryString",
+      "value" : "$(URL_QUERY_STRING)"
+    }, {
+      "name" : "headers",
+      "value" : ""
+    }, {
+      "name" : "cookies",
+      "value" : ""
+    }, {
+      "name" : "sendUrlData",
+      "value" : "BODY"
+    }, {
+      "name" : "contentType",
+      "value" : "text/xml"
+    }, {
+      "name" : "soapAction",
+      "value" : ""
+    }, {
+      "name" : "retryCount",
+      "value" : "5"
+    }, {
+      "name" : "retryDelay",
+      "value" : "3000"
+    }, {
+      "name" : "logHeaders",
+      "value" : "false"
+    }, {
+      "name" : "sourceFile",
+      "value" : ""
+    }, {
+      "name" : "sourceFolder",
+      "value" : ""
+    }, {
+      "name" : "writeFile",
+      "value" : ""
+    }, {
+      "name" : "responseFile",
+      "value" : ""
+    } ],
+    "component" : "WebServiceInvoker",
+    "action" : "Execute",
+    "parameters" : [ {
+      "name" : "SourceMessage",
+      "value" : "",
+      "position" : 0,
+      "displayName" : "Source Message"
+    }, {
+      "name" : "TargetMessage",
+      "value" : "msgOut",
+      "position" : 1,
+      "displayName" : "Target Message"
+    } ]
+  }, {
+    "name" : "LogResults",
+    "type" : "Script",
+    "description" : "Log REST API results",
+    "enabled" : true,
+    "ignoreError" : false,
+    "x" : 745,
+    "y" : 156,
+    "z" : 0,
+    "script" : "",
+    "expression" : "On Error GoTo errHandler\r\nOption Explicit\r\n\r\nIf Project(\"Achieve Response\").OutputRecordCount > 0 THEN\r\n\tLogMessage(\"INFO\",\"--------- SUCCESS: 1 or more records extracted from API result  ---------\")\r\nElse\r\n\tLogMessage(\"INFO\",\"--------- FAIL: 0 records extracted from API result ---------\")\r\nEnd If\r\n\r\n\r\nReturn\r\nerrHandler:\r\nLogMessage(\"ERROR\", \"Err.Number: \" & Err.Number & \" Err.Description: \" & Err.Description & \" Err.Line: \" & Err.Line & \" Err.Source: \" & Err.Source & \" Err.StackTrace: \" & Err.StackTrace)"
+  }, {
+    "name" : "Achieve Response",
+    "type" : "Transformation",
+    "description" : "Extract details from the API response and format as Unicode delimited text",
+    "enabled" : true,
+    "ignoreError" : false,
+    "x" : 726,
+    "y" : 48,
+    "z" : 0,
+    "configuration" : "$(WORKSPACE)/Templates/WebServiceAPI/WebServiceAPI.map.rtc"
+  } ],
+  "annotations" : [ {
+    "text" : "Publicapis API\r\nhttps://api.publicapis.org/entries",
+    "x" : 24,
+    "y" : 276,
+    "width" : 517,
+    "height" : 97,
+    "textAlignment" : "center",
+    "fontSize" : 20,
+    "fontBold" : false,
+    "fontItalic" : false,
+    "color" : 160,
+    "backgroundColor" : 16777215,
+    "borderColor" : 0
+  }, {
+    "text" : "Double-click on a step to add or edit a component and change its parameters or properties. Once created they can be used by any step in the process of the same type.",
+    "x" : 24,
+    "y" : 360,
+    "width" : 799,
+    "height" : 73,
+    "textAlignment" : "center",
+    "fontSize" : 10,
+    "fontBold" : false,
+    "fontItalic" : false,
+    "color" : 0,
+    "backgroundColor" : 11592957,
+    "borderColor" : 16512
+  }, {
+    "text" : "Macro List:\r\n$(URL) - URL value used by Web Service API template.\r\n$(URL_QUERY_STRING) - URL Query string value used by Web Service API template. On the Configuration tab, go to Macros and select T_WEB_SERVICE_API, click on the Macro Value cell for URL_QUERY_STRING and change \"Animals\" to one of the supported categories. Some examples are Business, Finance, or Transportation. See the complete list of categories and other documentation for this API at: https://github.com/davemachado/public-api",
+    "x" : 25,
+    "y" : 432,
+    "width" : 798,
+    "height" : 133,
+    "textAlignment" : "center",
+    "fontSize" : 10,
+    "fontBold" : false,
+    "fontItalic" : false,
+    "color" : 0,
+    "backgroundColor" : 15329769,
+    "borderColor" : 0
+  } ],
+  "links" : [ {
+    "source" : "Start",
+    "target" : "Setup",
+    "data" : "24,120 138,120"
+  }, {
+    "source" : "API Call",
+    "target" : "API Result",
+    "data" : "264,120 384,120"
+  }, {
+    "source" : "API Result",
+    "target" : "Get API Response",
+    "decision" : "True",
+    "data" : "384,120 540,48"
+  }, {
+    "source" : "API Result",
+    "target" : "Save Error Code",
+    "decision" : "False",
+    "data" : "384,120 516,196"
+  }, {
+    "source" : "LogResults",
+    "target" : "Stop",
+    "data" : "745,156 669,252"
+  }, {
+    "source" : "Setup",
+    "target" : "API Call",
+    "data" : "138,120 264,120"
+  }, {
+    "source" : "Achieve Response",
+    "target" : "LogResults",
+    "data" : "726,48 745,156"
+  }, {
+    "source" : "Get API Response",
+    "target" : "Achieve Response",
+    "data" : "540,48 726,48"
+  }, {
+    "source" : "Save Error Code",
+    "target" : "Stop",
+    "data" : "516,196 669,252"
+  } ],
+  "maxThreads" : 1,
+  "breakOnFirstError" : false,
+  "logMask" : 27,
+  "artifact_metadata" : {
+    "description" : "Process sends web service request to REST API via URL and captures web service response in Json format (refactored Robert Gorsuch example), and transfer the responese to a text file.",
+    "creator" : "ACTIAN\\gcoates",
+    "author" : "ACTIAN\\bzhang",
+    "version" : "1.73",
+    "date_created" : "2018-10-01T12:28:31.470519-05:00",
+    "date_modified" : "2019-06-03T14:49:35.562-05:00"
+  },
+  "ui" : {
+    "paletteX" : 0,
+    "paletteY" : 0,
+    "dividerY" : 0,
+    "zoom" : 100
+  }
+}

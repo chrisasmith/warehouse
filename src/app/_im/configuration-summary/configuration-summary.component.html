@@ -1,0 +1,245 @@
+<app-headingtitlenav [heading]="heading" [subheading]="subheading" [page]="page"></app-headingtitlenav>
+<br><br>
+<div class="center-content">
+    <div class="row acme-section">
+        <div class="col-12">
+            <div class="acme-container">
+                <!-- Connect to Avalanche Cluster Section Header Start -->
+                <div class="acme-container-header">
+                    <h1>Acme Configuration</h1>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="config-switch" checked="">
+                        <label class="custom-control-label" for="config-switch"></label>
+                    </div>
+                    <ul class="tab-links">
+                        <li [ngClass]="{'active': tab === 'details'}">
+                            <a (click)="selectTab('details')">
+                                <p>Details</p>
+                            </a>
+                        </li>
+                        <li [ngClass]="{'active': tab === 'macros'}">
+                            <a (click)="selectTab('macros')">
+                                <p>Macros <span class="meta-count">1</span></p>
+                            </a>
+                        </li>
+                        <li [ngClass]="{'active': tab === 'files'}">
+                            <a (click)="selectTab('files')">
+                                <p>Files <span class="meta-count">2</span></p>
+                            </a>
+                        </li>
+                        <li [ngClass]="{'active': tab === 'jobs'}">
+                            <a (click)="selectTab('jobs')">
+                                <p>Jobs</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Connect to Avalanche Cluster Section Header End -->
+
+                <!-- Details-->
+                <div *ngIf="tab === 'details' " class="configuration-details">
+                    <form class="configuration-form">
+                        <div class="row">
+                            <div class="col-sm-4 config-label-col">
+                                <span class="side-bold-text">Base Template</span>
+                            </div>
+                            <div class="col-sm-6 config-data-col">
+                                <span class="meta-template-name">
+                                            Acme Template
+                                        </span>
+                                <span class="template-meta meta-template-status">
+                                            ACTIAN TEMPLATE
+                                        </span>
+                            </div>
+                            <div class="col-sm-2 config-icon-col">
+                                <span class="profile-thumb-mini">
+                                            <img src="assets/images/profile-pic.jpg" alt="">
+                                        </span>
+                            </div>
+                        </div>
+                        <div class="row" (click)="openModal('fileupload')">
+                            <div class="col-sm-4 config-label-col">
+                                <span class="side-bold-text">Package Uploaded</span>
+                            </div>
+                            <div class="col-sm-6 config-data-col">
+                                <span class="meta-template-name">AcmePackagev3.djar</span>
+                                <span class="template-meta meta-package-status">PRIVATE FILE</span>
+                            </div>
+                            <div class="col-sm-2 config-icon-col">
+                                <a href="#"><i class="fas fa-cloud-upload-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 config-label-col">
+                                <span class="side-bold-text">Entry Point</span><span class="info-icon">i</span>
+                            </div>
+                            <div class="col-sm-6 config-data-col">
+                                AcmeDetails.process.rtc
+                            </div>
+                            <div class="col-sm-2 config-icon-col ">
+                                <a href="#">
+                                    <i class="fa fa-caret-down"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="sub-rows">
+                                <div class="row">
+                                    <div class="col-sm-4 config-label-col">
+                                        <span class="side-bold-text">Source</span><span class="info-icon">i</span>
+                                    </div>
+                                    <div class="col-sm-6 config-data-col">
+                                        <label class="checkbox-container meta-template-name">Sales Force
+                                                <input type="checkbox" checked="checked">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        <button type="button" class="btn btn-outline-primary" (click)="openModal('salesforce')">Saved Connection</button>
+
+                                    </div>
+                                    <div class="col-sm-2 config-icon-col"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4 config-label-col">
+                                        <span class="side-bold-text">Target</span><span class="info-icon">i</span>
+                                    </div>
+                                    <div class="col-sm-6 config-data-col" ngbDropdown>
+                                        <label class="checkbox-container meta-template-name">Avalache
+                                                <input type="checkbox" checked="checked">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        <button type="button" ngbDropdownToggle class="btn btn-outline-primary target-btn"><span class="target-btn-label">Warehouse 1</span><i class="fa fa-caret-down btn-caret-right"></i></button>
+                                        <div ngbDropdownMenu>
+                                            <button class="dropdown-item">Menus</button>
+                                            <button class="dropdown-item">Settings</button>
+                                            <button class="dropdown-item">Actions</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2 config-icon-col">
+                                        <img src="" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 config-label-col">
+                                <span class="side-bold-text">Artifact Override</span><span class="info-icon">i</span>
+                            </div>
+                            <div class="col-sm-6 config-data-col">ON</div>
+                            <div class="col-sm-2 config-icon-col" style=" padding-right: 3%">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="artifact-override-switch" checked>
+                                    <label class="custom-control-label" for="artifact-override-switch"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" (click)="toggleJobFields()">
+                            <div class="col-sm-4 config-label-col">
+                                <span class="side-bold-text">Job Timeout</span><span class="info-icon">i</span>
+                            </div>
+                            <div class="col-sm-6 config-data-col"  >
+                                    <div class="form-row" *ngIf="jobtime">
+                                        <div class="col" style="display:inline-flex;">
+                                            <input type="text" class="form-control" style="width: 40px; ;margin-right: 10px;">  min
+                                            <input type="text" class="form-control" style="width: 40px; ;margin-right: 10px; ;margin-left: 10px;">  secs
+                                        </div>
+                                    </div>
+                                <span class="time-min" *ngIf="!jobtime">
+                                    10 min
+                                </span>
+                                <span class="time-secs" *ngIf="!jobtime">
+                                    50 secs
+                                </span>
+                            </div>
+                            <div class="col-sm-2 config-icon-col">
+                                <a href=""><i class="fa fa-clock"></i></a>
+                            </div>
+                        </div>
+                        <div class="row" (click)="openModal('permissions')">
+                            <div class="col-sm-4 config-label-col">
+                                <span class="side-bold-text">Permissions</span><span class="info-icon">i</span>
+                            </div>
+                            <div class="col-sm-6 config-data-col">
+                                    <span class="scheduling-days">
+                                            <span class="scheduling-day">JP</span>
+                                            <span class="scheduling-day">RJ</span>
+                                            <span class="scheduling-day">PF</span>
+                                    </span>
+                                <span class="profiles-count">+2</span>
+                            </div>
+                            <div class="col-sm-2 config-icon-col">
+                                <a href="#"><i class="fa fa-user-plus"></i></a>
+                            </div>
+                        </div>
+                        <div class="row" (click)="openModal('scheduling')">
+                            <div class="col-sm-4 config-label-col">
+                                <span class="side-bold-text">Scheduling</span><span class="info-icon">i</span>
+                            </div>
+                            <div class="col-sm-6 config-data-col">3:30pm 
+                                <span class="scheduling-days-wrapper">
+                                    <span class="scheduling-days">
+                                        <span class="scheduling-day">M</span>
+                                        <span class="scheduling-day">W</span>
+                                        <span class="scheduling-day">TH</span>
+                                        <span class="scheduling-day scheduling-days-count">+2</span>
+                                    </span>
+                                    <button type="button" class="btn btn-outline-primary" >Recurring</button>
+                                </span>
+                            </div>
+                           
+
+                            <div class="col-sm-2 config-icon-col"><a href="#"><i class="fa fa-calendar"></i></a></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 config-label-col">
+                                <span class="side-bold-text">Log Level</span><span class="info-icon">i</span>
+                            </div>
+                            <div class="col-sm-6 config-data-col">Severe</div>
+                            <div class="col-sm-2 config-icon-col"><a href="#"><i class="fa fa-caret-down"></i></a></div>
+                        </div>
+
+
+                    </form>
+                </div>
+
+                <!-- Macros -->
+                <div *ngIf="tab === 'macros' " class="macro-details">
+                    <app-data-grid [datagrid]="'macrostab'" [filterable]="'yes'" [dateRange]="'yes'" ></app-data-grid>
+                </div>
+
+                <!-- Files -->
+                <div *ngIf="tab === 'files' " class="files-details">
+                    <app-data-grid [datagrid]="'files'" [filterable]="'yes'" [dateRange]="'no'" ></app-data-grid>
+                </div>
+
+                <!-- Jobs -->
+                <div *ngIf="tab === 'jobs' " class="jobs-details">
+                        <app-data-grid [datagrid]="'jobs'" [filterable]="'yes'" [dateRange]="'yes'" ></app-data-grid>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <app-footerrefresh></app-footerrefresh>
+
+
+    <div class="footer-action">
+        <!--<input class="create-config-btn" type="submit" value="Create Configuration">-->
+        <div class="action-button" ngbDropdown placement="top-right">
+            <button class="btn btn-primary btn-lg config-create-btn" type="submit" ngbDropdownToggle>
+                <i class="fa fa-play-circle"></i>
+                <span class="config-btn-label">Run Configuration</span>
+            </button>
+            <div ngbDropdownMenu>
+                <button class="dropdown-item">Save As Template</button>
+                <button class="dropdown-item">Delete Configuration</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Modal Content -->
+<app-scheduling-modal *ngIf="modal === 'scheduling'" (close)="openModal($event)"></app-scheduling-modal>
+<app-salesforce-modal *ngIf="modal === 'salesforce'" (close)="openModal($event)"></app-salesforce-modal>
+<app-permissions-modal *ngIf="modal === 'permissions'" (close)="openModal($event)"></app-permissions-modal>
+<app-file-upload *ngIf="modal === 'fileupload'" (close)="openModal($event)"></app-file-upload>

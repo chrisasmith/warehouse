@@ -1,0 +1,36 @@
+@import "../../../assets/actian/actian-variables";
+
+ul {
+
+}
+#header-nav-ul {
+       float: right !important;
+       margin-left:auto !important;
+       padding:0;
+       list-style-type: none;
+}
+li  {
+       display: inline-block !important;
+       margin-left: 3em !important;
+       font-size: 18px !important;
+}
+
+li a:hover {
+       text-decoration: none;
+       color: gray;
+}
+
+li a {
+       color: #98A9BC;
+}
+
+li button {
+       font-size:14px;
+       font-weight: bold;
+       background-color: $color-actian-primary !important;
+       padding: 10px;
+}
+
+.btn-info {
+       background-color: $color-actian-primary !important;
+}

@@ -1,0 +1,52 @@
+<div class="whiteBox">
+        <div *ngIf="!confirmedEmail">
+                <h2 class="titleHeader">Confirm your email</h2>
+            <div class="signInControls">
+            <div class="icon"></div>
+                <form >
+                    <div class="position-relative form-group">
+                        <label for="exampleEmail">Enter 6 digit code</label>
+                        <input placeholder="" type="text" class="mb-2 form-control-lg form-control">
+                    </div>
+                    <button class="mb-2 mr-2 btn btn-outline-primary btn-lg">Back </button>
+                    <button (click)="toggleEmail()" class="mb-2 mr-2 btn btn-primary btn-lg">NEXT </button>
+                </form>
+                <div class="copyright">
+                    Can't? find confirmation email? <span> <a href="#">Resend code</a> </span>
+                </div>
+            </div>  
+        </div>
+
+        <div *ngIf="confirmedEmail">
+                <h2 class="titleHeader">Hello Name</h2>
+                <div class="signInControls">
+                    <div class="icon"></div>
+                     <form name="form" (ngSubmit)="onSubmit(f)" #f="ngForm" novalidate>
+                        <div class="position-relative form-group">
+                            <label for="email" [ngClass]="{'form-label-error': f.submitted && f.value.email == undefined || f.value.email == ''}" >Email</label>
+                            <input placeholder="Enter Email" type="text"  [ngClass]="{'form-field-error': f.submitted && f.value.email == undefined || f.value.email == ''}" [(ngModel)]="form.email" name="email" class="mb-2 form-control-lg form-control" #email="ngModel" required>
+                            <div class="error-msg"  *ngIf="f.submitted && f.value.email == undefined || f.value.email == ''">
+                                <div *ngIf="f.value.email == undefined || f.value.email == ''">Email is required</div>
+                            </div>
+                        </div>
+                        <div class="position-relative form-group">
+                            <label for="password" [ngClass]="{'form-label-error': f.submitted && f.value.password == undefined || f.value.password == ''}" >Password</label>
+                            <input placeholder="Enter Password"  type="password"
+                                [ngClass]="{'form-field-error': f.submitted && f.value.password == undefined || f.value.password == ''}" [(ngModel)]="form.password" name="password" class="mb-2 form-control-lg form-control" #password="ngModel" required>
+                                <div class="error-msg"  *ngIf="f.submitted && f.value.password == undefined || f.value.password == ''">
+                                    <div *ngIf="f.value.password == undefined || f.value.password == ''">Password is required</div>
+                                </div>
+                                <input style="margin-top: 20px;" type="password"
+                                [ngClass]="{'form-field-error': f.submitted && f.value.passwordconfirm == undefined || f.value.passwordconfirm == ''}"   placeholder="Confirm Again" [(ngModel)]="form.passwordconfirm" name="passwordconfirm" class="mb-2 form-control-lg form-control" #passwordconfirm="ngModel" required>
+                                <div class="error-msg"  *ngIf="f.submitted && f.value.passwordconfirm == undefined || f.value.passwordconfirm == ''">
+                                    <div *ngIf="f.value.passwordconfirm == undefined || f.value.passwordconfirm == ''">Password is required</div>
+                                </div>
+                            </div>
+                        <button [ngClass]="{'form-button-valid': f.valid}" type="submit" class="mb-2 mr-2 btn btn-light btn-lg btn-block btnContinue">LETS GO! </button>
+                    </form>
+                    
+                </div>  
+        </div>
+</div>
+<!-- <app-actian-stepper></app-actian-stepper> -->
+<footer> </footer>

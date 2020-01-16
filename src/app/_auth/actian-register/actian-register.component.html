@@ -1,0 +1,32 @@
+<div class="whiteBox">
+<h2 class="titleHeader"> Create account </h2>
+    <div class="signInControls">
+            <form name="form" (ngSubmit)="onSubmit(f)" #f="ngForm" novalidate>
+               <div class="position-relative form-group">
+                   <label [ngClass]="{'form-label-error': f.submitted && f.value.name == undefined || f.value.name == ''}" for="exampleEmail">Full Name</label>
+                   <input [ngClass]="{'form-field-error': f.submitted && f.value.name == undefined || f.value.name == ''}" placeholder="Ben Joy" type="text"  [(ngModel)]="form.name" name="name" class="mb-2 form-control-lg form-control" #name="ngModel" required>
+                   <div class="error-msg"  *ngIf="f.submitted && f.value.name == undefined || f.value.name == ''">
+                        <div *ngIf="f.value.name == undefined || f.value.name == ''">Name is required</div>
+                    </div>
+               </div>
+               <div class="position-relative form-group">
+                   <label [ngClass]="{'form-label-error': f.submitted && f.value.email == undefined || f.value.email == ''}"  for="exampleEmail">Your Email</label>
+                   <input placeholder="Email" type="text" [ngClass]="{'form-field-error': f.submitted && f.value.email == undefined || f.value.email == ''}" [(ngModel)]="form.email" name="email" class="mb-2 form-control-lg form-control" #email="ngModel" required>
+                   <div class="error-msg"  *ngIf="f.submitted && f.value.email == undefined || f.value.email == ''">
+                        <div *ngIf="f.value.email == undefined || f.value.email == ''">Email is required</div>
+                    </div>
+               </div>
+               <button 
+               [ngClass]="{'form-button-valid': f.valid}" 
+               type="submit" class="mb-2 mr-2 btn btn-light btn-lg btn-block btnContinue">CONTINUE </button>
+               <div *ngIf="f.submitted && f.errors != null" class="alert alert-danger">
+                    Login failed: {{errorMessage}}
+                </div>
+          </form>
+           <div class="copyright">
+                  Already have an account? <span> <a [routerLink]="['/actian/login']" >Login Here</a> </span>
+           </div>
+    </div>
+</div>
+<footer> </footer>
+       

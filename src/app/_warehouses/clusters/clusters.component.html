@@ -1,0 +1,46 @@
+<!-- <app-headingtitle></app-headingtitle> -->
+  <!-- Create New Cluster Form -->
+<div class="card-cluster" *ngIf="addClusters" >
+    <div class="card-cluster-header">
+      Create a new Cluster
+    </div>
+    <div class="cluster-form">
+      <div class="position-relative">
+        <div class="form-group">
+            <input placeholder="Enter Cluster Name" type="text" class="mb-2 form-control-lg form-control">
+        </div>
+        <div class="form-group">
+            <div class="d-inline-block btn-block" ngbDropdown>
+                <button type="button" ngbDropdownToggle class="mb-2 mr-2 btn btn-lg btn-light btn-block">Choose Location</button>
+                <div ngbDropdownMenu>
+                  <button class="dropdown-item">Menus</button>
+                  <button class="dropdown-item">Settings</button>
+                  <h6 class="dropdown-header">Header</h6>
+                  <button class="dropdown-item">Actions</button>
+                  <div class="dropdown-divider"></div>
+                  <button class="dropdown-item">Dividers</button>
+                </div>
+              </div>
+        </div>
+        <div class="form-group">
+            <div class="d-inline-block btn-block" ngbDropdown>
+                <button type="button" ngbDropdownToggle class="mb-2 mr-2 btn btn-light btn-lg btn-block">Choose Cluster Size</button>
+                <div ngbDropdownMenu>
+                  <button class="dropdown-item">Menus</button>
+                  <button class="dropdown-item">Settings</button>
+                  <h6 class="dropdown-header">Header</h6>
+                  <button class="dropdown-item">Actions</button>
+                  <div class="dropdown-divider"></div>
+                  <button class="dropdown-item">Dividers</button>
+                </div>
+              </div>
+        </div>
+        <div class="form-group">
+            <input placeholder="Choose ip" type="text" class="mb-2 form-control-lg form-control">
+        </div>
+        <div class="continue">
+            <button (click)="loadStep(2)" class="mb-2 mr-2 btn btnContinue btn-light btn-lg"> Continue </button>
+        </div>
+      </div>
+    </div>
+  </div>

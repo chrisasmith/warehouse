@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="178px" height="50px" viewBox="0 0 178 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57 (83077) - https://sketch.com -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <text id="text-1" font-family="RedHatText-Medium, Red Hat Text" font-size="23" font-weight="400" letter-spacing="-0.200000003" fill="#FFFFFF">
+            <tspan x="59.548" y="33">Actian</tspan>
+            <tspan x="127.463" y="33" font-family="RedHatText-Regular, Red Hat Text" font-weight="normal">One</tspan>
+        </text>
+        <filter x="-3.1%" y="-8.3%" width="106.2%" height="123.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.0845443619 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M1.85529578,37.4464426 C2.14122352,38.64583 3.16579788,39.8452175 4.11889032,40.1004063 C13.5545054,41.8356902 21.107763,41.1211615 30.233623,37.9568202 C31.1867155,37.5485181 32.378081,36.3236118 32.8069726,35.2773376 C35.8568684,26.0139836 37.2626798,17.3375638 34.5701936,7.66590767 C34.2842659,6.61963352 33.1167277,5.49680272 32.0444987,5.19057614 C22.10851,2.94491455 13.1017865,2.4600558 3.04666133,3.65944324 C1.97443234,3.83807541 0.92603066,4.98642509 0.735412173,6.18581253 C-0.527435304,17.0313372 -0.170025641,26.6774745 1.85529578,37.4464426" id="path-3"></path>
+        <filter x="-27.8%" y="-21.1%" width="155.6%" height="152.6%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.17225743 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="ActianOne---PoC" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Account-Setting" transform="translate(-135.000000, -14.000000)">
+            <g id="Navbar">
+                <g id="logo" transform="translate(141.000000, 15.000000)">
+                    <g id="ActianOne" fill="#FFFFFF" fill-opacity="1">
+                        <use filter="url(#filter-2)" xlink:href="#text-1"></use>
+                        <use xlink:href="#text-1"></use>
+                    </g>
+                    <g id="Path">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                        <use fill="#168CFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    </g>
+                    <path d="M38.7449543,31.8795806 C38.6015594,32.9972937 37.6694928,34.0653308 36.6896278,34.2143592 C27.8708432,35.6798054 18.8130672,35.1333678 10.1854758,32.724075 C9.20561083,32.4508562 8.20184673,31.3828191 7.96285528,30.3644582 C5.95532708,21.5966192 5.47734417,12.4810473 6.57670485,3.53934178 C6.69620058,2.52098088 7.69996468,1.55229612 8.75152707,1.37842962 C18.2633869,-0.0621784831 27.9425407,-0.360235333 37.5260979,0.509097145 C38.5776603,0.608449428 39.5336261,1.60197226 39.6053235,2.71968545 C40.3461971,12.4313711 40.0355082,22.217571 38.7449543,31.8795806" id="Path" fill="#2244CC"></path>
+                    <path d="M13.3397282,40.5275092 C22.6679034,43.0348441 31.4431197,44.1380714 41.0838368,44.0127047 C42.2859212,43.9374846 43.463964,42.8342573 43.7043809,41.5555165 C45.2190072,31.2754436 45.3872991,21.7224978 44.3054231,11.3672048 C44.1130896,10.0633906 43.1033387,8.73450317 42.069546,8.45869634 C33.8953719,6.22716831 25.2644057,6.65341524 17.2585234,9.33626354 C16.1766475,9.68729042 14.8303129,10.8908112 14.3013957,11.9689651 C10.3585588,19.9172167 8.98818257,28.9937689 10.7672675,37.7945142 C10.9836427,38.9228149 12.1616855,40.151409 13.3397282,40.5275092 Z" id="Path" fill="#201A1B"></path>
+                    <path d="M28.9557613,38.0222759 C22.7088477,38.0222759 18,32.525822 18,25.7122455 C18,18.7973519 22.7325103,13.0222759 29.5236626,13.0222759 C36.2674897,13.0222759 41,18.7973519 41,25.8895504 L41,37.9969466 L35.2736626,31.9179192 L35.2736626,25.8895504 C35.2736626,22.1408169 32.718107,19.075974 29.5473251,19.075974 C26.3765432,19.075974 23.8209877,22.0648291 23.8209877,25.7122455 C23.8209877,29.3090033 26.3765432,31.9685778 29.6893004,31.9685778 L32.9783951,31.9685778 L32.9783951,38.0222759 L28.9557613,38.0222759 L28.9557613,38.0222759 Z" id="Path" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

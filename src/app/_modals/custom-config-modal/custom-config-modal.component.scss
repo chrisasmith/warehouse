@@ -1,0 +1,300 @@
+.modal-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    background-color: #FFF;
+    width: 620px;
+    border-radius: 3px;
+}
+
+.modal-window label {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.modal-window-close {
+    right: 20px;
+    position: relative;
+    top: 20px;
+}
+
+.modal-window-footer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+
+.modal-window-body {
+    padding: 70px;
+    padding-bottom: 35px;
+}
+
+.modal-window-footer button {
+    width: 198px;
+    height: 38px;
+    margin-bottom: 70px;
+}
+
+.backdrop {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(206, 206, 206, 0.66);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.form-row {
+    margin-bottom: 15px !important;
+}
+
+// .file-manager {
+//     color: #168CFF !important;
+//     font-size: 17px;
+//     font-weight: 600;
+// }
+.card-cluster-header {
+    position: relative;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #168CFF !important;
+    margin-top: 25px;
+}
+
+p.browse-file {
+    color: #168CFF !important;
+    cursor: pointer;
+}
+
+.drag-drop {
+    position: relative;
+    border-style: dashed;
+    border-color: #168CFF !important;
+    border-width: 2px;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    border-radius: 3px;
+    margin: 0%;
+}
+
+p.package-heading {
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #98A9BC !important;
+    margin-top: 25px;
+}
+
+p.package-heading .file-manager {
+    color: #168CFF !important;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.drag-drop>img {
+    /* height: calc(100% - 88%); */
+    width: calc(100% - 80%);
+    padding-bottom: 30px;
+}
+
+
+/* MODAL STYLES
+-------------------------------*/
+
+app-modal {
+    /* modals are hidden by default */
+    display: none;
+    .modal {
+        /* modal container fixed across whole screen */
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        /* z-index must be higher than .modal-background */
+        z-index: 1000;
+        /* enables scrolling for tall modals */
+        overflow: auto;
+        .modal-body {
+            padding: 20px;
+            background: #fff;
+            min-width: 300px;
+            /* margin exposes part of the modal background */
+            margin: 25%;
+            margin: 18% 26%;
+            border-radius: 8px;
+        }
+    }
+    .modal-background {
+        /* modal background fixed across whole screen */
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        /* semi-transparent black  */
+        background-color: #000;
+        opacity: 0.75;
+        /* z-index must be below .modal and above everything else  */
+        z-index: 900;
+    }
+}
+
+button.close-modal {
+    right: 0;
+    top: 0;
+    position: absolute;
+    margin: 5px;
+}
+
+body.modal-open {
+    /* body overflow is hidden to hide main scrollbar when modal window is open */
+    overflow: hidden;
+}
+
+button.continue-modal {
+    margin: 2% 44%;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 36px;
+    color: #168CFF !important;
+    background: #cbdef1;
+    cursor: pointer;
+}
+
+
+/* macros styles */
+
+input.macro-detail {
+    width: 41%;
+    height: 50px;
+    padding: 7px;
+    margin-left: 15px;
+    border: none;
+    color: #98A9BC;
+    font-weight: bold;
+    border: solid 1px #bdcbdc;
+    border-radius: 5px;
+}
+
+// FILE UPLOADING STYLES
+.file-upload-container2 {
+    margin-top: 2em;
+}
+
+.upload-cancel-btn i {
+    color: #188DFF;
+}
+
+.uploading-file-icon i {
+    font-size: 32px;
+}
+
+.progress-indicator {
+    text-align: center;
+}
+
+.progress-indicator span {
+    background: #F6F9FC;
+}
+
+.progress-indicator span {
+    background: #F6F9FC;
+    display: inline-block;
+    padding: 10px 25px;
+    font-size: inherit;
+    color: #188DFF;
+    border-radius: 5px;
+}
+
+.progress-indicator span i {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.uploading-file-name {
+    color: #000;
+    font-weight: 500;
+}
+
+.uploading-file-status {
+    font-size: 12px;
+}
+
+.uploading-file-progress-bg {
+    background: #98A9BC;
+    border-radius: 10px;
+    max-width: 200px;
+    overflow: hidden;
+}
+
+.uploading-file-progress-done {
+    background: #188DFF;
+    height: 6px;
+}
+
+i.fa-lock-open {
+    position: absolute;
+    z-index: 1;
+    right: 35px;
+    top: 15px;
+    color: #188DFF;
+    cursor: pointer;
+    width: 0;
+    font-size: 20px;
+}
+
+i.fa-lock {
+    position: absolute;
+    z-index: 1;
+    right: 35px;
+    top: 15px;
+    color: #d8d5de;
+    cursor: pointer;
+    width: 0;
+    font-size: 20px;
+}
+
+.addMacroBtn {
+    font-size: 25px;
+    align-items: center;
+    padding: 0 0 0 15px;
+}
+
+input[type="text"] {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+::-webkit-input-placeholder {
+    font-size: 14px;
+    // font-weight: 500px;
+}
+
+::-moz-placeholder {
+    font-size: 14px;
+    // font-weight: 500px;
+}
+
+ :-ms-input-placeholder {
+    font-size: 14px;
+    // font-weight: 500px;
+}
+
+ ::placeholder {
+    font-size: 14px;
+    // font-weight: 500px;
+}

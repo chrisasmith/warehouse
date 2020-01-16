@@ -1,0 +1,65 @@
+.modal-window{
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       box-shadow:0 5px 10px rgba(0,0,0,0.3);
+       background-color: #FFF;
+       width: 80%;
+       border-radius: 3px;
+}
+
+.modal-window label {
+       font-size: 15px;
+       font-weight: bold;
+}
+
+.modal-window-close {
+       right: 20px;
+       position: relative;
+       top: 20px;
+}
+
+h1 {
+       font-size:21px;
+       font-weight: bold;
+}
+
+.title {
+       display:flex;
+       margin-bottom:40px;
+}
+
+.title-text {
+       width: 360px;
+       margin-left: auto;
+
+}
+.title-button {
+       margin-left: auto;
+}
+
+.modal-window-body {
+       padding-top: 70px;
+       padding-left: 30px;
+       padding-right: 30px;
+}
+
+.modal-window-footer button {
+       width: 198px;
+       height:38px;
+       margin-bottom: 70px;
+}
+
+.backdrop {
+       height: 100%;
+       width: 100%;
+       background-color: rgba(206,206,206,0.66);
+       position: absolute;
+       top: 0;
+       left: 0;
+}
+
+.form-row {
+       margin-bottom: 15px !important;
+   }

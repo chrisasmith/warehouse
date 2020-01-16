@@ -1,0 +1,21 @@
+<div class="whiteBox">
+  <div class="ribbon">
+
+  </div>
+<h2 class="titleHeader"> Start your 30-day Free Trial Receive $500 in credits</h2>
+<div class="subheading">
+    Pick your preffered cloud environment
+</div>
+
+<div class="choices">
+  <div class="azure choice" (click)="azure = !azure &&  !amazon" [ngClass]="azure ? 'yes' : 'no'">
+    <span *ngIf="azure" class="success-checkmark"></span>
+  </div>
+  <div class="amazon choice" (click)="amazon = !amazon && !azure" [ngClass]="amazon ? 'yes' : 'no'">
+    <span *ngIf="amazon" class="success-checkmark" ></span>
+  </div>
+</div>
+
+<button [routerLink]="['/actian/login']" class="mr-2 btn btn-transition btn-outline-info btnOfferChoice"> Continue to Dashboard </button>   
+</div>
+<footer></footer>

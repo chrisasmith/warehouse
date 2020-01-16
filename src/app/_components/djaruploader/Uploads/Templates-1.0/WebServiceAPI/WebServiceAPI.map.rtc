@@ -1,0 +1,397 @@
+{
+  "name" : "WebServiceAPI",
+  "description" : "",
+  "entryPoint" : "WebServiceAPI.map",
+  "logLevel" : "INFO",
+  "logfileName" : "$(LOGS)\\DataConnect.log",
+  "flushLog" : false,
+  "clearLog" : true,
+  "macroSetNames" : [ ],
+  "profiling" : false,
+  "macroDefinitions" : [ ],
+  "transformOptions" : {
+    "overflowOption" : "IGNORE",
+    "truncationOption" : "IGNORE",
+    "nullOption" : "IGNORE"
+  },
+  "datasetConfigs" : {
+    "namedDatasets" : [ {
+      "name" : "SOURCE_1",
+      "schemaMismatchOption" : "error",
+      "dataset" : {
+        "session_info" : {
+          "type" : "source",
+          "connector" : "JSON"
+        },
+        "connect_info" : {
+          "parts" : [ {
+            "name" : "file",
+            "value" : "$(DATA)/out/APIcallOut.json"
+          } ],
+          "properties" : [ {
+            "name" : "batchsize",
+            "value" : "100"
+          }, {
+            "name" : "readNulls",
+            "value" : "true"
+          }, {
+            "name" : "readEmptyTokens",
+            "value" : "true"
+          } ]
+        },
+        "schema_info" : {
+          "schema" : {
+            "root_defs" : [ {
+              "name" : "DocumentRoot",
+              "max_occurs" : "unbounded",
+              "choice" : [ {
+                "name" : "ROOT",
+                "rec_type_ref" : "ROOT_._type"
+              } ]
+            } ],
+            "type_defs" : [ {
+              "name" : "ROOT_._type",
+              "groups" : [ {
+                "name" : "ROOT_._type_group",
+                "sequence" : [ {
+                  "name" : "__._JSON_INPUT",
+                  "max_occurs" : "unbounded",
+                  "type" : "string",
+                  "nulls" : false,
+                  "length" : 16,
+                  "external" : {
+                    "type" : "String",
+                    "pad_char" : " ",
+                    "max_total_digits" : 0
+                  },
+                  "min_occurs" : 0
+                }, {
+                  "name" : "count",
+                  "max_occurs" : "unbounded",
+                  "type" : "int",
+                  "nulls" : false,
+                  "length" : 4,
+                  "external" : {
+                    "type" : "Int",
+                    "signed" : true,
+                    "max_total_digits" : 0
+                  },
+                  "min_occurs" : 0,
+                  "total_digits" : 0
+                }, {
+                  "name" : "entries",
+                  "max_occurs" : "unbounded",
+                  "rec_type_ref" : "entries_._type",
+                  "external" : {
+                    "type" : "Structure"
+                  },
+                  "min_occurs" : 0
+                } ]
+              } ]
+            }, {
+              "name" : "entries_._type",
+              "groups" : [ {
+                "name" : "entries_._type_group",
+                "sequence" : [ {
+                  "name" : "__._JSON_INPUT",
+                  "max_occurs" : "unbounded",
+                  "type" : "string",
+                  "nulls" : false,
+                  "length" : 16,
+                  "external" : {
+                    "type" : "String",
+                    "pad_char" : " ",
+                    "max_total_digits" : 0
+                  },
+                  "min_occurs" : 0
+                }, {
+                  "name" : "Object",
+                  "max_occurs" : "unbounded",
+                  "rec_type_ref" : "Object_._type",
+                  "external" : {
+                    "type" : "Structure"
+                  },
+                  "min_occurs" : 0
+                } ]
+              } ]
+            }, {
+              "name" : "Object_._type",
+              "groups" : [ {
+                "name" : "Object_._type_group",
+                "sequence" : [ {
+                  "name" : "__._JSON_INPUT",
+                  "max_occurs" : "unbounded",
+                  "type" : "string",
+                  "nulls" : false,
+                  "length" : 16,
+                  "external" : {
+                    "type" : "String",
+                    "pad_char" : " ",
+                    "max_total_digits" : 0
+                  },
+                  "min_occurs" : 0
+                }, {
+                  "name" : "API",
+                  "max_occurs" : "unbounded",
+                  "type" : "string",
+                  "nulls" : false,
+                  "length" : 12,
+                  "external" : {
+                    "type" : "String",
+                    "pad_char" : " ",
+                    "max_total_digits" : 0
+                  },
+                  "min_occurs" : 0
+                }, {
+                  "name" : "Description",
+                  "max_occurs" : "unbounded",
+                  "type" : "string",
+                  "nulls" : false,
+                  "length" : 38,
+                  "external" : {
+                    "type" : "String",
+                    "pad_char" : " ",
+                    "max_total_digits" : 0
+                  },
+                  "min_occurs" : 0
+                }, {
+                  "name" : "Auth",
+                  "max_occurs" : "unbounded",
+                  "type" : "string",
+                  "nulls" : false,
+                  "length" : 6,
+                  "external" : {
+                    "type" : "String",
+                    "pad_char" : " ",
+                    "max_total_digits" : 0
+                  },
+                  "min_occurs" : 0
+                }, {
+                  "name" : "HTTPS",
+                  "max_occurs" : "unbounded",
+                  "type" : "boolean",
+                  "nulls" : false,
+                  "length" : 1,
+                  "external" : {
+                    "type" : "Boolean",
+                    "picture" : "True.False",
+                    "max_total_digits" : 0
+                  },
+                  "min_occurs" : 0
+                }, {
+                  "name" : "Cors",
+                  "max_occurs" : "unbounded",
+                  "type" : "string",
+                  "nulls" : false,
+                  "length" : 7,
+                  "external" : {
+                    "type" : "String",
+                    "pad_char" : " ",
+                    "max_total_digits" : 0
+                  },
+                  "min_occurs" : 0
+                }, {
+                  "name" : "Link",
+                  "max_occurs" : "unbounded",
+                  "type" : "string",
+                  "nulls" : false,
+                  "length" : 74,
+                  "external" : {
+                    "type" : "String",
+                    "pad_char" : " ",
+                    "max_total_digits" : 0
+                  },
+                  "min_occurs" : 0
+                }, {
+                  "name" : "Category",
+                  "max_occurs" : "unbounded",
+                  "type" : "string",
+                  "nulls" : false,
+                  "length" : 7,
+                  "external" : {
+                    "type" : "String",
+                    "pad_char" : " ",
+                    "max_total_digits" : 0
+                  },
+                  "min_occurs" : 0
+                } ]
+              } ]
+            } ],
+            "rule_defs" : { }
+          }
+        },
+        "sample_info" : {
+          "type" : "All",
+          "start" : 0,
+          "end" : 0
+        }
+      }
+    }, {
+      "name" : "TARGET_1",
+      "schemaMismatchOption" : "error",
+      "dataset" : {
+        "session_info" : {
+          "type" : "target",
+          "connector" : "Unicode (Delimited)"
+        },
+        "connect_info" : {
+          "parts" : [ {
+            "name" : "file",
+            "value" : "$(DATA)/out/WebServiceAPI_response.txt"
+          }, {
+            "name" : "outputmode",
+            "value" : "REPLACE"
+          } ],
+          "properties" : [ {
+            "name" : "encoding",
+            "value" : "OEM"
+          }, {
+            "name" : "byteorder",
+            "value" : "Auto"
+          }, {
+            "name" : "ordermark",
+            "value" : "False"
+          }, {
+            "name" : "recsep",
+            "value" : "CR-LF"
+          }, {
+            "name" : "fldsep",
+            "value" : ","
+          }, {
+            "name" : "fldsdelim",
+            "value" : "\""
+          }, {
+            "name" : "fldedelim",
+            "value" : "\""
+          }, {
+            "name" : "header",
+            "value" : "True"
+          }, {
+            "name" : "delimit",
+            "value" : "all"
+          }, {
+            "name" : "lstrip",
+            "value" : "True"
+          }, {
+            "name" : "tstrip",
+            "value" : "True"
+          }, {
+            "name" : "srcxlit",
+            "value" : ""
+          }, {
+            "name" : "trgxlit",
+            "value" : ""
+          }, {
+            "name" : "maxdatalen",
+            "value" : "0"
+          }, {
+            "name" : "nullind",
+            "value" : "none"
+          } ]
+        },
+        "schema_info" : {
+          "schema" : {
+            "root_defs" : [ {
+              "name" : "DocumentRoot",
+              "max_occurs" : "unbounded",
+              "choice" : [ {
+                "name" : "R1",
+                "rec_type_ref" : "R1"
+              } ]
+            } ],
+            "type_defs" : [ {
+              "name" : "R1",
+              "groups" : [ {
+                "name" : "R1",
+                "sequence" : [ {
+                  "name" : "API",
+                  "type" : "string",
+                  "length" : 12,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "Description",
+                  "type" : "string",
+                  "length" : 38,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "Auth",
+                  "type" : "string",
+                  "length" : 6,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "HTTPS",
+                  "type" : "boolean",
+                  "external" : {
+                    "type" : "Boolean",
+                    "picture" : "True.False"
+                  }
+                }, {
+                  "name" : "Cors",
+                  "type" : "string",
+                  "length" : 7,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "Link",
+                  "type" : "string",
+                  "length" : 74,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                }, {
+                  "name" : "Category",
+                  "type" : "string",
+                  "length" : 7,
+                  "external" : {
+                    "type" : "Text",
+                    "align" : "Left",
+                    "pad_char" : " "
+                  }
+                } ]
+              } ]
+            } ],
+            "rule_defs" : {
+              "recognition_rule" : [ {
+                "name" : "RuleSet 1"
+              } ]
+            },
+            "artifact_metadata" : { }
+          }
+        },
+        "sample_info" : {
+          "type" : "All",
+          "start" : 0,
+          "end" : 0
+        }
+      }
+    } ],
+    "namedSessions" : [ ]
+  },
+  "profile_mask" : 65535,
+  "profile_output_file" : "C:\\dcsamples_workspace_Templates\\Templates\\WebServiceAPI\\Output\\profile.out",
+  "artifact_metadata" : {
+    "description" : "",
+    "creator" : "ACTIAN\\gcoates",
+    "author" : "ACTIAN\\bzhang",
+    "version" : "1.7",
+    "date_created" : "2018-10-02T09:58:09.529911-05:00",
+    "date_modified" : "2019-04-15T15:11:13.873-05:00"
+  }
+}

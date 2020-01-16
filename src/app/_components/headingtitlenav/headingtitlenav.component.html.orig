@@ -1,0 +1,71 @@
+<div class="content-heading">
+<<<<<<< HEAD
+    <div class="content-heading-subheading">
+        {{subheading}}
+      </div>
+  <div class="content-heading-main">
+   {{ heading }}
+      <ul id="header-nav-ul">
+          <li class="header-nav-links"><a [routerLink]="['/im/configurations']">Configurations </a></li>
+          <li class="header-nav-links"><a [routerLink]="['/im/templates']" >Templates</a></li>
+          <li class="header-nav-links"><a [routerLink]="['/im/macros']" >Macros</a></li>
+          <li class="header-nav-links"><a [routerLink]="['/im/filemanager']">Files Manager</a></li>
+          <li class="header-nav-links" *ngIf="page === 'configuration'"> 
+            <button [routerLink]="['/dashboards/clusters/create-new']" class="mb-2 mr-2 btn-pill btn btn-info btn-icon">
+              <i class="lnr-plus-circle btn-icon-wrapper"> </i>
+              Create Configuration
+            </button>
+            
+=======
+  <div class="content-heading-subheading">
+        <!-- Integration > Configuration -->
+        {{subheading}}      
+	</div>
+  <div class="content-heading-main">
+        <!-- Configurations -->
+        {{heading}}
+      <ul id="header-nav-ul">
+          <li class="header-nav-links"><a [routerLink]="['/dashboards/configurations']">Configurations </a></li>
+          <li class="header-nav-links"><a [routerLink]="['/dashboards/templates']">Templates</a></li>
+          <li class="header-nav-links"><a href="#">Macros</a></li>
+          <li class="header-nav-links"><a [routerLink]="['/dashboards/filemanager']">Files Manager</a></li>
+          <li class="header-nav-links"> 
+            <button [routerLink]="['/dashboards/clusters/create-new']" class="mb-2 mr-2 btn-pill btn btn-info btn-icon" *ngIf="CreateCfgButtonShow">
+                    <i class="lnr-plus-circle btn-icon-wrapper"> </i>
+                    Create Configuration
+                </button>
+                <button class="mb-2 mr-2 btn-pill btn btn-info btn-icon" *ngIf="FileMgrButtonShow" (click)="openModal('filemgr')">
+                    <i class="lnr-plus-circle btn-icon-wrapper"> </i>
+                    Upload Folders / Files
+                </button>
+>>>>>>> ffc17376a077fbf33ca46e02d5b432cd1c642a5f
+          </li>
+          <li class="header-nav-links" *ngIf="page === 'templates'"> 
+              <button [routerLink]="['/dashboards/clusters/create-new-template']" class="mb-2 mr-2 btn-pill btn btn-info btn-icon">
+                <i class="lnr-plus-circle btn-icon-wrapper"> </i>
+                Create Template
+              </button>
+              
+            </li>
+      </ul>
+  </div>
+<<<<<<< HEAD
+</div>
+=======
+</div>
+<!-- 
+<div class="content-heading">
+  <div class="content-heading-subheading">
+      Overview of Integrations
+    </div>
+<div class="content-heading-main">
+ Integration Manager
+    <ul id="header-nav-ul">
+        <li class="header-nav-links"><a [routerLink]="['/dashboards/configurations']">Configurations </a></li>
+        <li class="header-nav-links"><a [routerLink]="['/dashboards/integrations']" >Templates</a></li>
+        <li class="header-nav-links"><a href="#">Macros</a></li>
+        <li class="header-nav-links"><a href="#">Files Manager</a></li>
+    </ul>
+</div>
+</div> -->
+>>>>>>> ffc17376a077fbf33ca46e02d5b432cd1c642a5f

@@ -1,0 +1,16 @@
+<div (clickedOutside)="clickOutsideDrawer()" class="app-drawer-wrapper" [ngClass]="{'drawer-open' : toggleDrawer}">
+  <div class="drawer-content-wrapper">
+    <div class="drawer-heading">
+      <span class="drawer-title">{{title}}</span>
+    </div>
+    <section class="scrollbar-container">
+      <perfect-scrollbar [autoPropagation]="true">
+        <div class="drawer-section">
+          <ng-content></ng-content>
+        </div>
+      </perfect-scrollbar>
+    </section>
+  </div>
+</div>
+
+<div class="app-drawer-overlay"></div>

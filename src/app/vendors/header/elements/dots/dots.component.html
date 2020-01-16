@@ -1,0 +1,206 @@
+<div class="header-dots">
+  <div class="btn-group" ngbDropdown autoClose="outside" placement="bottom">
+    <button type="button" class="btn btn-link p-0 mr-10" ngbDropdownToggle>
+      <span>
+        <div class="icon-wrapper icon-wrapper-alt rounded-circle">
+          <div class="icon-wrapper-bg"></div>
+          <i class="lnr-envelope text-white"></i>
+          <div class="badge badge-dot badge-dot-sm badge-danger">Notifications</div>
+        </div>
+      </span>
+    </button>
+    <div class="dropdown-menu-xl" ngbDropdownMenu>
+      <div class="card-tabbed-header">
+        <ngb-tabset class="tabs-animated tabs-animated-shadow" justify="justified">
+          <ngb-tab>
+            <ng-template ngbTabTitle><span>Activity</span></ng-template>
+            <ng-template ngbTabContent>
+              <div class="scroll-gradient">
+                <div class="scroll-area-sm shadow-overflow">
+                  <perfect-scrollbar [autoPropagation]="true">
+                    <div
+                      class="vertical-time-simple vertical-without-time vertical-timeline vertical-timeline--animate vertical-timeline--one-column">
+                      <div class="vertical-timeline-item vertical-timeline-element">
+                        <div><span class="vertical-timeline-element-icon bounce-in"></span>
+                          <div class="vertical-timeline-element-content bounce-in"><h4 class="timeline-title">All Hands
+                            Meeting</h4><span class="vertical-timeline-element-date"></span></div>
+                        </div>
+                      </div>
+                      <div class="vertical-timeline-item vertical-timeline-element">
+                        <div><span class="vertical-timeline-element-icon bounce-in"></span>
+                          <div class="vertical-timeline-element-content bounce-in"><p>Another meeting today, at <b
+                            class="text-danger">12:00 PM</b></p><span class="vertical-timeline-element-date"></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="vertical-timeline-item vertical-timeline-element">
+                        <div><span class="vertical-timeline-element-icon bounce-in"></span>
+                          <div class="vertical-timeline-element-content bounce-in"><h4 class="timeline-title">Build the
+                            production release</h4><span class="vertical-timeline-element-date"></span></div>
+                        </div>
+                      </div>
+                      <div class="vertical-timeline-item vertical-timeline-element">
+                        <div><span class="vertical-timeline-element-icon bounce-in"></span>
+                          <div class="vertical-timeline-element-content bounce-in"><h4 class="timeline-title">All Hands
+                            Meeting</h4><span class="vertical-timeline-element-date"></span></div>
+                        </div>
+                      </div>
+                      <div class="vertical-timeline-item vertical-timeline-element">
+                        <div><span class="vertical-timeline-element-icon bounce-in"></span>
+                          <div class="vertical-timeline-element-content bounce-in"><h4
+                            class="timeline-title text-success">FontAwesome Icons</h4><span
+                            class="vertical-timeline-element-date"></span></div>
+                        </div>
+                      </div>
+                      <div class="vertical-timeline-item vertical-timeline-element">
+                        <div><span class="vertical-timeline-element-icon bounce-in"></span>
+                          <div class="vertical-timeline-element-content bounce-in"><h4 class="timeline-title">Build the
+                            production release</h4><span class="vertical-timeline-element-date"></span></div>
+                        </div>
+                      </div>
+                      <div class="vertical-timeline-item vertical-timeline-element">
+                        <div><span class="vertical-timeline-element-icon bounce-in"></span>
+                          <div class="vertical-timeline-element-content bounce-in"><p>Another meeting today, at <b
+                            class="text-warning">12:00 PM</b></p><span class="vertical-timeline-element-date"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </perfect-scrollbar>
+                </div>
+              </div>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab>
+            <ng-template ngbTabTitle><span>Notifications</span></ng-template>
+            <ng-template ngbTabContent>
+              <div class="scroll-gradient">
+                <div class="scroll-area-sm shadow-overflow">
+                  <perfect-scrollbar [autoPropagation]="true">
+                    <div
+                      class="vertical-without-time vertical-timeline vertical-timeline--animate vertical-timeline--one-column">
+                      <div class="vertical-timeline-item vertical-timeline-element">
+                        <div><span class="vertical-timeline-element-icon bounce-in"><i
+                          class="badge badge-dot badge-dot-xl badge-success"></i></span>
+                          <div class="vertical-timeline-element-content bounce-in"><h4 class="timeline-title">All Hands
+                            Meeting</h4>
+                            <p>Lorem ipsum dolor sic amet, today at <a [routerLink]="">12:00 PM</a></p><span
+                              class="vertical-timeline-element-date"></span></div>
+                        </div>
+                      </div>
+                      <div class="vertical-timeline-item vertical-timeline-element">
+                        <div><span class="vertical-timeline-element-icon bounce-in"><i
+                          class="badge badge-dot badge-dot-xl badge-warning"></i></span>
+                          <div class="vertical-timeline-element-content bounce-in"><p>Another meeting today, at <b
+                            class="text-danger">12:00 PM</b></p>
+                            <p>Yet another one, at <span class="text-success">15:00 PM</span></p><span
+                              class="vertical-timeline-element-date"></span></div>
+                        </div>
+                      </div>
+                      <div class="vertical-timeline-item vertical-timeline-element">
+                        <div><span class="vertical-timeline-element-icon bounce-in"><i
+                          class="badge badge-dot badge-dot-xl badge-danger"></i></span>
+                          <div class="vertical-timeline-element-content bounce-in"><h4 class="timeline-title">Build the
+                            production release</h4>
+                            <p>Lorem ipsum dolor sit amit,consectetur eiusmdd tempor incididunt ut labore et dolore
+                              magna elit enim at minim veniam quis nostrud</p><span
+                              class="vertical-timeline-element-date"></span></div>
+                        </div>
+                      </div>
+                      <div class="vertical-timeline-item vertical-timeline-element">
+                        <div><span class="vertical-timeline-element-icon bounce-in"><i
+                          class="badge badge-dot badge-dot-xl badge-primary"></i></span>
+                          <div class="vertical-timeline-element-content bounce-in"><h4
+                            class="timeline-title text-success">Something not important</h4>
+                            <p>Lorem ipsum dolor sit amit,consectetur elit enim at minim veniam quis nostrud</p><span
+                              class="vertical-timeline-element-date"></span></div>
+                        </div>
+                      </div>
+                      <div class="vertical-timeline-item vertical-timeline-element">
+                        <div><span class="vertical-timeline-element-icon bounce-in"><i
+                          class="badge badge-dot badge-dot-xl badge-success"></i></span>
+                          <div class="vertical-timeline-element-content bounce-in"><h4 class="timeline-title">All Hands
+                            Meeting</h4>
+                            <p>Lorem ipsum dolor sic amet, today at <a [routerLink]="">12:00 PM</a></p><span
+                              class="vertical-timeline-element-date"></span></div>
+                        </div>
+                      </div>
+                      <div class="vertical-timeline-item vertical-timeline-element">
+                        <div><span class="vertical-timeline-element-icon bounce-in"><i
+                          class="badge badge-dot badge-dot-xl badge-warning"></i></span>
+                          <div class="vertical-timeline-element-content bounce-in"><p>Another meeting today, at <b
+                            class="text-danger">12:00 PM</b></p>
+                            <p>Yet another one, at <span class="text-success">15:00 PM</span></p><span
+                              class="vertical-timeline-element-date"></span></div>
+                        </div>
+                      </div>
+                      <div class="vertical-timeline-item vertical-timeline-element">
+                        <div><span class="vertical-timeline-element-icon bounce-in"><i
+                          class="badge badge-dot badge-dot-xl badge-danger"></i></span>
+                          <div class="vertical-timeline-element-content bounce-in"><h4 class="timeline-title">Build the
+                            production release</h4>
+                            <p>Lorem ipsum dolor sit amit,consectetur eiusmdd tempor incididunt ut labore et dolore
+                              magna elit enim at minim veniam quis nostrud</p><span
+                              class="vertical-timeline-element-date"></span></div>
+                        </div>
+                      </div>
+                      <div class="vertical-timeline-item vertical-timeline-element">
+                        <div><span class="vertical-timeline-element-icon bounce-in"><i
+                          class="badge badge-dot badge-dot-xl badge-primary"></i></span>
+                          <div class="vertical-timeline-element-content bounce-in"><h4
+                            class="timeline-title text-success">Something not important</h4>
+                            <p>Lorem ipsum dolor sit amit,consectetur elit enim at minim veniam quis nostrud</p><span
+                              class="vertical-timeline-element-date"></span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </perfect-scrollbar>
+                </div>
+              </div>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab>
+            <ng-template ngbTabTitle><span>Tickets</span></ng-template>
+            <ng-template ngbTabContent>
+              <div class="no-results">
+                <div class="swal2-icon swal2-success swal2-animate-success-icon">
+                  <div class="swal2-success-circular-line-left" style="background-color: rgb(255, 255, 255);"></div>
+                  <span class="swal2-success-line-tip"></span><span class="swal2-success-line-long"></span>
+                  <div class="swal2-success-ring"></div>
+                  <div class="swal2-success-fix" style="background-color: rgb(255, 255, 255);"></div>
+                  <div class="swal2-success-circular-line-right" style="background-color: rgb(255, 255, 255);"></div>
+                </div>
+                <div class="results-subtitle">All caught up!</div>
+                <div class="results-title">There are no system errors!</div>
+              </div>
+            </ng-template>
+          </ngb-tab>
+          <ngb-tab>
+              <ng-template ngbTabTitle><span>Shortcuts</span></ng-template>
+              <ng-template ngbTabContent>
+                <div class="no-results">
+                  <div class="swal2-icon swal2-success swal2-animate-success-icon">
+                    <div class="swal2-success-circular-line-left" style="background-color: rgb(255, 255, 255);"></div>
+                    <span class="swal2-success-line-tip"></span><span class="swal2-success-line-long"></span>
+                    <div class="swal2-success-ring"></div>
+                    <div class="swal2-success-fix" style="background-color: rgb(255, 255, 255);"></div>
+                    <div class="swal2-success-circular-line-right" style="background-color: rgb(255, 255, 255);"></div>
+                  </div>
+                  <div class="results-subtitle">All caught up!</div>
+                  <div class="results-title">There are no system errors!</div>
+                </div>
+              </ng-template>
+            </ngb-tab>
+        </ngb-tabset>
+      </div>
+      <div class="nav-justified">
+        <ul class="nav flex-column">
+          <li class="nav-item-divider nav-item mt-0"></li>
+          <li class="nav-item-btn text-center nav-item">
+            <button class="btn-shadow btn-wide btn-pill btn btn-focus btn-sm">View Latest Changes</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

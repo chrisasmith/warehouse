@@ -1,0 +1,37 @@
+<div class="whiteBox">
+ <h2 class="titleHeader">Login</h2>
+    <div class="signInControls">
+        <form name="form" (ngSubmit)="onSubmit(f)" #f="ngForm" novalidate>
+            <div class="position-relative form-group">
+                <label for="username" [ngClass]="{'form-label-error': f.submitted && f.value.username == undefined || f.value.username == ''}"  >Login</label>
+                <input [ngClass]="{'form-field-error': f.submitted && f.value.username == undefined || f.value.username == ''}"  placeholder="john.smith@actian.com" type="text" class="mb-2 form-control-lg form-control" name="username" [(ngModel)]="form.username" #username="ngModel" required>
+            </div>
+            <div class="error-msg"  *ngIf="f.submitted && username.invalid">
+                <div *ngIf="username.errors.required">Username is required</div>
+            </div>
+            <div class="position-relative form-group">
+                <label for="password" [ngClass]="{'form-label-error': f.submitted && f.value.password == undefined || f.value.password == ''}" for="password">Password</label>
+                <input [ngClass]="{'form-field-error': f.submitted && f.value.password == undefined || f.value.password == ''}"  placeholder="Enter a Password" type="password" class="mb-2 form-control-lg form-control" name="password" [(ngModel)]="form.password" #password="ngModel" required minlength="6">
+            </div>
+            <div class="error-msg"  *ngIf="f.submitted && password.invalid">
+                <div *ngIf="password.errors.required">Password is required</div>
+                <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+            </div>
+            <div class="form-group">
+                <button type="submit" [ngClass]="{'form-button-valid': f.valid}" class="mb-2 mr-2 btn btn-light btn-lg btn-block btnContinue">LOGIN</button>
+                <div *ngIf="f.submitted && isLoginFailed" class="alert alert-danger">
+                    Login failed: {{errorMessage}}
+                </div>
+            </div>
+        </form>
+        <div class="copyright text-center">
+            Forgot Password? <span> <a [routerLink]="['/actian/forgot-password']">Reset Password</a> </span>
+        </div>
+        <br>
+        <div class="copyright text-center">
+                New User? <span> <a [routerLink]="['/actian/register']">Create Account</a> </span>
+            </div>
+    </div>
+</div>
+<!-- <app-actian-stepper></app-actian-stepper> -->
+<footer> </footer>

@@ -1,0 +1,74 @@
+@import "../../../assets/actian/actian-variables";
+
+.whiteBox {
+       height: 630px !important;
+       width: 768px  !important;
+}
+.trialControls {
+       margin-right: auto;
+       margin-left: auto;
+       width: 360px;
+       position: relative;
+       top:144px;
+}
+.copyright {
+       text-align: center;
+}
+
+.titleHeader {
+       top:47px;
+       color: $color-text-title-headers;
+       font-size: 30px;
+       font-weight: 500;
+       line-height: 40px;
+       position: relative;
+       text-align: center;
+}
+
+   .copyright {
+       height: 18px;
+       color: $color-text-copyright;
+       font-size: 14px;
+       font-weight: 700;
+       line-height: 18px;
+       position: relative;
+       top: 110px;
+       text-align: center;
+   }
+
+   .copyright a {
+       color: $color-actian-primary;
+       text-decoration: none;
+       margin-left: 10px;
+   }
+
+.titleHeader {
+       font-weight: bold;
+}
+
+.eula-text {
+       padding: 23px;
+       width: 609px;
+       top: 75px;
+       position: relative;
+       margin-left: auto;
+       margin-right: auto;
+       height: 340px;
+       line-height: 1.9em;
+       overflow-y: scroll;
+       border: 1px solid $eula-text-color;
+       border-radius: 6px;
+       font-weight: 500;
+   }
+
+   button {
+          height: 43px;
+          width: 116px;
+          text-transform: uppercase;
+   }
+
+   .btnAgree{
+          margin-left: 110px;
+          background-color: $color-actian-disabled;
+          color: $color-text-disabled;
+   }

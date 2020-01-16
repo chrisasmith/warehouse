@@ -1,0 +1,147 @@
+<div class="modal fade actian-modal file-manager-modal" id="fileManagerModal" tabindex="-1" role="dialog" aria-labelledby="fileUploadModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>File Manager</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="user-bar clearfix">
+                    <!-- <div class="user-menu-wrapper">
+                        <select id="user-menu">
+                            <option>John Doe</option>
+                            <option>Steve Smith</option>
+                            <option>John William Goldsmith</option>
+                            <option>Bob Wilson</option>
+                        </select>
+                    </div> -->
+
+                    <div class="form-group">
+                        <div class="d-inline-block" ngbDropdown>
+                            <button type="button" ngbDropdownToggle class="mb-2 mr-2 btn btn-light btn-block">John Doe</button>
+                            <div ngbDropdownMenu>
+                                <button class="dropdown-item">John Doe</button>
+                                <button class="dropdown-item">Steve Smith</button>
+                                <button class="dropdown-item">John William Goldsmith</button>
+                                <button class="dropdown-item">Bob Wilson</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="user-features-wrapper">
+                        <a href="#" class="user-icon user-search-btn"><i class="fas fa-search"></i></a>
+                        <a class="user-icon user-group-btn"><i class="fas fa-users"></i></a>
+                        <div class="user-icon user-switch custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="user-switch" checked="" />
+                            <label class="custom-control-label" for="user-switch"></label>
+                        </div>
+                        <a class="user-icon user-profile"><i class="fas fa-user"></i></a>
+                    </div>
+                </div>
+                <div class="user-files-list">
+                    <div class="row user-files-header">
+                        <div class="col-sm-3 file-name-col">Name</div>
+                        <div class="col-sm-3 file-update-col">Modified</div>
+                        <div class="col-sm-3 file-owner-col">Owner</div>
+                        <div class="col-sm-3 file-size-col">File Size</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 file-name-col">
+                            <i class="fas fa-folder-open file-icon"></i> Public Files
+                        </div>
+                        <div class="col-sm-3 file-update-col">November 07, 2019 7:05am</div>
+                        <div class="col-sm-3 file-owner-col"><a href="#">John Doe</a></div>
+                        <div class="col-sm-3 file-size-col">3 items</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 file-name-col">
+                            <i class="fas fa-folder-open file-icon"></i> Private Files
+                        </div>
+                        <div class="col-sm-3 file-update-col">
+                            September 12, 2019 9:00pm
+                        </div>
+                        <div class="col-sm-3 file-owner-col">
+                            <a href="#">David Best</a>
+                        </div>
+                        <div class="col-sm-3 file-size-col">1 item</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 file-name-col">
+                            <i class="fas fa-folder-open file-icon"></i> Images Files
+                        </div>
+                        <div class="col-sm-3 file-update-col">March 02, 2019 12:05am</div>
+                        <div class="col-sm-3 file-owner-col">
+                            <a href="#">Bruce Davidson</a>
+                        </div>
+                        <div class="col-sm-3 file-size-col">2 items</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 file-name-col">
+                            <i class="fas fa-file-pdf file-icon"></i> Downloads Files
+                        </div>
+                        <div class="col-sm-3 file-update-col">November 07, 2019 7:05am</div>
+                        <div class="col-sm-3 file-owner-col"><a href="#">John Doe</a></div>
+                        <div class="col-sm-3 file-size-col">1.2mb</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 file-name-col">
+                            <i class="fas fa-file-excel file-icon"></i> Public Files
+                        </div>
+                        <div class="col-sm-3 file-update-col">July 06, 2019 7:05am</div>
+                        <div class="col-sm-3 file-owner-col">
+                            <a href="#">David Best</a>
+                        </div>
+                        <div class="col-sm-3 file-size-col">770kb</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 file-name-col">
+                            <i class="fas fa-file-word file-icon"></i> Public Files
+                        </div>
+                        <div class="col-sm-3 file-update-col">August 22, 2019 7:05am</div>
+                        <div class="col-sm-3 file-owner-col">
+                            <a href="#">Bruce Davidson</a>
+                        </div>
+                        <div class="col-sm-3 file-size-col">600kb</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 file-name-col">
+                            <i class="fas fa-file-pdf file-icon"></i> Public Files
+                        </div>
+                        <div class="col-sm-3 file-update-col">June 12, 2019 7:05am</div>
+                        <div class="col-sm-3 file-owner-col"><a href="#">John Doe</a></div>
+                        <div class="col-sm-3 file-size-col">300kb</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 file-name-col">
+                            <i class="fas fa-file-pdf file-icon"></i> Public Files
+                        </div>
+                        <div class="col-sm-3 file-update-col">July 18, 2019 7:05am</div>
+                        <div class="col-sm-3 file-owner-col">
+                            <a href="#">David Best</a>
+                        </div>
+                        <div class="col-sm-3 file-size-col">2mb</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 file-name-col">
+                            <i class="fas fa-file-word file-icon"></i> Public Files
+                        </div>
+                        <div class="col-sm-3 file-update-col">May 27, 2019 05:30pm</div>
+                        <div class="col-sm-3 file-owner-col">
+                            <a href="#">Bruce Davidson</a>
+                        </div>
+                        <div class="col-sm-3 file-size-col">4mb</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="row form-row">
+                    <button type="button" class="btn btn-primary attach-files-btn btn-long">
+                        ATTACH FILES
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

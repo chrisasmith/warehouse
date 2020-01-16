@@ -1,0 +1,45 @@
+<div>
+  <app-headingtitlenav></app-headingtitlenav>
+  <br>
+  <br>
+  <div class="center-content">
+    <div class="configuration-data-grid">
+        
+        <div class="main-card mb-3 card">
+            <div class="table-responsive">
+              <table class="align-middle text-truncate mb-0 table table-hover">
+                <thead>
+                  <tr>
+                    <th class="text-center">Start Time (CST)</th>
+                    <th class="text-center">Configuration</th>
+                    <th class="text-center">Template Used</th>
+                    <th class="text-center">Owner</th>
+                    <th class="text-center">Status</th>
+                    <th class="text-center">Duration</th>
+                    <th class="text-center">Log</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center">July 01, 2019 1:18am</td>
+                    <td class="text-center">John's Config</td>
+                    <td class="text-center">Salesforce Account to Ne...</td>
+                    <td class="text-center" style="width: 80px;">  
+                      <img width="40" [routerLink]="['/dashboards/usermanagement']"  class="rounded-circle" src="./assets/images/avatars/1.jpg" alt="">
+                    </td>                    
+                    <td class="text-center">Error</td>
+                    <td class="text-center">July 01, 2019 1:18am</td>
+                    <td class="text-center" style="width: 80px;">  
+                      <img width="40" [routerLink]="['/dashboards/usermanagement']"  class="rounded-circle" src="./assets/images/avatars/1.jpg" alt="">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
+
+
+    </div>
+    <app-footerrefresh></app-footerrefresh>
+  </div>
+</div>

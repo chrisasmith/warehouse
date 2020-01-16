@@ -1,0 +1,190 @@
+@import "../../../assets/actian/actian-variables";
+
+// .data-grid {
+//        margin-top: 100px;
+// }
+
+.data-grid-header {
+       height: 48px;
+       padding-top: 7px;
+       display: flex;
+}
+.data-applied-filters span {
+       padding-top: 5px;
+}
+
+ .filter-total-count {
+       padding-right: 10px;
+ }
+
+.btn-date-range {
+       box-sizing: border-box;
+       height: $button-date-range-height;
+       width: $button-date-range-width;
+       border: 0.75px solid $color-actian-primary-border;
+       border-radius: 12.75px;
+       background-color: $button-date-range-bg-color;
+       margin-left:40px;
+       color: $color-actian-primary;
+       font-weight: bold;
+       font-size: 14px;
+
+}
+
+.data-grid-calendar-component,.data-grid-search-component,.data-grid-filter-component, .data-grid-menu-component{
+       padding-top: 5px;
+}
+
+tr {
+       height: 50px !important;
+}
+
+tr, th {
+       font-size: 14px !important;
+}
+
+.data-grid-footer{
+       display: inline-flex;
+       padding-left: 36px;
+       padding-top: 20px;
+       padding-bottom: 10px;
+}
+
+.footer-select-filter, .footer-label, .footer-total{
+       margin-right:20px;
+}
+
+.footer-label, .footer-total{
+       margin-top: 6px;
+}
+
+
+
+.btn-date-range span:before {
+       content:'<';
+       margin-right: auto;
+       float: left;
+}
+
+.btn-date-range span:after {
+       content:'>';
+       margin-left: auto;
+       float: right;
+}
+
+.table-filter-bar {
+       height: 40px;
+       display: inline-flex;
+       margin-bottom: 17px;
+       margin-left: auto;
+       margin-right: 20px;
+   }
+.table-filter-bar div {
+       padding-left: 26px;
+}
+.table-filter-bar  i {
+       font-size: 18px;
+       color:lightgray;
+}
+
+.data-applied-filters {
+       display: inline-flex;
+}
+
+th, td {
+       padding-left: 50px;
+}
+
+
+.searchBox {
+       background: #EEEEEE;
+       height: 30px;
+       border-radius: 30px;
+       padding-top: 10px !important;
+       padding-bottom: 10px !important;
+       padding-left: 0px !important;
+   }
+
+   .searchBox:hover > .searchInput {
+       width: 240px;
+       padding: 0 6px;
+       margin-left:10px;
+   }
+
+   .searchBox:hover > .searchButton {
+     background: white;
+     color : #2f3640;
+   }
+
+   .searchButton {
+       color:#2f3640;
+       float: right;
+       width: 30px;
+       height: 30px;
+       border-radius: 50%;
+       background: #FFF;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       transition: 0.4s;
+       position: relative;
+       margin: 0px;
+       top: -10px;
+       right: 0px;
+   }
+
+   .searchInput {
+       border:none;
+       background: none;
+       outline:none;
+       float:left;
+       padding: 0;
+       color: #2f3640;
+       font-size: 16px;
+       transition: 0.4s;
+       line-height: 45px;
+       width: 0px;
+       position: relative;
+       top: -18px;
+   }
+
+   @media screen and (max-width: 620px) {
+   .searchBox:hover > .searchInput {
+       width: 150px;
+       padding: 0 6px;
+   }
+   }
+
+   .macros-value{
+       padding-left: 20px;
+       padding-right: 60px;
+   }
+
+   .data-grid-title-left{
+       padding-top: 5px;
+       padding-left: 20px;
+       font-weight: bold;
+   }
+
+   .return-code{
+       border-right: solid 4px #ddd;
+   }
+
+   .return-code-orange{
+       border-right: solid 4px orange;
+   }
+
+   .return-code-circle{
+       color: orange;
+       right: -81px;
+       position: relative;
+   }
+
+   .arrow-down {
+       padding-right: 30px;
+   }
+
+   .log-action{
+       width:50px;
+       padding-right: 30px;
+   }

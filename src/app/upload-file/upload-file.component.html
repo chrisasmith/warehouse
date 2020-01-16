@@ -1,0 +1,66 @@
+<!-- <app-headingtitle [heading]="heading" [subheading]="subheading"></app-headingtitle> -->
+<app-modal id="custom-modal-4">
+    <div class="modal">
+        <div class="modal-body">
+            <h1 class="card-cluster-header">Macro for your Template</h1>
+            <p class="">
+                <input type="text" class="macro-detail" placeholder="Name of Macro" [(ngModel)]="bodyText" />
+                <input type="text" class="macro-detail" placeholder="Value" [(ngModel)]="bodyText" />
+            </p>
+            <p class="package-heading">If you still want to upload Macros Drag & Drop macro files or <strong class="file-manager">Browse Files</strong></p>
+              <button class="continue-modal" (click)="closeModal('custom-modal-4');" [routerLink]="['/im/templates/summary']">continue</button>
+            <button class="close-modal" (click)="closeModal('custom-modal-4');">Close</button>
+        </div>
+    </div>
+    <div class="modal-background"></div>
+</app-modal>
+
+<app-modal id="custom-modal-3">
+    <div class="modal">
+        <div class="modal-body">
+            <h1 class="card-cluster-header">Macro for your Template</h1>
+            <p>
+                <input type="text" class="macro-detail" placeholder="Name of Macro" [(ngModel)]="bodyText" />
+                <input type="text" class="macro-detail" placeholder="Value" [(ngModel)]="bodyText" />
+            </p>
+            <div class="drag-drop">
+                <p>Drag & drop the package and files </p>
+                <p>or</p>
+                <p class="browse-file">Browse File</p>
+              </div>
+              <button class="continue-modal" (click)="openModal('custom-modal-4');closeModal('custom-modal-3');">continue</button>
+            <button class="close-modal" (click)="closeModal('custom-modal-3');">Close</button>
+        </div>
+    </div>
+    <div class="modal-background"></div>
+</app-modal>
+<app-modal id="custom-modal-2">
+  <div class="modal">
+      <div class="modal-body">
+          <h1 class="card-cluster-header" >Upload Packages and files</h1>
+          <p class="djar-file">djar File</p>
+          <p class="xlsv-file">xlsv-file File</p>
+          <button class="continue-modal" (click)="openModal('custom-modal-3');closeModal('custom-modal-2');">Uploading files</button>
+          <button class="close-modal" (click)="closeModal('custom-modal-2');">Close</button>
+      </div>
+  </div>
+  <div class="modal-background"></div>
+</app-modal>
+<app-modal id="custom-modal-1">
+  <div class="modal">
+      <div class="modal-body">
+          <h1 class="card-cluster-header">Upload Packages and files</h1>
+          <p class="package-heading" >Choose a Package and Files from<strong class="file-manager">File Manager</strong> </p>
+          <div class="drag-drop">
+            <p>Choose a Package and Files from </p>
+            <p>or</p>
+            <p class="browse-file" (click)="openModal('custom-modal-2');closeModal('custom-modal-1');" >Browse File</p>
+          </div>
+          <!-- <button  class="continue-modal">continue</button> -->
+          <button class="close-modal" (click)="closeModal('custom-modal-1');">Close</button>
+      </div>
+  </div>
+  <div class="modal-background"></div>
+</app-modal>
+
+

@@ -1,0 +1,67 @@
+.userItems {
+       width: 100%;
+}
+
+.userName{
+       color: #252631;		
+       font-size: 18px;	
+       font-weight: 500;	
+       line-height: 23px;
+}
+
+.userTitle, .userEmail, .userPhone {
+       color: #98A9BC;		
+       font-size: 14px;	
+       font-weight: 500;	
+       line-height: 21px;
+}
+
+.btnUserInfoRow{
+       height: 36px;	
+       width: 128px;
+       border-radius: 4px;	
+       background-color: #D5EAFF;
+       color: #238FFB;		
+       font-size: 14px;	
+       font-weight: 500;	
+       line-height: 18px;	
+       text-align: center;
+}
+
+.userCard {
+       height: 80px;		
+       box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1);
+}
+
+.card.mb-3 {
+       margin-bottom: 9px !important;
+}
+
+ul {
+      
+}
+#header-nav-ul {
+       float: right;
+       margin-left:auto;
+       padding:0;
+       list-style-type: none;
+}
+li  {
+       display: inline-block;
+       margin-left: 2em;
+       font-size: 18px;
+}
+
+li a:hover {
+       text-decoration: none;
+       color: gray;
+}
+
+li a {
+       color: #98A9BC;
+}
+
+li button {
+       font-size:14px;
+       font-weight: bold;
+}

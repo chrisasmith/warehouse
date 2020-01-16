@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="27px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59 (86127) - https://sketch.com -->
+    <title>02</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="IM-/-New-Config---Connect_02" transform="translate(-519.000000, -674.000000)">
+            <g id="Group-3" transform="translate(198.517672, 290.000000)">
+                <g id="connect_screen" transform="translate(-0.000000, 0.000000)">
+                    <g id="Form/Default/Placeholder" transform="translate(0.070686, 0.000000)">
+                        <g id="Mask">
+                            <g id="02" transform="translate(321.000000, 379.000000)">
+                                <g id="Group-5" transform="translate(0.000000, 6.000000)">
+                                    <circle id="Oval" fill="#158BFF" cx="12.5" cy="12.5" r="10.4166667"></circle>
+                                    <circle id="Oval" stroke="#158BFF" cx="12.5" cy="12.5" r="12.5"></circle>
+                                </g>
+                                <path d="M8.714,23 L8.714,21.46 L12.858,17.358 C13.306,16.91 13.516,16.504 13.516,16.056 C13.516,15.426 12.9,14.95 12.074,14.95 C11.192,14.95 10.492,15.286 9.596,16.154 L8.392,14.684 C9.512,13.62 10.786,13.074 12.144,13.074 C14.23,13.074 15.616,14.208 15.616,15.916 C15.616,16.826 15.224,17.596 14.342,18.45 L11.514,21.18 L15.756,21.166 L15.756,23 L8.714,23 Z" id="2" fill="#FFFFFF" fill-rule="nonzero"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

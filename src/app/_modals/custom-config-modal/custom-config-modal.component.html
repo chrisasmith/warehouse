@@ -1,0 +1,125 @@
+<div class="backdrop"></div>
+<div class="modal-window">
+    <div class="modal-window-close">
+        <button type="button" class="close" aria-label="Close" (click)="closeModal()" data-dismiss="modal-window">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-window-body">
+        <form id="form" name="form">
+            <h1 class="card-cluster-header">Upload Packages and files</h1>
+            <p class="package-heading">Choose a Package and Files, from <strong class="file-manager"> File Manager </strong></p>
+            <div class="drag-drop">
+                <img src="/assets/images/cloud-upload.png">
+                <br>
+                <p>Drag & drop the package and files</p>
+                <p>or</p>
+                <p class="browse-file">Browse File</p>
+            </div>
+
+            <hr>
+
+            <h2 class="card-cluster-header">Uploading Files</h2>
+            <div class="file-upload-container2">
+                <form id="file-upload-modal--form">
+                    <div class="row form-row">
+                        <div class="col-sm-1 uploading-file-icon"><i class="fas fa-file-excel"></i></div>
+                        <div class="col-sm-10">
+                            <div class="uploading-file-name">Acme_configv2.djar</div>
+                            <div class="uploading-file-status">Uploaded 10 seconds ago</div>
+                        </div>
+                        <div class="col-sm-1"><a class="upload-cancel-btn" href="#"><i class="fas fa-minus-circle"></i></a></div>
+                    </div>
+                    <hr>
+                    <div class="row form-row">
+                        <div class="col-sm-1 uploading-file-icon"><i class="fas fa-file-word"></i></div>
+                        <div class="col-sm-10">
+                            <div class="uploading-file-name">StateAbbrv_final.xlxs</div>
+                            <div class="uploading-file-progress">
+                                <div class="uploading-file-progress-bg">
+                                    <div class="uploading-file-progress-done" style="width:33%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-1"><a class="upload-cancel-btn" href="#"><i class="fas fa-minus-circle"></i></a></div>
+                    </div>
+                    <div class="row form-row">
+                        <div class="col-sm-12 progress-indicator"><span><i class="fas fa-spinner fa-spin"></i> Uploading 2 files</span></div>
+                    </div>
+                </form>
+            </div>
+
+            <hr>
+
+
+            <h1 class="card-cluster-header">Add Macros</h1>
+
+            <form name="form">
+                <div class="form-row">
+                    <div class="col-md-5">
+                        <div class="position-relative form-group">
+                            <input placeholder="Name of Macro" type="text" class="form-control-lg form-control" name="macroname" [(ngModel)]="form.macroname" #macroname="ngModel">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="position-relative form-group ">
+                            <input placeholder="Value" type="text" class="form-control-lg form-control" name="macrovalue" [(ngModel)]="form.macrovalue" #macrovalue="ngModel">
+                            <i id="valueLock" class="fas fa-lock-open"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="position-relative form-group">
+                            <a class="addMacroBtn" href="#"><i class="fas fa-plus-circle"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="drag-drop">
+                <p>Upload Macro File</p>
+                <img src="/assets/images/cloud-upload.png">
+                <br>
+                <p>Drag & drop the Macro file</p>
+                <p>or</p>
+                <p class="browse-file">Browse File</p>
+            </div>
+
+            <hr>
+
+
+            <h1 class="card-cluster-header">Add Macros</h1>
+
+            <form name="form">
+                <div class="form-row">
+                    <div class="col-md-5">
+                        <div class="position-relative form-group">
+                            <input placeholder="Name of Macro" type="text" class="form-control-lg form-control" name="macroname" [(ngModel)]="form.macroname" #macroname="ngModel" value="Macro1">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="position-relative form-group ">
+                            <input placeholder="Value" type="text" class="form-control-lg form-control" name="macrovalue" [(ngModel)]="form.macrovalue" #macrovalue="ngModel" value="**********">
+                            <i id="valueLock" class="fas fa-lock"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="position-relative form-group">
+                            <a class="addMacroBtn" href="#"><i class="fas fa-minus-circle"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </form>
+    </div>
+    <div class="modal-window-footer">
+        <button type="button" class="btn btn-primary" (click)="createNewConfig()">
+            Continue
+        </button>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('#valueLock').click(function() {
+        alert('Secure value' + $('#macrovalue').val());
+    });
+</script>

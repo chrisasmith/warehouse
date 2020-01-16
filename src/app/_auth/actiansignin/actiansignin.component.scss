@@ -1,0 +1,88 @@
+@import "../../../assets/actian/actian-variables";
+
+.whiteBox {
+       height: 570px !important;
+       width: 555px !important;
+}
+
+.signInControls {
+       margin-right: auto;
+       margin-left: auto;
+}
+.signInControls {
+       margin-right: auto;
+       margin-left: auto;
+       width: 360px;
+       position: relative;
+       top:80px;
+
+}
+.trialControls {
+       margin-right: auto;
+       margin-left: auto;
+       width: 360px;
+       position: relative;
+       top:80px;
+
+}
+.description{
+       padding-bottom: 37px;
+}
+.confirmIcon{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 56px;
+    left: 41%;
+    height: 71px;
+    width: 71px;
+}
+.copyright {
+       text-align: center;
+}
+
+.titleHeader {
+       top:47px;
+       color: $color-text-title-headers;
+       font-size: 30px;
+       font-weight: 500;
+       font-weight: bold;
+       line-height: 40px;
+       position: relative;
+       text-align: center;
+}
+
+.btnContinue{
+       margin-top: 50px !important;
+       height: 43px;
+       width: 360px;
+       border-radius: 6px;
+       font-size: 16px;
+       font-weight: 500;
+       line-height: 22px;
+       text-align: center;
+       background-color: $color-actian-disabled;
+       color: $color-text-disabled;
+}
+
+label { font-weight: bold; }
+.form-control-lg {  font-size: .85rem; }
+
+
+   .copyright {
+       height: 18px;
+       color: $color-text-copyright;
+       font-size: 14px;
+       font-weight: 700;
+       line-height: 18px;
+       position: relative;
+       top:20px;
+       text-align: center;
+   }
+
+   .copyright a {
+       color: $color-actian-primary;
+       text-decoration: none;
+       margin-left: 10px;
+   }
+

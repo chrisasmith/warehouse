@@ -1,0 +1,73 @@
+// Color Variables
+$color-actian-primary:#238FFB;
+$color-actian-primary-border: $color-actian-primary;
+$color-actian-primary-button: $color-actian-primary;
+$color-actian-info: #00FF00;
+$color-actian-disabled: #ECE9F1;
+$color-text-disabled:#D0C9D6;
+$color-text-copyright: #778CA2;
+$color-text-error:red;
+$color-button-error:red;
+$color-border-error:red;
+$color-text-disabled-button:#D0C9D6;
+$color-text-primary-button:#FFFFFF;
+$color-text-title-headers:#1B1E24;
+// Button Variables
+$button-height: 43px;
+$button-border-radius: 6px;
+$button-large-width: 360px;
+$button-large-height: $button-height;
+$button-large-disabled-color:"";
+// Data Grid Component
+$button-date-range-height: 22px;
+$button-date-range-width: 244px;
+$button-date-range-bg-color: #EFF6FF;
+// IM Details Card
+$card-box-size-width: "";
+$card-box-size-height: "";
+$card-grid-row-background-color: "";
+$card-grid-row-alternate-color: "";
+$sticky-footer-width: "";
+$sticky-footer-height: "";
+// Illustration urls
+$illustration-offers:url('');
+$illustration-configuration-details:url('');
+// Layout Variables
+$cardpages-border-radius: 4px;
+$center-content-body-width: 66%;
+$header-color-gradient-a: $color-actian-primary;
+$header-color-gradient-b: $color-actian-info;
+$box-pages-background-color: #F6F9FC;
+$card-box-size-width: "";
+$card-box-size-height: "";
+$actian-background-color:"";
+$nav-link-color:#67758D;
+$nav-link-color-active: $color-actian-primary;
+// Logo, Colors, Fonts, Sizes, Customization
+// Font Sizes
+$primary_font: 'Red Hat Text';
+$font-size-details-pages: 18px;
+$font-size-form-headers: 30px;
+$font-size-h1: 24px;
+// font-weight
+$thin:100;
+$light:300;
+$regular:400;
+$bold:700;
+$boldest:900;
+// Font size
+$font-xs:12px;
+$font-sm: 14px;
+$primary-fs: 16px;
+$font-md: 18px;
+$font-lg: 20px;
+// Eula Page
+$eula-text-color: #CDD9ED;
+
+// Filtering Color
+$filter-colors-primary: '';
+$filter-colors-error: '';
+$filter-colors-secondary: '';
+$filter-colors-success: '';
+$filter-colors-light: '';
+$filter-colors-dark: '';

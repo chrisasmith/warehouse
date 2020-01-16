@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="114px" height="112px" viewBox="0 0 114 112" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 56.3 (101010) - https://sketch.com -->
+    <title>B5E034C4-F38C-4E5A-B3D9-6351CCBCEED6</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <filter x="-9.5%" y="-9.5%" width="118.9%" height="118.9%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Actian---Signup" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Login-/-Step-4-Copy-2" transform="translate(-308.000000, -221.000000)">
+            <g id="Group-6" transform="translate(314.000000, 221.000000)">
+                <g id="top-left">
+                    <path d="M2,107.294118 C2.00762472,111.868845 9,111 9,111 L9,93 C9,93 2,97.0354451 2,107.294118 Z" id="Path-3" fill="#3FB38E"></path>
+                    <path d="M94,14.4775594 C94.0076247,19.9152558 101,18.8147697 101,18.8147697 L101,-2 C101,-2 94,2.68697544 94,14.4775594 Z" id="Path-3-Copy" fill="#3FB38E" transform="translate(97.500000, 8.500000) scale(-1, 1) rotate(-270.000000) translate(-97.500000, -8.500000) "></path>
+                    <path d="M8.93630074,51.7712706 C31.3335035,29.7169571 40.4714075,20.6199145 46.6337293,14.9008125 C52.3325844,8.81177658 58.3606494,7.06599991 58.5381804,7 L96,7 L1,102 L1,64.2808903 C1.06629636,64.1041532 3.38017755,57.5452858 8.93630074,51.7712706 Z" id="Rectangle-3-Copy-2" fill="#024E34" opacity="0.338487876" filter="url(#filter-1)"></path>
+                    <path d="M8.39751553,47.2236025 C30.0629927,25.7939867 38.9023578,16.9546216 44.863354,11.3975155 C50.3760253,5.48095414 56.207151,5.06413043 56.378882,5 L105,5 C105,5 95.5496459,5.42651728 86.447205,13.9565217 L10.9565217,90.0869565 C2.19739643,98.7787668 2,108 2,108 L2,59.378882 C2.06413043,59.207151 3.02291309,52.8340663 8.39751553,47.2236025 Z" id="Rectangle-3-Copy" fill="#14B982"></path>
+                    <text id="Free-Trial" transform="translate(38.923631, 39.227632) rotate(-45.000000) translate(-38.923631, -39.227632) " font-family="HelveticaNeue-CondensedBold, Helvetica Neue" font-size="14" font-style="condensed" font-weight="bold" letter-spacing="0.7" fill="#F7F9F9">
+                        <tspan x="3.94463126" y="44.031633">FREE TRIAL</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

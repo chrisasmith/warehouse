@@ -1,0 +1,367 @@
+{
+  "macroSet" : [ {
+    "id" : 1,
+    "name" : "GLOBAL",
+    "macros" : {
+      "macro" : [ {
+        "id" : 1,
+        "name" : "DATA",
+        "value" : "$(WORKSPACE)/Templates/workdir/data",
+        "encryptValue" : false,
+        "description" : "Root directory for data files"
+      }, {
+        "id" : 2,
+        "name" : "LOGS",
+        "value" : "$(WORKSPACE)/Templates/workdir/logs",
+        "encryptValue" : false,
+        "description" : "Directory for all logs"
+      }, {
+        "id" : 3,
+        "name" : "HELLO",
+        "value" : "insert your message here",
+        "encryptValue" : false,
+        "description" : "Add your own message"
+      }, {
+        "id" : 4,
+        "name" : "ALERT",
+        "value" : "true",
+        "encryptValue" : false,
+        "description" : "\"true\" will trigger error notifications"
+      }, {
+        "id" : 5,
+        "name" : "WORKSPACE",
+        "value" : "C:/Users/kvyvial/Actian/DataConnect/Samples",
+        "encryptValue" : false,
+        "description" : ""
+      } ]
+    }
+  }, {
+    "id" : 2,
+    "name" : "T_WEB_SERVICE_API",
+    "macros" : {
+      "macro" : [ {
+        "id" : 6,
+        "name" : "URL",
+        "value" : "https://api.publicapis.org/entries",
+        "encryptValue" : false,
+        "description" : "URL value used by Web Service API template"
+      }, {
+        "id" : 7,
+        "name" : "URL_QUERY_STRING",
+        "value" : "?category=Animals&https=true",
+        "encryptValue" : false,
+        "description" : "URL Query string value used by Web Service API template"
+      } ]
+    }
+  }, {
+    "id" : 3,
+    "name" : "T_EMAIL",
+    "macros" : {
+      "macro" : [ {
+        "id" : 8,
+        "name" : "SEND_SMTP_USER",
+        "value" : "first.lastname@actian.com",
+        "encryptValue" : false
+      }, {
+        "id" : 9,
+        "name" : "SEND_SMTP_PASSWORD",
+        "value" : "jbLYDiKi4JsuUEOIoMJKjw==",
+        "encryptValue" : true,
+        "description" : ""
+      }, {
+        "id" : 10,
+        "name" : "SEND_SMTP_SERVER",
+        "value" : "smtp.actian.com",
+        "encryptValue" : false
+      }, {
+        "id" : 11,
+        "name" : "SEND_SMTP_PORT",
+        "value" : "25",
+        "encryptValue" : false
+      }, {
+        "id" : 12,
+        "name" : "SEND_SMTP_FROM_EMAIL",
+        "value" : "first.lastname@actian.com",
+        "encryptValue" : false
+      }, {
+        "id" : 13,
+        "name" : "SEND_SMTP_TO_EMAIL",
+        "value" : "someone@gmail.com,first.lastname@actian.com",
+        "encryptValue" : false
+      }, {
+        "id" : 14,
+        "name" : "SEND_SMTP_SUBJECT",
+        "value" : "Test Email from DataConnect",
+        "encryptValue" : false
+      }, {
+        "id" : 15,
+        "name" : "SEND_SMTP_ATTACHMENT",
+        "value" : "$(WORKSPACE)/Templates/workdir/data/in/tutor1.txt",
+        "encryptValue" : false
+      }, {
+        "id" : 16,
+        "name" : "GET_IMAP_USER",
+        "value" : "someone@gmail.com",
+        "encryptValue" : false
+      }, {
+        "id" : 17,
+        "name" : "GET_IMAP_PASSWORD",
+        "value" : "JAOJOXJ931XWwJw3RTMkyaKec6fkBqAA",
+        "encryptValue" : true
+      }, {
+        "id" : 18,
+        "name" : "GET_IMAP_SERVER",
+        "value" : "imap.gmail.com",
+        "encryptValue" : false
+      }, {
+        "id" : 19,
+        "name" : "GET_IMAP_PORT",
+        "value" : "993",
+        "encryptValue" : false
+      }, {
+        "id" : 20,
+        "name" : "GET_IMAP_FROM_EMAIL",
+        "value" : "first.lastname@actian.com",
+        "encryptValue" : false
+      }, {
+        "id" : 21,
+        "name" : "GET_IMAP_TO_EMAIL",
+        "value" : "someone@gmail.com",
+        "encryptValue" : false
+      }, {
+        "id" : 22,
+        "name" : "GET_IMAP_SUBJECT",
+        "value" : "Test Email from DataConnect",
+        "encryptValue" : false
+      }, {
+        "id" : 23,
+        "name" : "GET_POP3_USER",
+        "value" : "someone@gmail.com",
+        "encryptValue" : false
+      }, {
+        "id" : 24,
+        "name" : "GET_POP3_PASSWORD",
+        "value" : "JAOJOXJ931XWwJw3RTMkyaKec6fkBqAA",
+        "encryptValue" : true
+      }, {
+        "id" : 25,
+        "name" : "GET_POP3_SERVER",
+        "value" : "pop3.gmail.com",
+        "encryptValue" : false
+      }, {
+        "id" : 26,
+        "name" : "GET_POP3_PORT",
+        "value" : "995",
+        "encryptValue" : false
+      }, {
+        "id" : 27,
+        "name" : "GET_POP3_FROM_EMAIL",
+        "value" : "first.lastname@actian.com",
+        "encryptValue" : false
+      }, {
+        "id" : 28,
+        "name" : "GET_POP3_TO_EMAIL",
+        "value" : "someone@gmail.com",
+        "encryptValue" : false
+      }, {
+        "id" : 29,
+        "name" : "GET_POP3_SUBJECT",
+        "value" : "Test Email from DataConnect",
+        "encryptValue" : false
+      } ]
+    }
+  }, {
+    "id" : 4,
+    "name" : "T_FFQ",
+    "macros" : {
+      "macro" : [ {
+        "id" : 30,
+        "name" : "FFQ_GET",
+        "value" : "$(DATA)/in",
+        "encryptValue" : false,
+        "description" : "Used in the FFQ_GET inovker configuration to specify the folder to get files from"
+      }, {
+        "id" : 31,
+        "name" : "FFQ_PUT",
+        "value" : "$(DATA)/out",
+        "encryptValue" : false,
+        "description" : "Used in the FFQ_PUT invoker configuration to specify the put folder"
+      }, {
+        "id" : 32,
+        "name" : "FFQ_ARCHIVE",
+        "value" : "$(DATA)/archive",
+        "encryptValue" : false,
+        "description" : "Used in the FFQ_ARCHIVE invoker configuration to specify the archive folder"
+      }, {
+        "id" : 33,
+        "name" : "FFQ_FILENAME_FORMAT",
+        "value" : "churn_data.*",
+        "encryptValue" : false,
+        "description" : "Used in the FFQ_GET invoker configuration to set the GET filename pattern"
+      } ]
+    }
+  }, {
+    "id" : 5,
+    "name" : "T_FTP",
+    "macros" : {
+      "macro" : [ {
+        "id" : 34,
+        "name" : "FTP_GET_TARGETDIR",
+        "value" : "$(DATA)/ftp_targetdir",
+        "encryptValue" : false,
+        "description" : "Used to specify the destination directory to copy files when using Get operation "
+      }, {
+        "id" : 35,
+        "name" : "FTP_USER",
+        "value" : "first.lastname@actian.com",
+        "encryptValue" : false,
+        "description" : "User name to login to the FTP server"
+      }, {
+        "id" : 36,
+        "name" : "FTP_HOST",
+        "value" : "GCOATES-X1",
+        "encryptValue" : false,
+        "description" : "Server name of the FTP server (can be an IP address)"
+      }, {
+        "id" : 37,
+        "name" : "FTP_PASSWORD",
+        "value" : "jbLYDiKi4JsuUEOIoMJKjw==",
+        "encryptValue" : true,
+        "description" : "User's password to login to the FTP server (be sure to set Encrypted = true)"
+      } ]
+    }
+  }, {
+    "id" : 6,
+    "name" : "T_ORCHESTRATE",
+    "macros" : {
+      "macro" : [ {
+        "id" : 38,
+        "name" : "CONFIG_ID",
+        "value" : "1",
+        "encryptValue" : false
+      }, {
+        "id" : 39,
+        "name" : "IM_SERVER",
+        "value" : "localhost",
+        "encryptValue" : false
+      }, {
+        "id" : 40,
+        "name" : "IM_PORT",
+        "value" : "8080",
+        "encryptValue" : false,
+        "description" : ""
+      }, {
+        "id" : 41,
+        "name" : "IM_USER",
+        "value" : "admin",
+        "encryptValue" : false
+      }, {
+        "id" : 42,
+        "name" : "IM_PASSWORD",
+        "value" : "admin",
+        "encryptValue" : false
+      } ]
+    }
+  }, {
+    "id" : 7,
+    "name" : "T_COMPRESSION",
+    "macros" : {
+      "macro" : [ {
+        "id" : 43,
+        "name" : "FILE_LOCATION",
+        "value" : "$(DATA)/in",
+        "encryptValue" : false,
+        "description" : "Location of File"
+      }, {
+        "id" : 44,
+        "name" : "OUTPUT_FILE",
+        "value" : "dish.jpg",
+        "encryptValue" : false,
+        "description" : "File to Unzip"
+      }, {
+        "id" : 45,
+        "name" : "INPUT_FILE",
+        "value" : "dish.zip",
+        "encryptValue" : false,
+        "description" : "File to Zip"
+      }, {
+        "id" : 46,
+        "name" : "FILE_PASSWORD",
+        "value" : "test",
+        "encryptValue" : false
+      }, {
+        "id" : 47,
+        "name" : "FILE_LOCATION_OUTPUT",
+        "value" : "$(DATA)/out",
+        "encryptValue" : false
+      } ]
+    }
+  }, {
+    "id" : 8,
+    "name" : "T_FILESPLITTER",
+    "macros" : {
+      "macro" : [ {
+        "id" : 48,
+        "name" : "FS_SOURCE_FILE",
+        "value" : "tutor1.txt",
+        "encryptValue" : false
+      }, {
+        "id" : 49,
+        "name" : "FS_RECORD_SEP",
+        "value" : "\\r\\n",
+        "encryptValue" : false
+      }, {
+        "id" : 50,
+        "name" : "FS_FILE_INPUT_LOCATION",
+        "value" : "$(DATA)/in",
+        "encryptValue" : false
+      }, {
+        "id" : 51,
+        "name" : "FS_FILE_OUTPUT_LOCATION",
+        "value" : "$(DATA)/out",
+        "encryptValue" : false
+      }, {
+        "id" : 52,
+        "name" : "FS_FILE_OUTPUT_TYPE",
+        "value" : "csv",
+        "encryptValue" : false
+      }, {
+        "id" : 53,
+        "name" : "FS_FILE_OUTPUT_NAME",
+        "value" : "data",
+        "encryptValue" : false
+      } ]
+    }
+  }, {
+    "id" : 9,
+    "name" : "T_SFDC",
+    "macros" : {
+      "macro" : [ {
+        "id" : 54,
+        "name" : "SFDC_USERNAME",
+        "value" : "username@domainname.com",
+        "encryptValue" : false
+      }, {
+        "id" : 55,
+        "name" : "SFDC_PASSWORD",
+        "value" : "999999999",
+        "encryptValue" : false
+      }, {
+        "id" : 56,
+        "name" : "SFDC_SECURITY",
+        "value" : "inserttokenhere",
+        "encryptValue" : false
+      }, {
+        "id" : 57,
+        "name" : "SFDC_SANDBOX",
+        "value" : "false",
+        "encryptValue" : false
+      }, {
+        "id" : 58,
+        "name" : "SFDC_APIVERSION",
+        "value" : "42.0",
+        "encryptValue" : false
+      } ]
+    }
+  } ]
+}
